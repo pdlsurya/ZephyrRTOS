@@ -1,0 +1,3 @@
+rsource "sh1106_drv/Kconfig"
+rsource "nrf24_drv/Kconfig"
+rsource "SD_drv/Kconfig"

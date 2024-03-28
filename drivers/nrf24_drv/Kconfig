@@ -1,0 +1,10 @@
+# Copyright (c) 2023 Surya Poudel
+# SPDX-License-Identifier: Apache-2.0
+
+config NRF24_DRV
+	bool "NRF24 wireless module driver"
+	default n
+	select SPI
+	help
+	 Enable NRF24 driver module.
+

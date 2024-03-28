@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/tflite-micro",
+		"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/tflite-micro"
+	}
+}

@@ -1,0 +1,9 @@
+# Copyright (c) 2023 Surya Poudel
+# SPDX-License-Identifier: Apache-2.0
+
+config NRF24_BLE
+	bool "BLE advertising module  on NRF24 wireless module"
+	default n
+	depends on NRF24_DRV
+	help
+	 Enable NRF24 BLE Advertising module

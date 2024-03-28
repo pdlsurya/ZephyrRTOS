@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/ti/simplelink",
+		"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/ti/simplelink"
+	}
+}

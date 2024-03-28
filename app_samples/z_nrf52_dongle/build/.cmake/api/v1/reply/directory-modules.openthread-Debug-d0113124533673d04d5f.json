@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/openthread",
+		"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/openthread"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "zephyr/cmake/flash",
+		"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/cmake/flash"
+	}
+}

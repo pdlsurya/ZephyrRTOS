@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "zephyr/subsys/task_wdt",
+		"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/task_wdt"
+	}
+}

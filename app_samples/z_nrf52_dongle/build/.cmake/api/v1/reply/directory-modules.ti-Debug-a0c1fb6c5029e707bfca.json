@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/ti",
+		"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/ti"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/stm32",
+		"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/stm32"
+	}
+}

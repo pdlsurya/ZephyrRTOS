@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "zephyr/subsys/debug",
+		"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/debug"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "zephyr/subsys/sh1106_gfx",
+		"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/sh1106_gfx"
+	}
+}

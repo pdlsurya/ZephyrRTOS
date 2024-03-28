@@ -1,0 +1,2530 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						5,
+						7,
+						8,
+						10,
+						11,
+						12,
+						13,
+						16,
+						33,
+						34,
+						41,
+						44,
+						49,
+						53,
+						54,
+						55,
+						56,
+						67
+					]
+				},
+				{
+					"build" : "zephyr",
+					"childIndexes" : 
+					[
+						2,
+						8,
+						15,
+						20,
+						22,
+						47,
+						66,
+						67,
+						68,
+						69,
+						72,
+						73,
+						74,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						99,
+						100,
+						101,
+						102,
+						103,
+						104,
+						105,
+						106,
+						107,
+						108,
+						109,
+						110,
+						111,
+						112,
+						113,
+						114,
+						115,
+						116,
+						117,
+						118,
+						119,
+						120,
+						121,
+						122,
+						123,
+						124,
+						125,
+						126,
+						127,
+						128,
+						129
+					],
+					"jsonFile" : "directory-zephyr-Debug-6568027f22dd8d5fcc1f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr",
+					"targetIndexes" : 
+					[
+						17,
+						37,
+						42,
+						43,
+						46,
+						47,
+						48,
+						52,
+						60,
+						62,
+						63,
+						64,
+						65,
+						66
+					]
+				},
+				{
+					"build" : "zephyr/arch",
+					"childIndexes" : 
+					[
+						3,
+						4
+					],
+					"jsonFile" : "directory-zephyr.arch-Debug-00f195adb4dfad4af821.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/arch"
+				},
+				{
+					"build" : "zephyr/arch/common",
+					"jsonFile" : "directory-zephyr.arch.common-Debug-9b20491ae33fd16d05cb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/arch/common",
+					"targetIndexes" : 
+					[
+						4,
+						35
+					]
+				},
+				{
+					"build" : "zephyr/arch/arch/arm",
+					"childIndexes" : 
+					[
+						5
+					],
+					"jsonFile" : "directory-zephyr.arch.arch.arm-Debug-9aa9fead151678504212.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/arch/arm"
+				},
+				{
+					"build" : "zephyr/arch/arch/arm/core/aarch32",
+					"childIndexes" : 
+					[
+						6,
+						7
+					],
+					"jsonFile" : "directory-zephyr.arch.arch.arm.core.aarch32-Debug-f0f5de97b3642ee308c4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/arch/arm/core/aarch32",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "zephyr/arch/arch/arm/core/aarch32/cortex_m",
+					"jsonFile" : "directory-zephyr.arch.arch.arm.core.aarch32.cortex_m-Debug-158a4af39db21092f287.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/arch/arm/core/aarch32/cortex_m",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "zephyr/arch/arch/arm/core/aarch32/mpu",
+					"jsonFile" : "directory-zephyr.arch.arch.arm.core.aarch32.mpu-Debug-09b0c6c18f60439b6b51.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/arch/arm/core/aarch32/mpu",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "zephyr/lib",
+					"childIndexes" : 
+					[
+						9,
+						12,
+						13,
+						14
+					],
+					"jsonFile" : "directory-zephyr.lib-Debug-d05b11bd47ee8e18f41a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib"
+				},
+				{
+					"build" : "zephyr/lib/libc",
+					"childIndexes" : 
+					[
+						10,
+						11
+					],
+					"jsonFile" : "directory-zephyr.lib.libc-Debug-d43cfe262499c4613a9c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/libc"
+				},
+				{
+					"build" : "zephyr/lib/libc/minimal",
+					"jsonFile" : "directory-zephyr.lib.libc.minimal-Debug-6597308239df3a728037.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/libc/minimal",
+					"targetIndexes" : 
+					[
+						39
+					]
+				},
+				{
+					"build" : "zephyr/lib/libc/common",
+					"jsonFile" : "directory-zephyr.lib.libc.common-Debug-c639e94f9ec8e496db94.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/libc/common",
+					"targetIndexes" : 
+					[
+						38
+					]
+				},
+				{
+					"build" : "zephyr/lib/posix",
+					"jsonFile" : "directory-zephyr.lib.posix-Debug-afbdcc4984a8041fc95f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/posix",
+					"targetIndexes" : 
+					[
+						40
+					]
+				},
+				{
+					"build" : "zephyr/lib/hash",
+					"jsonFile" : "directory-zephyr.lib.hash-Debug-f103c955f1d31841f180.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/hash"
+				},
+				{
+					"build" : "zephyr/lib/os",
+					"jsonFile" : "directory-zephyr.lib.os-Debug-c1a6a62db101ce3b3a34.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os"
+				},
+				{
+					"build" : "zephyr/soc/arm",
+					"childIndexes" : 
+					[
+						16,
+						17
+					],
+					"jsonFile" : "directory-zephyr.soc.arm-Debug-f6a0e6c19bf787802846.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm"
+				},
+				{
+					"build" : "zephyr/soc/arm/common/cortex_m",
+					"jsonFile" : "directory-zephyr.soc.arm.common.cortex_m-Debug-578fd599617f0a4e0165.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 15,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/common/cortex_m",
+					"targetIndexes" : 
+					[
+						57
+					]
+				},
+				{
+					"build" : "zephyr/soc/arm/nordic_nrf",
+					"childIndexes" : 
+					[
+						18,
+						19
+					],
+					"jsonFile" : "directory-zephyr.soc.arm.nordic_nrf-Debug-83c6ffeeb4b15f72bdc2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 15,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/nordic_nrf"
+				},
+				{
+					"build" : "zephyr/soc/arm/nordic_nrf/nrf52",
+					"jsonFile" : "directory-zephyr.soc.arm.nordic_nrf.nrf52-Debug-7e46443b6a37a67b178e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 17,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/nordic_nrf/nrf52",
+					"targetIndexes" : 
+					[
+						58
+					]
+				},
+				{
+					"build" : "zephyr/soc/arm/nordic_nrf/common",
+					"jsonFile" : "directory-zephyr.soc.arm.nordic_nrf.common-Debug-7b9cc5430ed150a27fe7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 17,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/nordic_nrf/common"
+				},
+				{
+					"build" : "zephyr/boards",
+					"childIndexes" : 
+					[
+						21
+					],
+					"jsonFile" : "directory-zephyr.boards-Debug-155ed828203e41c1df09.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/boards"
+				},
+				{
+					"build" : "zephyr/boards/arm/nrf52840dongle_nrf52840",
+					"jsonFile" : "directory-zephyr.boards.arm.nrf52840dongle_nrf52840-Debug-506e922cb7080ed29692.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 20,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/boards/arm/nrf52840dongle_nrf52840",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "zephyr/subsys",
+					"childIndexes" : 
+					[
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						45,
+						46
+					],
+					"jsonFile" : "directory-zephyr.subsys-Debug-725ec0f5728e1bd0f4ca.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys"
+				},
+				{
+					"build" : "zephyr/subsys/canbus",
+					"jsonFile" : "directory-zephyr.subsys.canbus-Debug-02acad1379385310a2a8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/canbus"
+				},
+				{
+					"build" : "zephyr/subsys/debug",
+					"jsonFile" : "directory-zephyr.subsys.debug-Debug-ed55d45557ce804fba94.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/debug"
+				},
+				{
+					"build" : "zephyr/subsys/fb",
+					"jsonFile" : "directory-zephyr.subsys.fb-Debug-33812d6fa6c450c4265e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/fb"
+				},
+				{
+					"build" : "zephyr/subsys/fs",
+					"jsonFile" : "directory-zephyr.subsys.fs-Debug-dbb98852e9e6da38a38e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/fs"
+				},
+				{
+					"build" : "zephyr/subsys/ipc",
+					"jsonFile" : "directory-zephyr.subsys.ipc-Debug-3e9ed99530d89260560b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/ipc"
+				},
+				{
+					"build" : "zephyr/subsys/logging",
+					"childIndexes" : 
+					[
+						29
+					],
+					"jsonFile" : "directory-zephyr.subsys.logging-Debug-035206f2045ee9db9257.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/logging"
+				},
+				{
+					"build" : "zephyr/subsys/logging/backends",
+					"jsonFile" : "directory-zephyr.subsys.logging.backends-Debug-f3cde6a69fac8e2092ab.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 28,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/logging/backends"
+				},
+				{
+					"build" : "zephyr/subsys/mgmt",
+					"jsonFile" : "directory-zephyr.subsys.mgmt-Debug-629cdb7d8c215f6b8557.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/mgmt"
+				},
+				{
+					"build" : "zephyr/subsys/modbus",
+					"jsonFile" : "directory-zephyr.subsys.modbus-Debug-e1b366d1e58cdd609132.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/modbus"
+				},
+				{
+					"build" : "zephyr/subsys/pm",
+					"jsonFile" : "directory-zephyr.subsys.pm-Debug-fedf7e82eb47c6659966.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/pm"
+				},
+				{
+					"build" : "zephyr/subsys/portability",
+					"jsonFile" : "directory-zephyr.subsys.portability-Debug-6d386148724f690f45e9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/portability"
+				},
+				{
+					"build" : "zephyr/subsys/random",
+					"jsonFile" : "directory-zephyr.subsys.random-Debug-3a69310789541d7a984c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/random"
+				},
+				{
+					"build" : "zephyr/subsys/rtio",
+					"jsonFile" : "directory-zephyr.subsys.rtio-Debug-e93a8c48306dc4ffc074.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/rtio"
+				},
+				{
+					"build" : "zephyr/subsys/sd",
+					"jsonFile" : "directory-zephyr.subsys.sd-Debug-185ba7f9f7d7089b57bf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/sd",
+					"targetIndexes" : 
+					[
+						59
+					]
+				},
+				{
+					"build" : "zephyr/subsys/stats",
+					"jsonFile" : "directory-zephyr.subsys.stats-Debug-236f7e31ae37d7e5efae.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/stats"
+				},
+				{
+					"build" : "zephyr/subsys/storage",
+					"jsonFile" : "directory-zephyr.subsys.storage-Debug-72573a20f9ecae58a058.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/storage"
+				},
+				{
+					"build" : "zephyr/subsys/task_wdt",
+					"jsonFile" : "directory-zephyr.subsys.task_wdt-Debug-60c8669890f12fcd768f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/task_wdt"
+				},
+				{
+					"build" : "zephyr/subsys/testsuite",
+					"jsonFile" : "directory-zephyr.subsys.testsuite-Debug-1557fe503c2af8273999.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/testsuite"
+				},
+				{
+					"build" : "zephyr/subsys/tracing",
+					"jsonFile" : "directory-zephyr.subsys.tracing-Debug-52d58559538ffd21c74e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/tracing"
+				},
+				{
+					"build" : "zephyr/subsys/usb",
+					"childIndexes" : 
+					[
+						43
+					],
+					"jsonFile" : "directory-zephyr.subsys.usb-Debug-0c056455e23072eee096.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/usb"
+				},
+				{
+					"build" : "zephyr/subsys/usb/device",
+					"childIndexes" : 
+					[
+						44
+					],
+					"jsonFile" : "directory-zephyr.subsys.usb.device-Debug-8fb4546cee3ca01a655c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 42,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/usb/device"
+				},
+				{
+					"build" : "zephyr/subsys/usb/device/class",
+					"jsonFile" : "directory-zephyr.subsys.usb.device.class-Debug-b5d6dffe980c09bb03da.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 43,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/usb/device/class"
+				},
+				{
+					"build" : "zephyr/subsys/sh1106_gfx",
+					"jsonFile" : "directory-zephyr.subsys.sh1106_gfx-Debug-a4a23d7417f50be83c26.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/sh1106_gfx"
+				},
+				{
+					"build" : "zephyr/subsys/console",
+					"jsonFile" : "directory-zephyr.subsys.console-Debug-5d97f873f419d166392f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/console"
+				},
+				{
+					"build" : "zephyr/drivers",
+					"childIndexes" : 
+					[
+						48,
+						49,
+						50,
+						51,
+						52,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65
+					],
+					"jsonFile" : "directory-zephyr.drivers-Debug-180b630c18ad0373a29b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers"
+				},
+				{
+					"build" : "zephyr/drivers/disk",
+					"jsonFile" : "directory-zephyr.drivers.disk-Debug-9bcb99cc8d0e79bd1b8f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/disk"
+				},
+				{
+					"build" : "zephyr/drivers/interrupt_controller",
+					"jsonFile" : "directory-zephyr.drivers.interrupt_controller-Debug-e31dfd00edaca731132a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/interrupt_controller",
+					"targetIndexes" : 
+					[
+						24
+					]
+				},
+				{
+					"build" : "zephyr/drivers/misc",
+					"jsonFile" : "directory-zephyr.drivers.misc-Debug-9ffaab0efcb41f6dda88.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/misc"
+				},
+				{
+					"build" : "zephyr/drivers/pcie",
+					"jsonFile" : "directory-zephyr.drivers.pcie-Debug-fa5c5a03841ba7018860.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/pcie"
+				},
+				{
+					"build" : "zephyr/drivers/usb",
+					"childIndexes" : 
+					[
+						53
+					],
+					"jsonFile" : "directory-zephyr.drivers.usb-Debug-4fdccc42fd0ac7496f32.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/usb"
+				},
+				{
+					"build" : "zephyr/drivers/usb/device",
+					"jsonFile" : "directory-zephyr.drivers.usb.device-Debug-a5aebed9282cb2935201.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 52,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/usb/device",
+					"targetIndexes" : 
+					[
+						30
+					]
+				},
+				{
+					"build" : "zephyr/drivers/usb_c",
+					"jsonFile" : "directory-zephyr.drivers.usb_c-Debug-92567e8e0e8afd3c0ec3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/usb_c"
+				},
+				{
+					"build" : "zephyr/drivers/clock_control",
+					"jsonFile" : "directory-zephyr.drivers.clock_control-Debug-d7f95698c840d9099ac3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/clock_control",
+					"targetIndexes" : 
+					[
+						18
+					]
+				},
+				{
+					"build" : "zephyr/drivers/console",
+					"jsonFile" : "directory-zephyr.drivers.console-Debug-e95df3ae918a6aa7ae39.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/console",
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"build" : "zephyr/drivers/display",
+					"jsonFile" : "directory-zephyr.drivers.display-Debug-0232e9ca74f937753508.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/display",
+					"targetIndexes" : 
+					[
+						20
+					]
+				},
+				{
+					"build" : "zephyr/drivers/gpio",
+					"jsonFile" : "directory-zephyr.drivers.gpio-Debug-b722848e6b1cd21978bc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/gpio",
+					"targetIndexes" : 
+					[
+						21
+					]
+				},
+				{
+					"build" : "zephyr/drivers/hwinfo",
+					"jsonFile" : "directory-zephyr.drivers.hwinfo-Debug-5dde320310ec0416dc19.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/hwinfo",
+					"targetIndexes" : 
+					[
+						22
+					]
+				},
+				{
+					"build" : "zephyr/drivers/i2c",
+					"jsonFile" : "directory-zephyr.drivers.i2c-Debug-de011757ddbcb5ed9e57.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/i2c",
+					"targetIndexes" : 
+					[
+						23
+					]
+				},
+				{
+					"build" : "zephyr/drivers/pinctrl",
+					"jsonFile" : "directory-zephyr.drivers.pinctrl-Debug-983f73b5bcba0739081b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/pinctrl",
+					"targetIndexes" : 
+					[
+						25
+					]
+				},
+				{
+					"build" : "zephyr/drivers/sdhc",
+					"jsonFile" : "directory-zephyr.drivers.sdhc-Debug-16c3b61a367891a754f1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/sdhc",
+					"targetIndexes" : 
+					[
+						26
+					]
+				},
+				{
+					"build" : "zephyr/drivers/serial",
+					"jsonFile" : "directory-zephyr.drivers.serial-Debug-406e3e7adb7bc8e02fe2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/serial",
+					"targetIndexes" : 
+					[
+						27
+					]
+				},
+				{
+					"build" : "zephyr/drivers/spi",
+					"jsonFile" : "directory-zephyr.drivers.spi-Debug-a62f62970160e2bf08a0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/spi",
+					"targetIndexes" : 
+					[
+						28
+					]
+				},
+				{
+					"build" : "zephyr/drivers/timer",
+					"jsonFile" : "directory-zephyr.drivers.timer-Debug-1b2aa0e38a24c472c724.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 47,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/drivers/timer",
+					"targetIndexes" : 
+					[
+						29
+					]
+				},
+				{
+					"build" : "modules/acpica",
+					"jsonFile" : "directory-modules.acpica-Debug-43e5fd3335d33c6fe7c1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/acpica"
+				},
+				{
+					"build" : "modules/canopennode",
+					"jsonFile" : "directory-modules.canopennode-Debug-26d67e48ce9a32a9ab9d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/canopennode"
+				},
+				{
+					"build" : "modules/chre",
+					"jsonFile" : "directory-modules.chre-Debug-c0b3a41627a4a5fa95dc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/lib/chre/platform/zephyr"
+				},
+				{
+					"build" : "modules/cmsis",
+					"childIndexes" : 
+					[
+						70
+					],
+					"jsonFile" : "directory-modules.cmsis-Debug-775da1b51bf0a3c3445c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/cmsis"
+				},
+				{
+					"build" : "modules/cmsis/CMSIS",
+					"childIndexes" : 
+					[
+						71
+					],
+					"jsonFile" : "directory-modules.cmsis.CMSIS-Debug-41e8ffa4d5ae8cec762d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 69,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/cmsis/CMSIS"
+				},
+				{
+					"build" : "modules/cmsis/CMSIS/Core",
+					"jsonFile" : "directory-modules.cmsis.CMSIS.Core-Debug-41555c34e4c74afb81ab.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 70,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/cmsis/CMSIS/Core"
+				},
+				{
+					"build" : "modules/fatfs",
+					"jsonFile" : "directory-modules.fatfs-Debug-d2ce51342b7ec64b7baa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/fatfs"
+				},
+				{
+					"build" : "modules/altera",
+					"jsonFile" : "directory-modules.altera-Debug-1494a92adcfb69c35f23.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/altera"
+				},
+				{
+					"build" : "modules/atmel",
+					"childIndexes" : 
+					[
+						75
+					],
+					"jsonFile" : "directory-modules.atmel-Debug-43ee3309af286e638c8a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/atmel"
+				},
+				{
+					"build" : "modules/atmel/asf",
+					"childIndexes" : 
+					[
+						76
+					],
+					"jsonFile" : "directory-modules.atmel.asf-Debug-a53898eb622c9464f3c2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 74,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/atmel/asf"
+				},
+				{
+					"build" : "modules/atmel/asf/common",
+					"childIndexes" : 
+					[
+						77
+					],
+					"jsonFile" : "directory-modules.atmel.asf.common-Debug-e6b32ddb651af289ff16.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 75,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/atmel/asf/common"
+				},
+				{
+					"build" : "modules/atmel/asf/common/components",
+					"childIndexes" : 
+					[
+						78
+					],
+					"jsonFile" : "directory-modules.atmel.asf.common.components-Debug-432f6fd0e9b73af3ac66.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 76,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/atmel/asf/common/components"
+				},
+				{
+					"build" : "modules/atmel/asf/common/components/wifi",
+					"jsonFile" : "directory-modules.atmel.asf.common.components.wifi-Debug-549e12398e590904ee6d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 77,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/atmel/asf/common/components/wifi"
+				},
+				{
+					"build" : "modules/hal_espressif",
+					"jsonFile" : "directory-modules.hal_espressif-Debug-58d556cf0ff4e0d468a9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/espressif/zephyr"
+				},
+				{
+					"build" : "modules/hal_ethos_u",
+					"jsonFile" : "directory-modules.hal_ethos_u-Debug-97aab075b5655683b956.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/hal_ethos_u"
+				},
+				{
+					"build" : "modules/hal_gigadevice",
+					"jsonFile" : "directory-modules.hal_gigadevice-Debug-c136eb4aabcda5cfd5e3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/hal_gigadevice"
+				},
+				{
+					"build" : "modules/hal_infineon",
+					"jsonFile" : "directory-modules.hal_infineon-Debug-a40a9e7522f07037bb67.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/hal_infineon"
+				},
+				{
+					"build" : "modules/microchip",
+					"jsonFile" : "directory-modules.microchip-Debug-f4f6f02d62db58b403a3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/microchip"
+				},
+				{
+					"build" : "modules/hal_nordic",
+					"childIndexes" : 
+					[
+						85
+					],
+					"jsonFile" : "directory-modules.hal_nordic-Debug-2e5c84e9c31b9657623d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/hal_nordic"
+				},
+				{
+					"build" : "modules/hal_nordic/nrfx",
+					"jsonFile" : "directory-modules.hal_nordic.nrfx-Debug-cbe3914b82ef24f7290f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 84,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/hal_nordic/nrfx",
+					"targetIndexes" : 
+					[
+						45
+					]
+				},
+				{
+					"build" : "modules/nuvoton",
+					"jsonFile" : "directory-modules.nuvoton-Debug-a067ae7210933f6ef1bd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/nuvoton"
+				},
+				{
+					"build" : "modules/hal_nxp",
+					"jsonFile" : "directory-modules.hal_nxp-Debug-bef7539f411586b5eb14.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/hal_nxp"
+				},
+				{
+					"build" : "modules/openisa",
+					"jsonFile" : "directory-modules.openisa-Debug-3621bf345d5597a4c667.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/openisa"
+				},
+				{
+					"build" : "modules/quicklogic",
+					"jsonFile" : "directory-modules.quicklogic-Debug-8e5e72c7d62b3a52baa1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/quicklogic"
+				},
+				{
+					"build" : "modules/hal_renesas",
+					"jsonFile" : "directory-modules.hal_renesas-Debug-6989a01616160d37ed58.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/renesas"
+				},
+				{
+					"build" : "modules/hal_rpi_pico",
+					"jsonFile" : "directory-modules.hal_rpi_pico-Debug-1163dcd884bcc2f24107.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/hal_rpi_pico"
+				},
+				{
+					"build" : "modules/silabs",
+					"jsonFile" : "directory-modules.silabs-Debug-01564d5baaa6577e6913.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/silabs"
+				},
+				{
+					"build" : "modules/st",
+					"jsonFile" : "directory-modules.st-Debug-5e502dde7e107b582e15.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/st"
+				},
+				{
+					"build" : "modules/stm32",
+					"jsonFile" : "directory-modules.stm32-Debug-1f037b735c052fad4d26.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/stm32"
+				},
+				{
+					"build" : "modules/hal_telink",
+					"jsonFile" : "directory-modules.hal_telink-Debug-a326cf2139b1b5f41ebd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/telink"
+				},
+				{
+					"build" : "modules/ti",
+					"childIndexes" : 
+					[
+						97
+					],
+					"jsonFile" : "directory-modules.ti-Debug-a0c1fb6c5029e707bfca.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/ti"
+				},
+				{
+					"build" : "modules/ti/simplelink",
+					"childIndexes" : 
+					[
+						98
+					],
+					"jsonFile" : "directory-modules.ti.simplelink-Debug-539d10dc70af62ff96fd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 96,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/ti/simplelink"
+				},
+				{
+					"build" : "modules/ti/simplelink/source/ti/devices",
+					"jsonFile" : "directory-modules.ti.simplelink.source.ti.devices-Debug-c845f3b917cb9a81ae38.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 97,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/ti/simplelink/source/ti/devices"
+				},
+				{
+					"build" : "modules/hal_wurthelektronik",
+					"jsonFile" : "directory-modules.hal_wurthelektronik-Debug-0c1f80755aba64140910.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/wurthelektronik"
+				},
+				{
+					"build" : "modules/xtensa",
+					"jsonFile" : "directory-modules.xtensa-Debug-b14018460522df29f88d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/xtensa"
+				},
+				{
+					"build" : "modules/libmetal",
+					"jsonFile" : "directory-modules.libmetal-Debug-55b6c9c88004f532a965.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/hal/libmetal"
+				},
+				{
+					"build" : "modules/liblc3",
+					"jsonFile" : "directory-modules.liblc3-Debug-48f6d851a788a0fde547.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/liblc3"
+				},
+				{
+					"build" : "modules/littlefs",
+					"jsonFile" : "directory-modules.littlefs-Debug-218c3b3101440032a470.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/littlefs"
+				},
+				{
+					"build" : "modules/loramac-node",
+					"jsonFile" : "directory-modules.loramac-node-Debug-6c984d8cf29c5bbe74c9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/loramac-node"
+				},
+				{
+					"build" : "modules/lvgl",
+					"jsonFile" : "directory-modules.lvgl-Debug-4c5cf8ecdaf52c189bea.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/lib/gui/lvgl/zephyr"
+				},
+				{
+					"build" : "modules/lz4",
+					"jsonFile" : "directory-modules.lz4-Debug-04e44b3e6ed80c0e8f1b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/lz4"
+				},
+				{
+					"build" : "modules/mbedtls",
+					"jsonFile" : "directory-modules.mbedtls-Debug-e7953621f1967cd925d2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/mbedtls"
+				},
+				{
+					"build" : "modules/mcuboot",
+					"jsonFile" : "directory-modules.mcuboot-Debug-9f1136034cbe682e494e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/bootloader/mcuboot/boot/bootutil/zephyr"
+				},
+				{
+					"build" : "modules/mipi-sys-t",
+					"jsonFile" : "directory-modules.mipi-sys-t-Debug-80b679118ef9675820eb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/debug/mipi-sys-t"
+				},
+				{
+					"build" : "modules/nanopb",
+					"jsonFile" : "directory-modules.nanopb-Debug-a51866eaec6c94253192.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/nanopb"
+				},
+				{
+					"build" : "modules/nrf_hw_models",
+					"jsonFile" : "directory-modules.nrf_hw_models-Debug-66a676615e6db6b9d7fa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/bsim_hw_models/nrf_hw_models"
+				},
+				{
+					"build" : "modules/open-amp",
+					"jsonFile" : "directory-modules.open-amp-Debug-238179aced2beb908ae6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/lib/open-amp"
+				},
+				{
+					"build" : "modules/openthread",
+					"jsonFile" : "directory-modules.openthread-Debug-d0113124533673d04d5f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/openthread"
+				},
+				{
+					"build" : "modules/picolibc",
+					"jsonFile" : "directory-modules.picolibc-Debug-4cae117e96c8f4efa442.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/lib/picolibc"
+				},
+				{
+					"build" : "modules/segger",
+					"jsonFile" : "directory-modules.segger-Debug-54497cabb78ecb62a8c7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/segger"
+				},
+				{
+					"build" : "modules/sof",
+					"jsonFile" : "directory-modules.sof-Debug-b81a651ebb453e88bbb1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/audio/sof/zephyr"
+				},
+				{
+					"build" : "modules/tflite-micro",
+					"jsonFile" : "directory-modules.tflite-micro-Debug-7b3e0f23f92c5ea95ca8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/tflite-micro"
+				},
+				{
+					"build" : "modules/tinycrypt",
+					"jsonFile" : "directory-modules.tinycrypt-Debug-d9787f156f9b7db5a8a8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/crypto/tinycrypt"
+				},
+				{
+					"build" : "modules/TraceRecorder",
+					"jsonFile" : "directory-modules.TraceRecorder-Debug-f1662f0b3d3178c0f168.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/TraceRecorder"
+				},
+				{
+					"build" : "modules/trusted-firmware-m",
+					"jsonFile" : "directory-modules.trusted-firmware-m-Debug-3783e259d4b1c82b7178.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/trusted-firmware-m"
+				},
+				{
+					"build" : "modules/trusted-firmware-a",
+					"jsonFile" : "directory-modules.trusted-firmware-a-Debug-3ac37a203b4cf9c1160e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/trusted-firmware-a"
+				},
+				{
+					"build" : "modules/uoscore-uedhoc",
+					"jsonFile" : "directory-modules.uoscore-uedhoc-Debug-10cd4810f049040ce47c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/uoscore-uedhoc"
+				},
+				{
+					"build" : "modules/zcbor",
+					"jsonFile" : "directory-modules.zcbor-Debug-664f1f0fb389b86576cb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/zcbor"
+				},
+				{
+					"build" : "modules/zscilib",
+					"jsonFile" : "directory-modules.zscilib-Debug-efaa153eaeaf25bcd4cb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/modules/lib/zscilib"
+				},
+				{
+					"build" : "modules/thrift",
+					"jsonFile" : "directory-modules.thrift-Debug-8af5c1e0ca9d6e7e2c1d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/thrift"
+				},
+				{
+					"build" : "zephyr/kernel",
+					"jsonFile" : "directory-zephyr.kernel-Debug-983d897e35e1b653326b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/kernel",
+					"targetIndexes" : 
+					[
+						36
+					]
+				},
+				{
+					"build" : "zephyr/cmake/flash",
+					"jsonFile" : "directory-zephyr.cmake.flash-Debug-2af832e08ccf70b8cf1e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/cmake/flash",
+					"targetIndexes" : 
+					[
+						6,
+						14,
+						15,
+						31
+					]
+				},
+				{
+					"build" : "zephyr/cmake/usage",
+					"jsonFile" : "directory-zephyr.cmake.usage-Debug-5a39307d553449a2f3ff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/cmake/usage",
+					"targetIndexes" : 
+					[
+						61
+					]
+				},
+				{
+					"build" : "zephyr/cmake/reports",
+					"jsonFile" : "directory-zephyr.cmake.reports-Debug-f6c9ac68d035027ce600.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/cmake/reports",
+					"targetIndexes" : 
+					[
+						32,
+						50,
+						51
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "z_nrf52_dongle",
+					"targetIndexes" : 
+					[
+						0,
+						5,
+						7,
+						8,
+						10,
+						11,
+						12,
+						13,
+						16,
+						33,
+						34,
+						41,
+						44,
+						49,
+						53,
+						54,
+						55,
+						56,
+						67
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						97,
+						98,
+						99,
+						100,
+						101,
+						102,
+						103,
+						104,
+						105,
+						106,
+						107,
+						108,
+						109,
+						110,
+						111,
+						112,
+						113,
+						115,
+						116,
+						117,
+						118,
+						119,
+						120,
+						121,
+						122,
+						123,
+						124,
+						125,
+						126,
+						127,
+						128,
+						129
+					],
+					"name" : "Zephyr-Kernel",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						6,
+						9,
+						14,
+						15,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						42,
+						43,
+						45,
+						46,
+						47,
+						48,
+						50,
+						51,
+						52,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						114
+					],
+					"name" : "Picolibc",
+					"parentIndex" : 1
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "app::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-app-Debug-18d1c67e4f23f84f9084.json",
+					"name" : "app",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "arch__arm__core__aarch32::@131175bec2aca1783c40",
+					"jsonFile" : "target-arch__arm__core__aarch32-Debug-c023fb0be0b2fbf6223d.json",
+					"name" : "arch__arm__core__aarch32",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "arch__arm__core__aarch32__cortex_m::@046adc49fa773f8f21c3",
+					"jsonFile" : "target-arch__arm__core__aarch32__cortex_m-Debug-671512966aab67c34f72.json",
+					"name" : "arch__arm__core__aarch32__cortex_m",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "arch__arm__core__aarch32__mpu::@a7e55ccc85ddc46357bd",
+					"jsonFile" : "target-arch__arm__core__aarch32__mpu-Debug-22443e6a331fea02af54.json",
+					"name" : "arch__arm__core__aarch32__mpu",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "arch__common::@0b0b0cfd7a24e8ecfe11",
+					"jsonFile" : "target-arch__common-Debug-3d0cf8bbd46f11d1ddb2.json",
+					"name" : "arch__common",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "asm::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-asm-Debug-9e27c9e2040c5031e48a.json",
+					"name" : "asm",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 127,
+					"id" : "attach::@a247f7a48b0aa9995de3",
+					"jsonFile" : "target-attach-Debug-e619eb76f661a4b18877.json",
+					"name" : "attach",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bintools::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bintools-Debug-127fa3522d6cf4242d69.json",
+					"name" : "bintools",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "boards::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-boards-Debug-aa5f8dfa397b336f6220.json",
+					"name" : "boards",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "boards__arm__nrf52840dongle_nrf52840::@79543f901adc678daefe",
+					"jsonFile" : "target-boards__arm__nrf52840dongle_nrf52840-Debug-48b0f42bb69209a293fe.json",
+					"name" : "boards__arm__nrf52840dongle_nrf52840",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "code_data_relocation_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-code_data_relocation_target-Debug-bbbfbf645a71f959e92f.json",
+					"name" : "code_data_relocation_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "compiler::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-compiler-Debug-d4035ad4f9a2feb52436.json",
+					"name" : "compiler",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "compiler-cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-compiler-cpp-Debug-2e88f460f4c81375edaf.json",
+					"name" : "compiler-cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "config-twister::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-config-twister-Debug-9cd90c9399e22cd6d77e.json",
+					"name" : "config-twister",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 127,
+					"id" : "debug::@a247f7a48b0aa9995de3",
+					"jsonFile" : "target-debug-Debug-2b13937d220b1ba189c7.json",
+					"name" : "debug",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 127,
+					"id" : "debugserver::@a247f7a48b0aa9995de3",
+					"jsonFile" : "target-debugserver-Debug-06f62e225978377d9878.json",
+					"name" : "debugserver",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "devicetree_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-devicetree_target-Debug-c4111cec14b8b17338aa.json",
+					"name" : "devicetree_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "driver_validation_h_target::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-driver_validation_h_target-Debug-4f55636ef0129bd56c3f.json",
+					"name" : "driver_validation_h_target",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 55,
+					"id" : "drivers__clock_control::@03043f5596ae6e5fcffe",
+					"jsonFile" : "target-drivers__clock_control-Debug-e3e1744b9b9a23c8df77.json",
+					"name" : "drivers__clock_control",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 56,
+					"id" : "drivers__console::@39939278fdcee8c62e52",
+					"jsonFile" : "target-drivers__console-Debug-06e9c78a215d702e719b.json",
+					"name" : "drivers__console",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 57,
+					"id" : "drivers__display::@ecdc190fb8cc4f036062",
+					"jsonFile" : "target-drivers__display-Debug-f724154777135a28f487.json",
+					"name" : "drivers__display",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 58,
+					"id" : "drivers__gpio::@f8009383a952b2e6d5b0",
+					"jsonFile" : "target-drivers__gpio-Debug-d7bc0fa30a126960bb31.json",
+					"name" : "drivers__gpio",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 59,
+					"id" : "drivers__hwinfo::@d90cd5bb46acdd6e1da8",
+					"jsonFile" : "target-drivers__hwinfo-Debug-b56cc5da2592ab237379.json",
+					"name" : "drivers__hwinfo",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 60,
+					"id" : "drivers__i2c::@9c05a3cf4c1cb78586d0",
+					"jsonFile" : "target-drivers__i2c-Debug-0f39c859e1a29b6d0c9f.json",
+					"name" : "drivers__i2c",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 49,
+					"id" : "drivers__interrupt_controller::@4ccdf64818bf568667f1",
+					"jsonFile" : "target-drivers__interrupt_controller-Debug-4481cc05c6fce174a525.json",
+					"name" : "drivers__interrupt_controller",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 61,
+					"id" : "drivers__pinctrl::@762029cc579c68d25071",
+					"jsonFile" : "target-drivers__pinctrl-Debug-a31ab6a08d2d5aadfa1e.json",
+					"name" : "drivers__pinctrl",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 62,
+					"id" : "drivers__sdhc::@0ed82ff86bf64f43fc5f",
+					"jsonFile" : "target-drivers__sdhc-Debug-c56606c342ea92327ae2.json",
+					"name" : "drivers__sdhc",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 63,
+					"id" : "drivers__serial::@18e421c5ba74f72aaba5",
+					"jsonFile" : "target-drivers__serial-Debug-fa94c99dc052014d3d94.json",
+					"name" : "drivers__serial",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 64,
+					"id" : "drivers__spi::@6089661dbc642732d5e9",
+					"jsonFile" : "target-drivers__spi-Debug-8650843bfe774c705063.json",
+					"name" : "drivers__spi",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 65,
+					"id" : "drivers__timer::@d6d9b8697bc2d7d4441f",
+					"jsonFile" : "target-drivers__timer-Debug-4f8305d344591c060d57.json",
+					"name" : "drivers__timer",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 53,
+					"id" : "drivers__usb__device::@b413562622df8e4010d9",
+					"jsonFile" : "target-drivers__usb__device-Debug-3e4e170e3a6e94e04f26.json",
+					"name" : "drivers__usb__device",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 127,
+					"id" : "flash::@a247f7a48b0aa9995de3",
+					"jsonFile" : "target-flash-Debug-56c36cffa0c3c03a144a.json",
+					"name" : "flash",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 129,
+					"id" : "footprint::@ca7f08113abe6c9ed8d3",
+					"jsonFile" : "target-footprint-Debug-1b70aeae76f99d5d8bef.json",
+					"name" : "footprint",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "guiconfig::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-guiconfig-Debug-f7137bc370911a58bd66.json",
+					"name" : "guiconfig",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hardenconfig::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hardenconfig-Debug-c49322ebe3e4bf67b23f.json",
+					"name" : "hardenconfig",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "isr_tables::@0b0b0cfd7a24e8ecfe11",
+					"jsonFile" : "target-isr_tables-Debug-0fa15546d9658fabb3b0.json",
+					"name" : "isr_tables",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 126,
+					"id" : "kernel::@84e783bf488a9f887759",
+					"jsonFile" : "target-kernel-Debug-4a66c807c839c00bce79.json",
+					"name" : "kernel",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "kobj_types_h_target::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-kobj_types_h_target-Debug-2b0dc817e1bce39a4dc6.json",
+					"name" : "kobj_types_h_target",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "lib__libc__common::@4887e96c8898694998ea",
+					"jsonFile" : "target-lib__libc__common-Debug-1851c28b07a37cbe66c7.json",
+					"name" : "lib__libc__common",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "lib__libc__minimal::@3b54d4ee2bcd1c296168",
+					"jsonFile" : "target-lib__libc__minimal-Debug-22011ba72187fcd3cd7d.json",
+					"name" : "lib__libc__minimal",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "lib__posix::@8d3cddd8f0156878d5c8",
+					"jsonFile" : "target-lib__posix-Debug-694276e520fff489178e.json",
+					"name" : "lib__posix",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linker::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linker-Debug-37c6b6317bdba571b35c.json",
+					"name" : "linker",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "linker_zephyr_final_script_target::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-linker_zephyr_final_script_target-Debug-c01ee1add40a42e08c28.json",
+					"name" : "linker_zephyr_final_script_target",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "linker_zephyr_prebuilt_script_target::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-linker_zephyr_prebuilt_script_target-Debug-42a88081f2f3a8977877.json",
+					"name" : "linker_zephyr_prebuilt_script_target",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "menuconfig::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-menuconfig-Debug-b15a2f9eb64682fb50ed.json",
+					"name" : "menuconfig",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 85,
+					"id" : "modules__hal_nordic__nrfx::@f7f3a5ded70f6119b353",
+					"jsonFile" : "target-modules__hal_nordic__nrfx-Debug-86d9bdd73f787b71829e.json",
+					"name" : "modules__hal_nordic__nrfx",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "offsets::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-offsets-Debug-1fef467ab3de002d4c83.json",
+					"name" : "offsets",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "offsets_h::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-offsets_h-Debug-eb39ffdce4650ac8e02f.json",
+					"name" : "offsets_h",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "parse_syscalls_target::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-parse_syscalls_target-Debug-fb2868fb0448a7edc01e.json",
+					"name" : "parse_syscalls_target",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pristine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pristine-Debug-b69354c1956a45ecb377.json",
+					"name" : "pristine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 129,
+					"id" : "ram_report::@ca7f08113abe6c9ed8d3",
+					"jsonFile" : "target-ram_report-Debug-3c605cd03eb5d33c8099.json",
+					"name" : "ram_report",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 129,
+					"id" : "rom_report::@ca7f08113abe6c9ed8d3",
+					"jsonFile" : "target-rom_report-Debug-fb7a4629aead72b03e7d.json",
+					"name" : "rom_report",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "run::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-run-Debug-4c0fd75a7370859ce1bc.json",
+					"name" : "run",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "runners_yaml_props_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-runners_yaml_props_target-Debug-98d5e2ac8912623b8f3f.json",
+					"name" : "runners_yaml_props_target",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "shields::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-shields-Debug-aca642e1a1aece2af996.json",
+					"name" : "shields",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snippets::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snippets-Debug-f1d55473c3b396fe2e46.json",
+					"name" : "snippets",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "snippets_scope::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-snippets_scope-Debug-cde181a247747bbe2fd7.json",
+					"name" : "snippets_scope",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "soc__arm__common__cortex_m::@31fa8b46182c464e0cd2",
+					"jsonFile" : "target-soc__arm__common__cortex_m-Debug-3cfcbfbbb1532184bfae.json",
+					"name" : "soc__arm__common__cortex_m",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "soc__arm__nordic_nrf__nrf52::@4563f0f8cf1036a1c0d5",
+					"jsonFile" : "target-soc__arm__nordic_nrf__nrf52-Debug-aacfa575e311f50f88d6.json",
+					"name" : "soc__arm__nordic_nrf__nrf52",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 36,
+					"id" : "subsys__sd::@e79b7423029b2cf2652c",
+					"jsonFile" : "target-subsys__sd-Debug-0feedc474c91b6032c6f.json",
+					"name" : "subsys__sd",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "syscall_list_h_target::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-syscall_list_h_target-Debug-230785fbc651d4cc0f4e.json",
+					"name" : "syscall_list_h_target",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 128,
+					"id" : "usage::@94b61706647a07df483a",
+					"jsonFile" : "target-usage-Debug-f935f0f605c745a1aca2.json",
+					"name" : "usage",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "version_h::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-version_h-Debug-90e98f27055846a94129.json",
+					"name" : "version_h",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "zephyr::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-zephyr-Debug-7b4ce151c8fad2ba937e.json",
+					"name" : "zephyr",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "zephyr_final::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-zephyr_final-Debug-4097ab9df91ff1dde14a.json",
+					"name" : "zephyr_final",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "zephyr_generated_headers::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-zephyr_generated_headers-Debug-633025dd740445aeeeb0.json",
+					"name" : "zephyr_generated_headers",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "zephyr_pre0::@d36e55b69c1b90fb26b2",
+					"jsonFile" : "target-zephyr_pre0-Debug-973c640021964ee55a1d.json",
+					"name" : "zephyr_pre0",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zephyr_property_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zephyr_property_target-Debug-5d3bc6aae5904f722974.json",
+					"name" : "zephyr_property_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build",
+		"source" : "/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

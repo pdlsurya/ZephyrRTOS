@@ -1,0 +1,11 @@
+# Frame buffer configuration options
+
+# Copyright (c) 2023 Surya Poudel
+# SPDX-License-Identifier: Apache-2.0
+
+config SH1106_GFX
+	bool "SH1106 Graphics Library"
+	default n
+	depends on OLED_SH1106
+	help
+	 Enable SH1106 Graphics Library

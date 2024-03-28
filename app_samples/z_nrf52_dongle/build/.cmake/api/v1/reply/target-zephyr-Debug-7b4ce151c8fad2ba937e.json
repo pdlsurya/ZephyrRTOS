@@ -1,0 +1,1413 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "zephyr/libzephyr.a"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"zephyr_library_named",
+			"add_dependencies",
+			"target_link_libraries",
+			"target_include_directories",
+			"zephyr_library_include_directories",
+			"target_sources",
+			"zephyr_sources",
+			"zephyr_sources_ifdef",
+			"include",
+			"zephyr_library_sources",
+			"zephyr_library_sources_ifdef"
+		],
+		"files" : 
+		[
+			"/Users/pdlsurya/ZephyrSDK/zephyr/cmake/modules/extensions.cmake",
+			"/Users/pdlsurya/ZephyrSDK/zephyr/CMakeLists.txt",
+			"/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/CMakeLists.txt",
+			"/Users/pdlsurya/ZephyrSDK/zephyr/misc/generated/CMakeLists.txt",
+			"/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/nordic_nrf/common/CMakeLists.txt",
+			"/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/nordic_nrf/CMakeLists.txt",
+			"/Users/pdlsurya/ZephyrSDK/zephyr/subsys/pm/CMakeLists.txt",
+			"/Users/pdlsurya/ZephyrSDK/zephyr/subsys/tracing/CMakeLists.txt",
+			"/Users/pdlsurya/ZephyrSDK/zephyr/subsys/usb/device/CMakeLists.txt",
+			"/Users/pdlsurya/ZephyrSDK/zephyr/subsys/usb/device/class/CMakeLists.txt",
+			"/Users/pdlsurya/ZephyrSDK/zephyr/subsys/sh1106_gfx/CMakeLists.txt",
+			"/Users/pdlsurya/ZephyrSDK/zephyr/subsys/console/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 110,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 424,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 846,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 904,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 428,
+				"parent" : 1
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 71,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 485,
+				"parent" : 7
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 9,
+				"parent" : 6
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 25,
+				"parent" : 6
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1696,
+				"parent" : 23
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 24
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 26,
+				"parent" : 6
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1696,
+				"parent" : 26
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 27
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 27,
+				"parent" : 6
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1696,
+				"parent" : 29
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 30
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 30
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 30
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 30
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 30
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 36,
+				"parent" : 6
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1696,
+				"parent" : 36
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 37
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 40,
+				"parent" : 6
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 39
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 45,
+				"parent" : 6
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1696,
+				"parent" : 41
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 42
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 48,
+				"parent" : 6
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 44
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 602,
+				"parent" : 0
+			},
+			{
+				"file" : 3,
+				"parent" : 46
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 18,
+				"parent" : 47
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 48
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 11,
+				"file" : 4,
+				"line" : 4,
+				"parent" : 50
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 1690,
+				"parent" : 51
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 481,
+				"parent" : 52
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 6,
+				"parent" : 54
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 55
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 55
+			},
+			{
+				"file" : 6
+			},
+			{
+				"command" : 7,
+				"file" : 6,
+				"line" : 4,
+				"parent" : 58
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 59
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 59
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 59
+			},
+			{
+				"file" : 7
+			},
+			{
+				"command" : 7,
+				"file" : 7,
+				"line" : 45,
+				"parent" : 63
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 64
+			},
+			{
+				"file" : 8
+			},
+			{
+				"command" : 7,
+				"file" : 8,
+				"line" : 6,
+				"parent" : 66
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 67
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 67
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 67
+			},
+			{
+				"file" : 9
+			},
+			{
+				"command" : 8,
+				"file" : 9,
+				"line" : 3,
+				"parent" : 71
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1696,
+				"parent" : 72
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 73
+			},
+			{
+				"command" : 8,
+				"file" : 8,
+				"line" : 19,
+				"parent" : 66
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1696,
+				"parent" : 75
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 76
+			},
+			{
+				"file" : 10
+			},
+			{
+				"command" : 8,
+				"file" : 10,
+				"line" : 3,
+				"parent" : 78
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1696,
+				"parent" : 79
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 80
+			},
+			{
+				"file" : 11
+			},
+			{
+				"command" : 8,
+				"file" : 11,
+				"line" : 4,
+				"parent" : 82
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1696,
+				"parent" : 83
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 84
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-strict-aliasing"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Os"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-imacros"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/include/generated/autoconf.h"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-ffreestanding"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-common"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-gdwarf-4"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mcpu=cortex-m4"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mthumb"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mabi=aapcs"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mfp16-format=ieee"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "--sysroot=/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/arm-zephyr-eabi"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-imacros"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/toolchain/zephyr_stdint.h"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wformat"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wformat-security"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wno-format-zero-length"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wno-pointer-sign"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wpointer-arith"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wexpansion-to-defined"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wno-unused-but-set-variable"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Werror=implicit-int"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-pic"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-pie"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-asynchronous-unwind-tables"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-reorder-functions"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "--param=min-pagesize=0"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-defer-pop"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fmacro-prefix-map=/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle=CMAKE_SOURCE_DIR"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fmacro-prefix-map=/Users/pdlsurya/ZephyrSDK/zephyr=ZEPHYR_BASE"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fmacro-prefix-map=/Users/pdlsurya/ZephyrSDK=WEST_TOPDIR"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-std=c99"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-nostdinc"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "KERNEL"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "NRF52840_XXAA"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "__PROGRAM_START"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "__ZEPHYR__=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 8,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/kernel/include"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/arch/arm/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/include/generated"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/nordic_nrf/nrf52"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/nordic_nrf/common/."
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/usb/device"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/../../zephyr/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/.."
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/source/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/source/include/platform"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/source/compiler"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/generate/zephyr"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/source/tools/acpiexec"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/source/tools/acpidump"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/hal/cmsis/CMSIS/Core/Include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/hal/nordic/nrfx"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/hal/nordic/nrfx/drivers/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/hal/nordic/nrfx/mdk"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/hal_nordic/nrfx/."
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/libc/minimal/include"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Os"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-imacros"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/include/generated/autoconf.h"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-ffreestanding"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-common"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-gdwarf-4"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mcpu=cortex-m4"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mthumb"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mabi=aapcs"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mfp16-format=ieee"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "--sysroot=/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/arm-zephyr-eabi"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-xassembler-with-cpp"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-imacros"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/toolchain/zephyr_stdint.h"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-D_ASMLANGUAGE"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wno-unused-but-set-variable"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-asynchronous-unwind-tables"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-reorder-functions"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "--param=min-pagesize=0"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-defer-pop"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fmacro-prefix-map=/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle=CMAKE_SOURCE_DIR"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fmacro-prefix-map=/Users/pdlsurya/ZephyrSDK/zephyr=ZEPHYR_BASE"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fmacro-prefix-map=/Users/pdlsurya/ZephyrSDK=WEST_TOPDIR"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-nostdinc"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "KERNEL"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "NRF52840_XXAA"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "__PROGRAM_START"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "__ZEPHYR__=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 8,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/kernel/include"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/arch/arm/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/include/generated"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/nordic_nrf/nrf52"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/nordic_nrf/common/."
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/usb/device"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/../../zephyr/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/.."
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/source/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/source/include/platform"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/source/compiler"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/generate/zephyr"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/source/tools/acpiexec"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/lib/acpica/source/tools/acpidump"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/hal/cmsis/CMSIS/Core/Include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/hal/nordic/nrfx"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/hal/nordic/nrfx/drivers/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/modules/hal/nordic/nrfx/mdk"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/hal_nordic/nrfx/."
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/libc/minimal/include"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed"
+				}
+			],
+			"language" : "ASM",
+			"sourceIndexes" : 
+			[
+				25
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "syscall_list_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "driver_validation_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "kobj_types_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "zephyr_generated_headers::@d36e55b69c1b90fb26b2"
+		}
+	],
+	"id" : "zephyr::@d36e55b69c1b90fb26b2",
+	"name" : "zephyr",
+	"nameOnDisk" : "libzephyr.a",
+	"paths" : 
+	{
+		"build" : "zephyr",
+		"source" : "/Users/pdlsurya/ZephyrSDK/zephyr"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				25
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 10,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/cbprintf_packaged.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 11,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/dec.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 12,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/fdtable.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 13,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/hex.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 14,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/printk.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 15,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/rb.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 16,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/sem.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 17,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/thread_entry.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 18,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/timeutil.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 19,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/heap.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 20,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/heap-validate.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 21,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/bitarray.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 22,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/multi_heap.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 25,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/onoff.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 28,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/notify.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 31,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/crc32c_sw.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 32,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/crc32_sw.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 33,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/crc16_sw.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 34,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/crc8_sw.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 35,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/crc7_sw.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 38,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/cbprintf_complete.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 40,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/cbprintf.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 43,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/ring_buffer.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 45,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/lib/os/assert.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 49,
+			"compileGroupIndex" : 0,
+			"path" : "build/zephyr/misc/generated/configs.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 53,
+			"compileGroupIndex" : 1,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/nordic_nrf/common/soc_nrf_common.S",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 56,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/nordic_nrf/validate_base_addresses.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 57,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/soc/arm/nordic_nrf/validate_enabled_instances.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 60,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/pm/pm.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 61,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/pm/policy.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 62,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/pm/state.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 65,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/tracing/tracing_none.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 68,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/usb/device/usb_device.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 69,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/usb/device/usb_descriptor.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 70,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/usb/device/usb_transfer.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 74,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/usb/device/class/cdc_acm.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 77,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/usb/device/usb_work_q.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 81,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/sh1106_gfx/sh1106_gfx.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 85,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/pdlsurya/ZephyrSDK/zephyr/subsys/console/getline.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

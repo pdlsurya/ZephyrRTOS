@@ -1,0 +1,14 @@
+# Copyright (c) 2023, Surya Poudel
+# SPDX-License-Identifier: Apache-2.0
+
+description: "NRF24 2.4GHz wireless module on SPI bus"
+
+compatible: "nordic,nrf24"
+
+include: [ spi-device.yaml ]
+
+properties:
+  ce-gpios:
+    type: phandle-array
+    required: true
+    description: "Chip Enable(CE) gpio pin"

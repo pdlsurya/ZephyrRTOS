@@ -1,0 +1,8 @@
+
+# Copyright (c) 2023 Surya Poudel
+# SPDX-License-Identifier: Apache-2.0
+
+rsource "sh1106_gfx/Kconfig"
+rsource "nrf24_ble/Kconfig"
+rsource "SdFat/Kconfig"
+

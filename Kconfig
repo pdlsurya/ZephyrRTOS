@@ -1,0 +1,6 @@
+
+# Copyright (c) 2023 Surya Poudel
+# SPDX-License-Identifier: Apache-2.0
+
+rsource "drivers/Kconfig"
+rsource "subsys/Kconfig"

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/thrift",
+		"source" : "/Users/pdlsurya/ZephyrSDK/zephyr/modules/thrift"
+	}
+}
