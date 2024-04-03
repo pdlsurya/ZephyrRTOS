@@ -64,6 +64,8 @@ bool SdFat_init();
 
 bool listDir(const char *path);
 
+void listDir_recursive(myFile *pFolder, uint8_t tab);
+
 bool readFile(const char *path, const char *fileName);
 
 myFile fileOpen(const char *path, const char *filename);
@@ -82,16 +84,13 @@ myFile nextFile(myFile *p_file);
 
 myFile pathExists(const char *path);
 
-uint32_t startCluster(myFile file);
+uint32_t startCluster(myFile *file);
 
-bool isValidFile(myFile file);
+bool isValidFile(myFile *file);
 
 char *getFileName();
 
-inline uint32_t getFileSize(myFile file)
-{
-    return file.DIR_FileSize;
-}
+uint32_t fileSize(myFile *file);
 
 typedef struct
 {
