@@ -419,6 +419,7 @@ myFile nextFile(myFile *pFolder)
             }
         }
     }
+    temp.entryIndex = isDirectory(&temp) ? 2 : 0;
 
     return temp;
 }
