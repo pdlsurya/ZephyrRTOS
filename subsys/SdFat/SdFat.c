@@ -308,10 +308,10 @@ myFile nextFile(myFile *pFolder)
         return temp;
     }
 
+    SD_readSector(startSecOfClus(currentClus) + sectorIndex, SD_buff);
+
     while (1)
     {
-        SD_readSector(startSecOfClus(currentClus) + sectorIndex, SD_buff);
-
         temp = *((myFile *)(SD_buff + (pFolder->entryIndex % 16) * 32));
 
         if (!isFreeEntry(&temp))
@@ -377,9 +377,6 @@ myFile nextFile(myFile *pFolder)
                 temp.fileEntInf.sectorIndex = sectorIndex;
                 temp.fileEntInf.entryIndex = pFolder->entryIndex % 16;
                 pFolder->entryIndex++;
-
-                if (pFolder->entryIndex % 16 == 0)
-                    sectorIndex++;
                 break;
             }
             else
@@ -389,12 +386,7 @@ myFile nextFile(myFile *pFolder)
                 temp.fileEntInf.Cluster = currentClus;
                 temp.fileEntInf.sectorIndex = sectorIndex;
                 temp.fileEntInf.entryIndex = pFolder->entryIndex % 16;
-
                 pFolder->entryIndex++;
-
-                if (pFolder->entryIndex % 16 == 0)
-                    sectorIndex++;
-
                 break;
             }
         }
@@ -402,22 +394,25 @@ myFile nextFile(myFile *pFolder)
         {
             pFolder->entryIndex++;
             if (pFolder->entryIndex % 16 == 0)
-                sectorIndex++;
-        }
-
-        if (sectorIndex == params.BPB_SecPerClus)
-        {
-            sectorIndex = 0;
-            currentClus = fatNextClus(currentClus);
-            if (currentClus > FAT_EOC)
             {
-                pFolder->entryIndex = 2;
-                memset(&temp, 0, sizeof(myFile));
-                return temp;
+                sectorIndex++;
+                if (sectorIndex == params.BPB_SecPerClus)
+                {
+                    sectorIndex = 0;
+                    currentClus = fatNextClus(currentClus);
+                    if (currentClus > FAT_EOC)
+                    {
+                        pFolder->entryIndex = 2;
+                        memset(&temp, 0, sizeof(myFile));
+                        return temp;
+                    }
+                }
+                SD_readSector(startSecOfClus(currentClus) + sectorIndex, SD_buff);
             }
         }
     }
     temp.entryIndex = isDirectory(&temp) ? 2 : 0;
+
     return temp;
 }
 
