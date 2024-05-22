@@ -545,28 +545,18 @@ bool isClosed(myFile *pFile)
 
 uint8_t readByte(myFile *pFile)
 {
-    static bool readStarted = false;
-    static uint32_t Cluster = 0xFFFFFFFF;
-    static uint16_t sectorIndex = 0;
-    if (Cluster == 0xFFFFFFFF)
-        Cluster = startCluster(pFile);
-
-    if (pFile->entryIndex == 0)
-    {
-        readStarted = false;
-        Cluster = startCluster(pFile);
-    }
+    static uint32_t Cluster = 0;
+    static uint8_t sectorIndex = 0;
 
     if (isClosed(pFile))
     {
-        readStarted = false;
         return 0;
     }
 
-    if (!readStarted)
+    if (pFile->entryIndex == 0)
     {
-        SD_readSector(startSecOfClus(Cluster) + (sectorIndex++), SD_buff);
-        readStarted = true;
+        Cluster = startCluster(pFile);
+        sectorIndex = 0;
     }
 
     if ((pFile->entryIndex > 0) && (pFile->entryIndex % (params.BPB_SecPerClus * params.BPB_BytesPerSec) == 0))
@@ -575,16 +565,17 @@ uint8_t readByte(myFile *pFile)
         Cluster = fatNextClus(Cluster);
         if (Cluster >= FAT_EOC)
         {
-            readStarted = false;
+            pFile->entryIndex = 0;
             return 0;
         }
     }
 
-    if (pFile->entryIndex > 0 && (pFile->entryIndex % params.BPB_BytesPerSec == 0))
+    if (pFile->entryIndex % params.BPB_BytesPerSec == 0)
         SD_readSector(startSecOfClus(Cluster) + (sectorIndex++), SD_buff);
 
     return SD_buff[(pFile->entryIndex++) % params.BPB_BytesPerSec];
 }
+
 
 bool readFile(const char *path, const char *fileName)
 {
