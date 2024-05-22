@@ -629,7 +629,7 @@ void SD_readMultipleSecStop()
     spi_release_dt(&spi_drv_spec);
 }
 
-uint8_t SD_init()
+uint8_t SD_drv_init()
 {
     printk("Using custom SDHC driver by SURYA POUDEL\n");
     // uint8_t csd_reg[16];

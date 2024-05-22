@@ -1,4 +1,4 @@
-# Install script for directory: /users/pdlsurya/documents/ZephyrProject/drivers/SD_drv
+# Install script for directory: /users/pdlsurya/documents/EmbeddedProjects/ZephyrRTOS/drivers/sh1106_drv
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

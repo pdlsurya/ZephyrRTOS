@@ -10,7 +10,6 @@
     ],
     "__subsystem": [
         "gpio_driver_api",
-        "i2c_driver_api",
         "uart_driver_api",
         "spi_driver_api",
         "crypto_driver_api",
@@ -38,6 +37,7 @@
         "fuel_gauge_driver_api",
         "gnss_driver_api",
         "hwspinlock_driver_api",
+        "i2c_driver_api",
         "i2s_driver_api",
         "i3c_driver_api",
         "ipm_driver_api",

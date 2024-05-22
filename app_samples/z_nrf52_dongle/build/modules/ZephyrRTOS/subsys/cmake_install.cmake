@@ -1,4 +1,4 @@
-# Install script for directory: /users/pdlsurya/documents/ZephyrProject
+# Install script for directory: /users/pdlsurya/documents/EmbeddedProjects/ZephyrRTOS/subsys
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,11 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/modules/ZephyrProject/drivers/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/modules/ZephyrProject/subsys/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/EmbeddedProjects/ZephyrRTOS/app_samples/z_nrf52_dongle/build/modules/ZephyrRTOS/subsys/SdFat/cmake_install.cmake")
 endif()
 

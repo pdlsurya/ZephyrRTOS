@@ -1,4 +1,4 @@
-# Install script for directory: /users/pdlsurya/documents/ZephyrProject/subsys/sh1106_gfx
+# Install script for directory: /users/pdlsurya/documents/EmbeddedProjects/ZephyrRTOS
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,15 @@ endif()
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/local/zephyr-sdk-0.16.5-1/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/pdlsurya/Documents/EmbeddedProjects/ZephyrRTOS/app_samples/z_nrf52_dongle/build/modules/ZephyrRTOS/drivers/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/pdlsurya/Documents/EmbeddedProjects/ZephyrRTOS/app_samples/z_nrf52_dongle/build/modules/ZephyrRTOS/subsys/cmake_install.cmake")
 endif()
 

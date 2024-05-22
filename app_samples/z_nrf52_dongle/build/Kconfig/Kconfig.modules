@@ -233,9 +233,9 @@ config ZEPHYR_ZCBOR_MODULE
 	bool
 	default y
 endmenu
-menu "ZephyrProject (/users/pdlsurya/documents/ZephyrProject)"
-osource "/users/pdlsurya/documents/ZephyrProject/Kconfig"
-config ZEPHYR_ZEPHYRPROJECT_MODULE
+menu "ZephyrRTOS (/users/pdlsurya/documents/EmbeddedProjects/ZephyrRTOS)"
+osource "/users/pdlsurya/documents/EmbeddedProjects/ZephyrRTOS/Kconfig"
+config ZEPHYR_ZEPHYRRTOS_MODULE
 	bool
 	default y
 endmenu

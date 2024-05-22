@@ -241,54 +241,6 @@
     ],
     [
         [
-            "int i2c_configure",
-            "const struct device *dev, uint32_t dev_config"
-        ],
-        "i2c.h",
-        true
-    ],
-    [
-        [
-            "int i2c_get_config",
-            "const struct device *dev, uint32_t *dev_config"
-        ],
-        "i2c.h",
-        true
-    ],
-    [
-        [
-            "int i2c_transfer",
-            "const struct device *dev,\n\t\t\t   struct i2c_msg *msgs, uint8_t num_msgs,\n\t\t\t   uint16_t addr"
-        ],
-        "i2c.h",
-        true
-    ],
-    [
-        [
-            "int i2c_recover_bus",
-            "const struct device *dev"
-        ],
-        "i2c.h",
-        true
-    ],
-    [
-        [
-            "int i2c_target_driver_register",
-            "const struct device *dev"
-        ],
-        "i2c.h",
-        true
-    ],
-    [
-        [
-            "int i2c_target_driver_unregister",
-            "const struct device *dev"
-        ],
-        "i2c.h",
-        true
-    ],
-    [
-        [
             "int uart_err_check",
             "const struct device *dev"
         ],
@@ -538,7 +490,7 @@
     [
         [
             "k_tid_t k_thread_create",
-            "struct k_thread *new_thread,\n\t\t\t\t  k_thread_stack_t *stack,\n\t\t\t\t  size_t stack_size,\n\t\t\t\t  k_thread_entry_t entry,\n\t\t\t\t  void *p1, void *p2, void *p3,\n\t\t\t\t  int prio, uint32_t options, k_timeout_t delay"
+            "struct k_thread *new_thread, k_thread_stack_t *stack,\n\t\t\t\t  size_t stack_size, k_thread_entry_t entry, void *p1, void *p2,\n\t\t\t\t  void *p3, int prio, uint32_t options, k_timeout_t delay"
         ],
         "kernel.h",
         true
@@ -546,7 +498,7 @@
     [
         [
             "int k_thread_stack_space_get",
-            "const struct k_thread *thread,\n\t\t\t\t       size_t *unused_ptr"
+            "const struct k_thread *thread, size_t *unused_ptr"
         ],
         "kernel.h",
         true
@@ -714,7 +666,7 @@
     [
         [
             "int k_thread_name_copy",
-            "k_tid_t thread, char *buf,\n\t\t\t\t size_t size"
+            "k_tid_t thread, char *buf, size_t size"
         ],
         "kernel.h",
         true
@@ -722,7 +674,7 @@
     [
         [
             "void k_timer_start",
-            "struct k_timer *timer,\n\t\t\t     k_timeout_t duration, k_timeout_t period"
+            "struct k_timer *timer, k_timeout_t duration, k_timeout_t period"
         ],
         "kernel.h",
         true
@@ -858,7 +810,7 @@
     [
         [
             "int k_futex_wait",
-            "struct k_futex *futex, int expected,\n\t\t\t   k_timeout_t timeout"
+            "struct k_futex *futex, int expected, k_timeout_t timeout"
         ],
         "kernel.h",
         true
@@ -898,7 +850,7 @@
     [
         [
             "uint32_t k_event_set_masked",
-            "struct k_event *event, uint32_t events,\n\t\t\t\t  uint32_t events_mask"
+            "struct k_event *event, uint32_t events, uint32_t events_mask"
         ],
         "kernel.h",
         true
@@ -914,7 +866,7 @@
     [
         [
             "uint32_t k_event_wait",
-            "struct k_event *event, uint32_t events,\n\t\t\t\tbool reset, k_timeout_t timeout"
+            "struct k_event *event, uint32_t events, bool reset,\n\t\t\t\tk_timeout_t timeout"
         ],
         "kernel.h",
         true
@@ -922,7 +874,7 @@
     [
         [
             "uint32_t k_event_wait_all",
-            "struct k_event *event, uint32_t events,\n\t\t\t\t    bool reset, k_timeout_t timeout"
+            "struct k_event *event, uint32_t events, bool reset,\n\t\t\t\t    k_timeout_t timeout"
         ],
         "kernel.h",
         true
@@ -930,7 +882,7 @@
     [
         [
             "int32_t k_stack_alloc_init",
-            "struct k_stack *stack,\n\t\t\t\t   uint32_t num_entries"
+            "struct k_stack *stack, uint32_t num_entries"
         ],
         "kernel.h",
         true
@@ -946,7 +898,7 @@
     [
         [
             "int k_stack_pop",
-            "struct k_stack *stack, stack_data_t *data,\n\t\t\t  k_timeout_t timeout"
+            "struct k_stack *stack, stack_data_t *data, k_timeout_t timeout"
         ],
         "kernel.h",
         true
@@ -1002,7 +954,7 @@
     [
         [
             "int k_condvar_wait",
-            "struct k_condvar *condvar, struct k_mutex *mutex,\n\t\t\t     k_timeout_t timeout"
+            "struct k_condvar *condvar, struct k_mutex *mutex, k_timeout_t timeout"
         ],
         "kernel.h",
         true
@@ -1010,7 +962,7 @@
     [
         [
             "int k_sem_init",
-            "struct k_sem *sem, unsigned int initial_count,\n\t\t\t  unsigned int limit"
+            "struct k_sem *sem, unsigned int initial_count, unsigned int limit"
         ],
         "kernel.h",
         true
@@ -1050,7 +1002,7 @@
     [
         [
             "int k_msgq_alloc_init",
-            "struct k_msgq *msgq, size_t msg_size,\n\t\t\t\tuint32_t max_msgs"
+            "struct k_msgq *msgq, size_t msg_size, uint32_t max_msgs"
         ],
         "kernel.h",
         true
@@ -1105,8 +1057,8 @@
     ],
     [
         [
-            "void  k_msgq_get_attrs",
-            "struct k_msgq *msgq,\n\t\t\t\t struct k_msgq_attrs *attrs"
+            "void k_msgq_get_attrs",
+            "struct k_msgq *msgq, struct k_msgq_attrs *attrs"
         ],
         "kernel.h",
         true
@@ -1130,7 +1082,7 @@
     [
         [
             "int k_pipe_put",
-            "struct k_pipe *pipe, const void *data,\n\t\t\t size_t bytes_to_write, size_t *bytes_written,\n\t\t\t size_t min_xfer, k_timeout_t timeout"
+            "struct k_pipe *pipe, const void *data, size_t bytes_to_write,\n\t\t\t size_t *bytes_written, size_t min_xfer, k_timeout_t timeout"
         ],
         "kernel.h",
         true
@@ -1138,7 +1090,7 @@
     [
         [
             "int k_pipe_get",
-            "struct k_pipe *pipe, void *data,\n\t\t\t size_t bytes_to_read, size_t *bytes_read,\n\t\t\t size_t min_xfer, k_timeout_t timeout"
+            "struct k_pipe *pipe, void *data, size_t bytes_to_read, size_t *bytes_read,\n\t\t\t size_t min_xfer, k_timeout_t timeout"
         ],
         "kernel.h",
         true
@@ -1178,7 +1130,7 @@
     [
         [
             "int k_poll",
-            "struct k_poll_event *events, int num_events,\n\t\t     k_timeout_t timeout"
+            "struct k_poll_event *events, int num_events, k_timeout_t timeout"
         ],
         "kernel.h",
         true
@@ -1202,7 +1154,7 @@
     [
         [
             "void k_poll_signal_check",
-            "struct k_poll_signal *sig,\n\t\t\t\t   unsigned int *signaled, int *result"
+            "struct k_poll_signal *sig, unsigned int *signaled, int *result"
         ],
         "kernel.h",
         true
@@ -2493,6 +2445,54 @@
             "const struct device *dev"
         ],
         "hwspinlock.h",
+        false
+    ],
+    [
+        [
+            "int i2c_configure",
+            "const struct device *dev, uint32_t dev_config"
+        ],
+        "i2c.h",
+        false
+    ],
+    [
+        [
+            "int i2c_get_config",
+            "const struct device *dev, uint32_t *dev_config"
+        ],
+        "i2c.h",
+        false
+    ],
+    [
+        [
+            "int i2c_transfer",
+            "const struct device *dev,\n\t\t\t   struct i2c_msg *msgs, uint8_t num_msgs,\n\t\t\t   uint16_t addr"
+        ],
+        "i2c.h",
+        false
+    ],
+    [
+        [
+            "int i2c_recover_bus",
+            "const struct device *dev"
+        ],
+        "i2c.h",
+        false
+    ],
+    [
+        [
+            "int i2c_target_driver_register",
+            "const struct device *dev"
+        ],
+        "i2c.h",
+        false
+    ],
+    [
+        [
+            "int i2c_target_driver_unregister",
+            "const struct device *dev"
+        ],
+        "i2c.h",
         false
     ],
     [

@@ -26,4 +26,4 @@ empty_file.o: /Users/pdlsurya/ZephyrSDK/zephyr/misc/empty_file.c \
  /Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/override.dtsi \
  /Users/pdlsurya/ZephyrSDK/zephyr/boards/nordic/nrf52840dongle/nrf52840dongle_nrf52840-pinctrl.dtsi \
  /Users/pdlsurya/ZephyrSDK/zephyr/boards/nordic/nrf52840dongle/fstab-stock.dtsi \
- /Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/nrf52840dongle_nrf52840.overlay
+ /Users/pdlsurya/Documents/EmbeddedProjects/ZephyrRTOS/app_samples/z_nrf52_dongle/nrf52840dongle_nrf52840.overlay

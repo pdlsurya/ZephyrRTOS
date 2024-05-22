@@ -46,4 +46,4 @@
 "trusted-firmware-a":"/Users/pdlsurya/ZephyrSDK/modules/tee/tf-a/trusted-firmware-a":"${ZEPHYR_TRUSTED_FIRMWARE_A_CMAKE_DIR}"
 "uoscore-uedhoc":"/Users/pdlsurya/ZephyrSDK/modules/lib/uoscore-uedhoc":"${ZEPHYR_UOSCORE_UEDHOC_CMAKE_DIR}"
 "zcbor":"/Users/pdlsurya/ZephyrSDK/modules/lib/zcbor":"${ZEPHYR_ZCBOR_CMAKE_DIR}"
-"ZephyrProject":"/users/pdlsurya/documents/ZephyrProject":"/users/pdlsurya/documents/ZephyrProject"
+"ZephyrRTOS":"/users/pdlsurya/documents/EmbeddedProjects/ZephyrRTOS":"/users/pdlsurya/documents/EmbeddedProjects/ZephyrRTOS"

@@ -1042,7 +1042,7 @@ zephyr_udc0: &usbd {
  };
 };
 # 0 "<command-line>" 2
-# 1 "/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/nrf52840dongle_nrf52840.overlay" 1
+# 1 "/Users/pdlsurya/Documents/EmbeddedProjects/ZephyrRTOS/app_samples/z_nrf52_dongle/nrf52840dongle_nrf52840.overlay" 1
 &i2c1 {
     status = "okay";
     sh1106:sh1106@3c{

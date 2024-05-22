@@ -1,4 +1,4 @@
-# Install script for directory: /Users/pdlsurya/ZephyrSDK/zephyr/drivers/i2c
+# Install script for directory: /users/pdlsurya/documents/EmbeddedProjects/ZephyrRTOS/drivers/SD_drv
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

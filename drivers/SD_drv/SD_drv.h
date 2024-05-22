@@ -4,7 +4,7 @@ typedef enum{
    SD_READY, SD_INIT_SUCCESS, SD_INIT_ERROR, SD_READ_SUCCESS, SD_READ_ERROR,SD_WRITE_SUCCESS, SD_WRITE_ERROR
 }sd_ret_t;
 
-uint8_t SD_init();
+uint8_t SD_drv_init();
 
 uint8_t SD_readSector(uint32_t SecAddr, uint8_t *buf);
 
