@@ -300,6 +300,8 @@ ISR_DIRECT_DECLARE(rtc2_irq_handler)
 {
 	NRF_RTC2->EVENTS_COMPARE[1] = 0;
 	handle_timers();
+
+	return 1;
 }
 
 /* Function to initialize the timer module.

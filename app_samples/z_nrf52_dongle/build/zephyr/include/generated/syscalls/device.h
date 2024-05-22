@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -36,7 +38,7 @@ static inline const struct device * device_get_binding(const char * name)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define device_get_binding(name) ({ 	const struct device * retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DEVICE_GET_BINDING, device_get_binding, name); 	retval = device_get_binding(name); 	sys_port_trace_syscall_exit(K_SYSCALL_DEVICE_GET_BINDING, device_get_binding, name, retval); 	retval; })
+#define device_get_binding(name) ({ 	const struct device * syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DEVICE_GET_BINDING, device_get_binding, name); 	syscall__retval = device_get_binding(name); 	sys_port_trace_syscall_exit(K_SYSCALL_DEVICE_GET_BINDING, device_get_binding, name, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -59,7 +61,30 @@ static inline bool device_is_ready(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define device_is_ready(dev) ({ 	bool retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DEVICE_IS_READY, device_is_ready, dev); 	retval = device_is_ready(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_DEVICE_IS_READY, device_is_ready, dev, retval); 	retval; })
+#define device_is_ready(dev) ({ 	bool syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DEVICE_IS_READY, device_is_ready, dev); 	syscall__retval = device_is_ready(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_DEVICE_IS_READY, device_is_ready, dev, syscall__retval); 	syscall__retval; })
+#endif
+#endif
+
+
+extern int z_impl_device_init(const struct device * dev);
+
+__pinned_func
+static inline int device_init(const struct device * dev)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		return (int) arch_syscall_invoke1(parm0.x, K_SYSCALL_DEVICE_INIT);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_device_init(dev);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define device_init(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DEVICE_INIT, device_init, dev); 	syscall__retval = device_init(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_DEVICE_INIT, device_init, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

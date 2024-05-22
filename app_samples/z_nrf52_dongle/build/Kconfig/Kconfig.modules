@@ -4,15 +4,21 @@ config ZEPHYR_ACPICA_MODULE
 	bool
 	default y
 endmenu
-menu "canopennode (/Users/pdlsurya/ZephyrSDK/modules/lib/canopennode)"
-osource "$(ZEPHYR_CANOPENNODE_KCONFIG)"
-config ZEPHYR_CANOPENNODE_MODULE
+menu "cmsis (/Users/pdlsurya/ZephyrSDK/modules/hal/cmsis)"
+osource "$(ZEPHYR_CMSIS_KCONFIG)"
+config ZEPHYR_CMSIS_MODULE
 	bool
 	default y
 endmenu
-menu "chre (/Users/pdlsurya/ZephyrSDK/modules/lib/chre)"
-osource "/Users/pdlsurya/ZephyrSDK/modules/lib/chre/platform/zephyr/Kconfig"
-config ZEPHYR_CHRE_MODULE
+menu "cmsis-dsp (/Users/pdlsurya/ZephyrSDK/modules/lib/cmsis-dsp)"
+osource "$(ZEPHYR_CMSIS_DSP_KCONFIG)"
+config ZEPHYR_CMSIS_DSP_MODULE
+	bool
+	default y
+endmenu
+menu "cmsis-nn (/Users/pdlsurya/ZephyrSDK/modules/lib/cmsis-nn)"
+osource "$(ZEPHYR_CMSIS_NN_KCONFIG)"
+config ZEPHYR_CMSIS_NN_MODULE
 	bool
 	default y
 endmenu
@@ -22,6 +28,18 @@ config ZEPHYR_FATFS_MODULE
 	bool
 	default y
 endmenu
+config ZEPHYR_ALTERA_MODULE
+   bool
+   default y
+menu "hal_ambiq (/Users/pdlsurya/ZephyrSDK/modules/hal/ambiq)"
+osource "$(ZEPHYR_HAL_AMBIQ_KCONFIG)"
+config ZEPHYR_HAL_AMBIQ_MODULE
+	bool
+	default y
+endmenu
+config ZEPHYR_ATMEL_MODULE
+   bool
+   default y
 menu "hal_espressif (/Users/pdlsurya/ZephyrSDK/modules/hal/espressif)"
 osource "/Users/pdlsurya/ZephyrSDK/modules/hal/espressif/zephyr/Kconfig"
 config ZEPHYR_HAL_ESPRESSIF_MODULE
@@ -47,18 +65,36 @@ config ZEPHYR_HAL_INFINEON_MODULE
 	bool
 	default y
 endmenu
+config ZEPHYR_HAL_INTEL_MODULE
+   bool
+   default y
+config ZEPHYR_MICROCHIP_MODULE
+   bool
+   default y
 menu "hal_nordic (/Users/pdlsurya/ZephyrSDK/modules/hal/nordic)"
 osource "$(ZEPHYR_HAL_NORDIC_KCONFIG)"
 config ZEPHYR_HAL_NORDIC_MODULE
 	bool
 	default y
 endmenu
+config ZEPHYR_NUVOTON_MODULE
+   bool
+   default y
 menu "hal_nxp (/Users/pdlsurya/ZephyrSDK/modules/hal/nxp)"
 osource "$(ZEPHYR_HAL_NXP_KCONFIG)"
 config ZEPHYR_HAL_NXP_MODULE
 	bool
 	default y
 endmenu
+config ZEPHYR_OPENISA_MODULE
+   bool
+   default y
+config ZEPHYR_QUICKLOGIC_MODULE
+   bool
+   default y
+config ZEPHYR_HAL_RENESAS_MODULE
+   bool
+   default y
 menu "hal_rpi_pico (/Users/pdlsurya/ZephyrSDK/modules/hal/rpi_pico)"
 osource "$(ZEPHYR_HAL_RPI_PICO_KCONFIG)"
 config ZEPHYR_HAL_RPI_PICO_MODULE
@@ -71,12 +107,39 @@ config ZEPHYR_SILABS_MODULE
 	bool
 	default y
 endmenu
+menu "hal_st (/Users/pdlsurya/ZephyrSDK/modules/hal/st)"
+osource "$(ZEPHYR_HAL_ST_KCONFIG)"
+config ZEPHYR_HAL_ST_MODULE
+	bool
+	default y
+endmenu
+config ZEPHYR_STM32_MODULE
+   bool
+   default y
 menu "hal_telink (/Users/pdlsurya/ZephyrSDK/modules/hal/telink)"
 osource "/Users/pdlsurya/ZephyrSDK/modules/hal/telink/Kconfig"
 config ZEPHYR_HAL_TELINK_MODULE
 	bool
 	default y
 endmenu
+config ZEPHYR_TI_MODULE
+   bool
+   default y
+config ZEPHYR_HAL_WURTHELEKTRONIK_MODULE
+   bool
+   default y
+config ZEPHYR_XTENSA_MODULE
+   bool
+   default y
+menu "hostap (/Users/pdlsurya/ZephyrSDK/modules/lib/hostap)"
+osource "$(ZEPHYR_HOSTAP_KCONFIG)"
+config ZEPHYR_HOSTAP_MODULE
+	bool
+	default y
+endmenu
+config ZEPHYR_LIBMETAL_MODULE
+   bool
+   default y
 menu "liblc3 (/Users/pdlsurya/ZephyrSDK/modules/lib/liblc3)"
 osource "$(ZEPHYR_LIBLC3_KCONFIG)"
 config ZEPHYR_LIBLC3_MODULE
@@ -96,14 +159,8 @@ config ZEPHYR_LORAMAC_NODE_MODULE
 	default y
 endmenu
 menu "lvgl (/Users/pdlsurya/ZephyrSDK/modules/lib/gui/lvgl)"
-osource "/Users/pdlsurya/ZephyrSDK/modules/lib/gui/lvgl/zephyr/Kconfig"
+osource "/Users/pdlsurya/ZephyrSDK/modules/lib/gui/lvgl/Kconfig"
 config ZEPHYR_LVGL_MODULE
-	bool
-	default y
-endmenu
-menu "lz4 (/Users/pdlsurya/ZephyrSDK/modules/lib/lz4)"
-osource "$(ZEPHYR_LZ4_KCONFIG)"
-config ZEPHYR_LZ4_MODULE
 	bool
 	default y
 endmenu
@@ -113,15 +170,27 @@ config ZEPHYR_MBEDTLS_MODULE
 	bool
 	default y
 endmenu
-menu "nanopb (/Users/pdlsurya/ZephyrSDK/modules/lib/nanopb)"
-osource "$(ZEPHYR_NANOPB_KCONFIG)"
-config ZEPHYR_NANOPB_MODULE
-	bool
-	default y
-endmenu
+config ZEPHYR_MCUBOOT_MODULE
+   bool
+   default y
+config ZEPHYR_MIPI_SYS_T_MODULE
+   bool
+   default y
+config ZEPHYR_NRF_HW_MODELS_MODULE
+   bool
+   default y
+config ZEPHYR_OPEN_AMP_MODULE
+   bool
+   default y
 menu "openthread (/Users/pdlsurya/ZephyrSDK/modules/lib/openthread)"
 osource "$(ZEPHYR_OPENTHREAD_KCONFIG)"
 config ZEPHYR_OPENTHREAD_MODULE
+	bool
+	default y
+endmenu
+menu "percepio (/Users/pdlsurya/ZephyrSDK/modules/debug/percepio)"
+osource "/Users/pdlsurya/ZephyrSDK/modules/debug/percepio/zephyr/Kconfig"
+config ZEPHYR_PERCEPIO_MODULE
 	bool
 	default y
 endmenu
@@ -137,24 +206,9 @@ config ZEPHYR_SEGGER_MODULE
 	bool
 	default y
 endmenu
-menu "sof (/Users/pdlsurya/ZephyrSDK/modules/audio/sof)"
-osource "/Users/pdlsurya/ZephyrSDK/modules/audio/sof/zephyr/Kconfig"
-config ZEPHYR_SOF_MODULE
-	bool
-	default y
-endmenu
-menu "tflite-micro (/Users/pdlsurya/ZephyrSDK/modules/lib/tflite-micro)"
-osource "$(ZEPHYR_TFLITE_MICRO_KCONFIG)"
-config ZEPHYR_TFLITE_MICRO_MODULE
-	bool
-	default y
-endmenu
-menu "TraceRecorder (/Users/pdlsurya/ZephyrSDK/modules/debug/TraceRecorder)"
-osource "/Users/pdlsurya/ZephyrSDK/modules/debug/TraceRecorder/kernelports/Zephyr/Kconfig"
-config ZEPHYR_TRACERECORDER_MODULE
-	bool
-	default y
-endmenu
+config ZEPHYR_TINYCRYPT_MODULE
+   bool
+   default y
 menu "trusted-firmware-m (/Users/pdlsurya/ZephyrSDK/modules/tee/tf-m/trusted-firmware-m)"
 osource "$(ZEPHYR_TRUSTED_FIRMWARE_M_KCONFIG)"
 config ZEPHYR_TRUSTED_FIRMWARE_M_MODULE
@@ -179,15 +233,9 @@ config ZEPHYR_ZCBOR_MODULE
 	bool
 	default y
 endmenu
-menu "zscilib (/Users/pdlsurya/ZephyrSDK/modules/lib/zscilib)"
-osource "/Users/pdlsurya/ZephyrSDK/modules/lib/zscilib/Kconfig.zscilib"
-config ZEPHYR_ZSCILIB_MODULE
-	bool
-	default y
-endmenu
-menu "thrift (/Users/pdlsurya/ZephyrSDK/modules/lib/thrift)"
-osource "$(ZEPHYR_THRIFT_KCONFIG)"
-config ZEPHYR_THRIFT_MODULE
+menu "ZephyrProject (/users/pdlsurya/documents/ZephyrProject)"
+osource "/users/pdlsurya/documents/ZephyrProject/Kconfig"
+config ZEPHYR_ZEPHYRPROJECT_MODULE
 	bool
 	default y
 endmenu

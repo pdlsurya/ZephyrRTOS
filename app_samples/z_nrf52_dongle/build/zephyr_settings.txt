@@ -12,3 +12,4 @@
 "DTS_ROOT":"/Users/pdlsurya/ZephyrSDK/modules/hal/nuvoton"
 "DTS_ROOT":"/Users/pdlsurya/ZephyrSDK/modules/hal/nxp"
 "DTS_ROOT":"/Users/pdlsurya/ZephyrSDK/modules/hal/stm32"
+"DTS_ROOT":"/users/pdlsurya/documents/ZephyrProject"

@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -36,7 +38,7 @@ static inline ssize_t retained_mem_size(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define retained_mem_size(dev) ({ 	ssize_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RETAINED_MEM_SIZE, retained_mem_size, dev); 	retval = retained_mem_size(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_RETAINED_MEM_SIZE, retained_mem_size, dev, retval); 	retval; })
+#define retained_mem_size(dev) ({ 	ssize_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RETAINED_MEM_SIZE, retained_mem_size, dev); 	syscall__retval = retained_mem_size(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_RETAINED_MEM_SIZE, retained_mem_size, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -62,7 +64,7 @@ static inline int retained_mem_read(const struct device * dev, off_t offset, uin
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define retained_mem_read(dev, offset, buffer, size) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RETAINED_MEM_READ, retained_mem_read, dev, offset, buffer, size); 	retval = retained_mem_read(dev, offset, buffer, size); 	sys_port_trace_syscall_exit(K_SYSCALL_RETAINED_MEM_READ, retained_mem_read, dev, offset, buffer, size, retval); 	retval; })
+#define retained_mem_read(dev, offset, buffer, size) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RETAINED_MEM_READ, retained_mem_read, dev, offset, buffer, size); 	syscall__retval = retained_mem_read(dev, offset, buffer, size); 	sys_port_trace_syscall_exit(K_SYSCALL_RETAINED_MEM_READ, retained_mem_read, dev, offset, buffer, size, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -88,7 +90,7 @@ static inline int retained_mem_write(const struct device * dev, off_t offset, co
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define retained_mem_write(dev, offset, buffer, size) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RETAINED_MEM_WRITE, retained_mem_write, dev, offset, buffer, size); 	retval = retained_mem_write(dev, offset, buffer, size); 	sys_port_trace_syscall_exit(K_SYSCALL_RETAINED_MEM_WRITE, retained_mem_write, dev, offset, buffer, size, retval); 	retval; })
+#define retained_mem_write(dev, offset, buffer, size) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RETAINED_MEM_WRITE, retained_mem_write, dev, offset, buffer, size); 	syscall__retval = retained_mem_write(dev, offset, buffer, size); 	sys_port_trace_syscall_exit(K_SYSCALL_RETAINED_MEM_WRITE, retained_mem_write, dev, offset, buffer, size, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -111,7 +113,7 @@ static inline int retained_mem_clear(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define retained_mem_clear(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RETAINED_MEM_CLEAR, retained_mem_clear, dev); 	retval = retained_mem_clear(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_RETAINED_MEM_CLEAR, retained_mem_clear, dev, retval); 	retval; })
+#define retained_mem_clear(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RETAINED_MEM_CLEAR, retained_mem_clear, dev); 	syscall__retval = retained_mem_clear(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_RETAINED_MEM_CLEAR, retained_mem_clear, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

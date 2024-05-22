@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -39,7 +41,7 @@ static inline int rtio_cqe_get_mempool_buffer(const struct rtio * r, struct rtio
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtio_cqe_get_mempool_buffer(r, cqe, buff, buff_len) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_CQE_GET_MEMPOOL_BUFFER, rtio_cqe_get_mempool_buffer, r, cqe, buff, buff_len); 	retval = rtio_cqe_get_mempool_buffer(r, cqe, buff, buff_len); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_CQE_GET_MEMPOOL_BUFFER, rtio_cqe_get_mempool_buffer, r, cqe, buff, buff_len, retval); 	retval; })
+#define rtio_cqe_get_mempool_buffer(r, cqe, buff, buff_len) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_CQE_GET_MEMPOOL_BUFFER, rtio_cqe_get_mempool_buffer, r, cqe, buff, buff_len); 	syscall__retval = rtio_cqe_get_mempool_buffer(r, cqe, buff, buff_len); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_CQE_GET_MEMPOOL_BUFFER, rtio_cqe_get_mempool_buffer, r, cqe, buff, buff_len, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -88,7 +90,7 @@ static inline int rtio_sqe_cancel(struct rtio_sqe * sqe)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtio_sqe_cancel(sqe) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_SQE_CANCEL, rtio_sqe_cancel, sqe); 	retval = rtio_sqe_cancel(sqe); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_SQE_CANCEL, rtio_sqe_cancel, sqe, retval); 	retval; })
+#define rtio_sqe_cancel(sqe) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_SQE_CANCEL, rtio_sqe_cancel, sqe); 	syscall__retval = rtio_sqe_cancel(sqe); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_SQE_CANCEL, rtio_sqe_cancel, sqe, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -114,7 +116,7 @@ static inline int rtio_sqe_copy_in_get_handles(struct rtio * r, const struct rti
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtio_sqe_copy_in_get_handles(r, sqes, handle, sqe_count) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_SQE_COPY_IN_GET_HANDLES, rtio_sqe_copy_in_get_handles, r, sqes, handle, sqe_count); 	retval = rtio_sqe_copy_in_get_handles(r, sqes, handle, sqe_count); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_SQE_COPY_IN_GET_HANDLES, rtio_sqe_copy_in_get_handles, r, sqes, handle, sqe_count, retval); 	retval; })
+#define rtio_sqe_copy_in_get_handles(r, sqes, handle, sqe_count) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_SQE_COPY_IN_GET_HANDLES, rtio_sqe_copy_in_get_handles, r, sqes, handle, sqe_count); 	syscall__retval = rtio_sqe_copy_in_get_handles(r, sqes, handle, sqe_count); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_SQE_COPY_IN_GET_HANDLES, rtio_sqe_copy_in_get_handles, r, sqes, handle, sqe_count, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -140,7 +142,7 @@ static inline int rtio_cqe_copy_out(struct rtio * r, struct rtio_cqe * cqes, siz
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtio_cqe_copy_out(r, cqes, cqe_count, timeout) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_CQE_COPY_OUT, rtio_cqe_copy_out, r, cqes, cqe_count, timeout); 	retval = rtio_cqe_copy_out(r, cqes, cqe_count, timeout); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_CQE_COPY_OUT, rtio_cqe_copy_out, r, cqes, cqe_count, timeout, retval); 	retval; })
+#define rtio_cqe_copy_out(r, cqes, cqe_count, timeout) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_CQE_COPY_OUT, rtio_cqe_copy_out, r, cqes, cqe_count, timeout); 	syscall__retval = rtio_cqe_copy_out(r, cqes, cqe_count, timeout); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_CQE_COPY_OUT, rtio_cqe_copy_out, r, cqes, cqe_count, timeout, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -164,7 +166,7 @@ static inline int rtio_submit(struct rtio * r, uint32_t wait_count)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtio_submit(r, wait_count) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_SUBMIT, rtio_submit, r, wait_count); 	retval = rtio_submit(r, wait_count); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_SUBMIT, rtio_submit, r, wait_count, retval); 	retval; })
+#define rtio_submit(r, wait_count) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_SUBMIT, rtio_submit, r, wait_count); 	syscall__retval = rtio_submit(r, wait_count); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_SUBMIT, rtio_submit, r, wait_count, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

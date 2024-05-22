@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -66,54 +68,108 @@ static inline void mdio_bus_disable(const struct device * dev)
 #endif
 
 
-extern int z_impl_mdio_read(const struct device * dev, uint8_t prtad, uint8_t devad, uint16_t * data);
+extern int z_impl_mdio_read(const struct device * dev, uint8_t prtad, uint8_t regad, uint16_t * data);
 
 __pinned_func
-static inline int mdio_read(const struct device * dev, uint8_t prtad, uint8_t devad, uint16_t * data)
+static inline int mdio_read(const struct device * dev, uint8_t prtad, uint8_t regad, uint16_t * data)
 {
 #ifdef CONFIG_USERSPACE
 	if (z_syscall_trap()) {
 		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
 		union { uintptr_t x; uint8_t val; } parm1 = { .val = prtad };
-		union { uintptr_t x; uint8_t val; } parm2 = { .val = devad };
+		union { uintptr_t x; uint8_t val; } parm2 = { .val = regad };
 		union { uintptr_t x; uint16_t * val; } parm3 = { .val = data };
 		return (int) arch_syscall_invoke4(parm0.x, parm1.x, parm2.x, parm3.x, K_SYSCALL_MDIO_READ);
 	}
 #endif
 	compiler_barrier();
-	return z_impl_mdio_read(dev, prtad, devad, data);
+	return z_impl_mdio_read(dev, prtad, regad, data);
 }
 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define mdio_read(dev, prtad, devad, data) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MDIO_READ, mdio_read, dev, prtad, devad, data); 	retval = mdio_read(dev, prtad, devad, data); 	sys_port_trace_syscall_exit(K_SYSCALL_MDIO_READ, mdio_read, dev, prtad, devad, data, retval); 	retval; })
+#define mdio_read(dev, prtad, regad, data) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MDIO_READ, mdio_read, dev, prtad, regad, data); 	syscall__retval = mdio_read(dev, prtad, regad, data); 	sys_port_trace_syscall_exit(K_SYSCALL_MDIO_READ, mdio_read, dev, prtad, regad, data, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
 
-extern int z_impl_mdio_write(const struct device * dev, uint8_t prtad, uint8_t devad, uint16_t data);
+extern int z_impl_mdio_write(const struct device * dev, uint8_t prtad, uint8_t regad, uint16_t data);
 
 __pinned_func
-static inline int mdio_write(const struct device * dev, uint8_t prtad, uint8_t devad, uint16_t data)
+static inline int mdio_write(const struct device * dev, uint8_t prtad, uint8_t regad, uint16_t data)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		union { uintptr_t x; uint8_t val; } parm1 = { .val = prtad };
+		union { uintptr_t x; uint8_t val; } parm2 = { .val = regad };
+		union { uintptr_t x; uint16_t val; } parm3 = { .val = data };
+		return (int) arch_syscall_invoke4(parm0.x, parm1.x, parm2.x, parm3.x, K_SYSCALL_MDIO_WRITE);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_mdio_write(dev, prtad, regad, data);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define mdio_write(dev, prtad, regad, data) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MDIO_WRITE, mdio_write, dev, prtad, regad, data); 	syscall__retval = mdio_write(dev, prtad, regad, data); 	sys_port_trace_syscall_exit(K_SYSCALL_MDIO_WRITE, mdio_write, dev, prtad, regad, data, syscall__retval); 	syscall__retval; })
+#endif
+#endif
+
+
+extern int z_impl_mdio_read_c45(const struct device * dev, uint8_t prtad, uint8_t devad, uint16_t regad, uint16_t * data);
+
+__pinned_func
+static inline int mdio_read_c45(const struct device * dev, uint8_t prtad, uint8_t devad, uint16_t regad, uint16_t * data)
 {
 #ifdef CONFIG_USERSPACE
 	if (z_syscall_trap()) {
 		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
 		union { uintptr_t x; uint8_t val; } parm1 = { .val = prtad };
 		union { uintptr_t x; uint8_t val; } parm2 = { .val = devad };
-		union { uintptr_t x; uint16_t val; } parm3 = { .val = data };
-		return (int) arch_syscall_invoke4(parm0.x, parm1.x, parm2.x, parm3.x, K_SYSCALL_MDIO_WRITE);
+		union { uintptr_t x; uint16_t val; } parm3 = { .val = regad };
+		union { uintptr_t x; uint16_t * val; } parm4 = { .val = data };
+		return (int) arch_syscall_invoke5(parm0.x, parm1.x, parm2.x, parm3.x, parm4.x, K_SYSCALL_MDIO_READ_C45);
 	}
 #endif
 	compiler_barrier();
-	return z_impl_mdio_write(dev, prtad, devad, data);
+	return z_impl_mdio_read_c45(dev, prtad, devad, regad, data);
 }
 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define mdio_write(dev, prtad, devad, data) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MDIO_WRITE, mdio_write, dev, prtad, devad, data); 	retval = mdio_write(dev, prtad, devad, data); 	sys_port_trace_syscall_exit(K_SYSCALL_MDIO_WRITE, mdio_write, dev, prtad, devad, data, retval); 	retval; })
+#define mdio_read_c45(dev, prtad, devad, regad, data) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MDIO_READ_C45, mdio_read_c45, dev, prtad, devad, regad, data); 	syscall__retval = mdio_read_c45(dev, prtad, devad, regad, data); 	sys_port_trace_syscall_exit(K_SYSCALL_MDIO_READ_C45, mdio_read_c45, dev, prtad, devad, regad, data, syscall__retval); 	syscall__retval; })
+#endif
+#endif
+
+
+extern int z_impl_mdio_write_c45(const struct device * dev, uint8_t prtad, uint8_t devad, uint16_t regad, uint16_t data);
+
+__pinned_func
+static inline int mdio_write_c45(const struct device * dev, uint8_t prtad, uint8_t devad, uint16_t regad, uint16_t data)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		union { uintptr_t x; uint8_t val; } parm1 = { .val = prtad };
+		union { uintptr_t x; uint8_t val; } parm2 = { .val = devad };
+		union { uintptr_t x; uint16_t val; } parm3 = { .val = regad };
+		union { uintptr_t x; uint16_t val; } parm4 = { .val = data };
+		return (int) arch_syscall_invoke5(parm0.x, parm1.x, parm2.x, parm3.x, parm4.x, K_SYSCALL_MDIO_WRITE_C45);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_mdio_write_c45(dev, prtad, devad, regad, data);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define mdio_write_c45(dev, prtad, devad, regad, data) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MDIO_WRITE_C45, mdio_write_c45, dev, prtad, devad, regad, data); 	syscall__retval = mdio_write_c45(dev, prtad, devad, regad, data); 	sys_port_trace_syscall_exit(K_SYSCALL_MDIO_WRITE_C45, mdio_write_c45, dev, prtad, devad, regad, data, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

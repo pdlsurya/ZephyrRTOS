@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -34,91 +34,86 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
+  set(CMAKE_OBJDUMP "/usr/local/zephyr-sdk-0.16.5-1/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/disk/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/disk/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/interrupt_controller/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/interrupt_controller/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/misc/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/misc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/pcie/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/pcie/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/usb/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/usb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/usb_c/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/usb_c/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/clock_control/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/clock_control/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/console/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/console/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/display/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/display/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/gpio/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/gpio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/hwinfo/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/hwinfo/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/i2c/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/i2c/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/pinctrl/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/pinctrl/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/sdhc/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/serial/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/serial/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/spi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/spi/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/build/zephyr/drivers/timer/cmake_install.cmake")
+  include("/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/build/zephyr/drivers/timer/cmake_install.cmake")
 endif()
 

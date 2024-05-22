@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int i2c_configure(const struct device * dev, uint32_t dev_config)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define i2c_configure(dev, dev_config) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I2C_CONFIGURE, i2c_configure, dev, dev_config); 	retval = i2c_configure(dev, dev_config); 	sys_port_trace_syscall_exit(K_SYSCALL_I2C_CONFIGURE, i2c_configure, dev, dev_config, retval); 	retval; })
+#define i2c_configure(dev, dev_config) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I2C_CONFIGURE, i2c_configure, dev, dev_config); 	syscall__retval = i2c_configure(dev, dev_config); 	sys_port_trace_syscall_exit(K_SYSCALL_I2C_CONFIGURE, i2c_configure, dev, dev_config, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -61,7 +63,7 @@ static inline int i2c_get_config(const struct device * dev, uint32_t * dev_confi
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define i2c_get_config(dev, dev_config) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I2C_GET_CONFIG, i2c_get_config, dev, dev_config); 	retval = i2c_get_config(dev, dev_config); 	sys_port_trace_syscall_exit(K_SYSCALL_I2C_GET_CONFIG, i2c_get_config, dev, dev_config, retval); 	retval; })
+#define i2c_get_config(dev, dev_config) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I2C_GET_CONFIG, i2c_get_config, dev, dev_config); 	syscall__retval = i2c_get_config(dev, dev_config); 	sys_port_trace_syscall_exit(K_SYSCALL_I2C_GET_CONFIG, i2c_get_config, dev, dev_config, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -87,7 +89,7 @@ static inline int i2c_transfer(const struct device * dev, struct i2c_msg * msgs,
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define i2c_transfer(dev, msgs, num_msgs, addr) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I2C_TRANSFER, i2c_transfer, dev, msgs, num_msgs, addr); 	retval = i2c_transfer(dev, msgs, num_msgs, addr); 	sys_port_trace_syscall_exit(K_SYSCALL_I2C_TRANSFER, i2c_transfer, dev, msgs, num_msgs, addr, retval); 	retval; })
+#define i2c_transfer(dev, msgs, num_msgs, addr) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I2C_TRANSFER, i2c_transfer, dev, msgs, num_msgs, addr); 	syscall__retval = i2c_transfer(dev, msgs, num_msgs, addr); 	sys_port_trace_syscall_exit(K_SYSCALL_I2C_TRANSFER, i2c_transfer, dev, msgs, num_msgs, addr, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -110,7 +112,7 @@ static inline int i2c_recover_bus(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define i2c_recover_bus(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I2C_RECOVER_BUS, i2c_recover_bus, dev); 	retval = i2c_recover_bus(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_I2C_RECOVER_BUS, i2c_recover_bus, dev, retval); 	retval; })
+#define i2c_recover_bus(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I2C_RECOVER_BUS, i2c_recover_bus, dev); 	syscall__retval = i2c_recover_bus(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_I2C_RECOVER_BUS, i2c_recover_bus, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -133,7 +135,7 @@ static inline int i2c_target_driver_register(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define i2c_target_driver_register(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I2C_TARGET_DRIVER_REGISTER, i2c_target_driver_register, dev); 	retval = i2c_target_driver_register(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_I2C_TARGET_DRIVER_REGISTER, i2c_target_driver_register, dev, retval); 	retval; })
+#define i2c_target_driver_register(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I2C_TARGET_DRIVER_REGISTER, i2c_target_driver_register, dev); 	syscall__retval = i2c_target_driver_register(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_I2C_TARGET_DRIVER_REGISTER, i2c_target_driver_register, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -156,7 +158,7 @@ static inline int i2c_target_driver_unregister(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define i2c_target_driver_unregister(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I2C_TARGET_DRIVER_UNREGISTER, i2c_target_driver_unregister, dev); 	retval = i2c_target_driver_unregister(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_I2C_TARGET_DRIVER_UNREGISTER, i2c_target_driver_unregister, dev, retval); 	retval; })
+#define i2c_target_driver_unregister(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I2C_TARGET_DRIVER_UNREGISTER, i2c_target_driver_unregister, dev); 	syscall__retval = i2c_target_driver_unregister(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_I2C_TARGET_DRIVER_UNREGISTER, i2c_target_driver_unregister, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

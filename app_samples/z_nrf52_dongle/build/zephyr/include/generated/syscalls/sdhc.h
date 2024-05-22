@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -36,7 +38,7 @@ static inline int sdhc_hw_reset(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sdhc_hw_reset(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_HW_RESET, sdhc_hw_reset, dev); 	retval = sdhc_hw_reset(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_HW_RESET, sdhc_hw_reset, dev, retval); 	retval; })
+#define sdhc_hw_reset(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_HW_RESET, sdhc_hw_reset, dev); 	syscall__retval = sdhc_hw_reset(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_HW_RESET, sdhc_hw_reset, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -61,7 +63,7 @@ static inline int sdhc_request(const struct device * dev, struct sdhc_command * 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sdhc_request(dev, cmd, data) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_REQUEST, sdhc_request, dev, cmd, data); 	retval = sdhc_request(dev, cmd, data); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_REQUEST, sdhc_request, dev, cmd, data, retval); 	retval; })
+#define sdhc_request(dev, cmd, data) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_REQUEST, sdhc_request, dev, cmd, data); 	syscall__retval = sdhc_request(dev, cmd, data); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_REQUEST, sdhc_request, dev, cmd, data, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -85,7 +87,7 @@ static inline int sdhc_set_io(const struct device * dev, struct sdhc_io * io)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sdhc_set_io(dev, io) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_SET_IO, sdhc_set_io, dev, io); 	retval = sdhc_set_io(dev, io); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_SET_IO, sdhc_set_io, dev, io, retval); 	retval; })
+#define sdhc_set_io(dev, io) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_SET_IO, sdhc_set_io, dev, io); 	syscall__retval = sdhc_set_io(dev, io); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_SET_IO, sdhc_set_io, dev, io, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -108,7 +110,7 @@ static inline int sdhc_card_present(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sdhc_card_present(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_CARD_PRESENT, sdhc_card_present, dev); 	retval = sdhc_card_present(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_CARD_PRESENT, sdhc_card_present, dev, retval); 	retval; })
+#define sdhc_card_present(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_CARD_PRESENT, sdhc_card_present, dev); 	syscall__retval = sdhc_card_present(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_CARD_PRESENT, sdhc_card_present, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -131,7 +133,7 @@ static inline int sdhc_execute_tuning(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sdhc_execute_tuning(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_EXECUTE_TUNING, sdhc_execute_tuning, dev); 	retval = sdhc_execute_tuning(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_EXECUTE_TUNING, sdhc_execute_tuning, dev, retval); 	retval; })
+#define sdhc_execute_tuning(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_EXECUTE_TUNING, sdhc_execute_tuning, dev); 	syscall__retval = sdhc_execute_tuning(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_EXECUTE_TUNING, sdhc_execute_tuning, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -154,7 +156,7 @@ static inline int sdhc_card_busy(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sdhc_card_busy(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_CARD_BUSY, sdhc_card_busy, dev); 	retval = sdhc_card_busy(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_CARD_BUSY, sdhc_card_busy, dev, retval); 	retval; })
+#define sdhc_card_busy(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_CARD_BUSY, sdhc_card_busy, dev); 	syscall__retval = sdhc_card_busy(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_CARD_BUSY, sdhc_card_busy, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -178,7 +180,57 @@ static inline int sdhc_get_host_props(const struct device * dev, struct sdhc_hos
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sdhc_get_host_props(dev, props) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_GET_HOST_PROPS, sdhc_get_host_props, dev, props); 	retval = sdhc_get_host_props(dev, props); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_GET_HOST_PROPS, sdhc_get_host_props, dev, props, retval); 	retval; })
+#define sdhc_get_host_props(dev, props) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_GET_HOST_PROPS, sdhc_get_host_props, dev, props); 	syscall__retval = sdhc_get_host_props(dev, props); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_GET_HOST_PROPS, sdhc_get_host_props, dev, props, syscall__retval); 	syscall__retval; })
+#endif
+#endif
+
+
+extern int z_impl_sdhc_enable_interrupt(const struct device * dev, sdhc_interrupt_cb_t callback, int sources, void * user_data);
+
+__pinned_func
+static inline int sdhc_enable_interrupt(const struct device * dev, sdhc_interrupt_cb_t callback, int sources, void * user_data)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		union { uintptr_t x; sdhc_interrupt_cb_t val; } parm1 = { .val = callback };
+		union { uintptr_t x; int val; } parm2 = { .val = sources };
+		union { uintptr_t x; void * val; } parm3 = { .val = user_data };
+		return (int) arch_syscall_invoke4(parm0.x, parm1.x, parm2.x, parm3.x, K_SYSCALL_SDHC_ENABLE_INTERRUPT);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_sdhc_enable_interrupt(dev, callback, sources, user_data);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define sdhc_enable_interrupt(dev, callback, sources, user_data) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_ENABLE_INTERRUPT, sdhc_enable_interrupt, dev, callback, sources, user_data); 	syscall__retval = sdhc_enable_interrupt(dev, callback, sources, user_data); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_ENABLE_INTERRUPT, sdhc_enable_interrupt, dev, callback, sources, user_data, syscall__retval); 	syscall__retval; })
+#endif
+#endif
+
+
+extern int z_impl_sdhc_disable_interrupt(const struct device * dev, int sources);
+
+__pinned_func
+static inline int sdhc_disable_interrupt(const struct device * dev, int sources)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		union { uintptr_t x; int val; } parm1 = { .val = sources };
+		return (int) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_SDHC_DISABLE_INTERRUPT);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_sdhc_disable_interrupt(dev, sources);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define sdhc_disable_interrupt(dev, sources) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SDHC_DISABLE_INTERRUPT, sdhc_disable_interrupt, dev, sources); 	syscall__retval = sdhc_disable_interrupt(dev, sources); 	sys_port_trace_syscall_exit(K_SYSCALL_SDHC_DISABLE_INTERRUPT, sdhc_disable_interrupt, dev, sources, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

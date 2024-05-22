@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int maxim_ds3231_req_syncpoint(const struct device * dev, struct k
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define maxim_ds3231_req_syncpoint(dev, signal) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MAXIM_DS3231_REQ_SYNCPOINT, maxim_ds3231_req_syncpoint, dev, signal); 	retval = maxim_ds3231_req_syncpoint(dev, signal); 	sys_port_trace_syscall_exit(K_SYSCALL_MAXIM_DS3231_REQ_SYNCPOINT, maxim_ds3231_req_syncpoint, dev, signal, retval); 	retval; })
+#define maxim_ds3231_req_syncpoint(dev, signal) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MAXIM_DS3231_REQ_SYNCPOINT, maxim_ds3231_req_syncpoint, dev, signal); 	syscall__retval = maxim_ds3231_req_syncpoint(dev, signal); 	sys_port_trace_syscall_exit(K_SYSCALL_MAXIM_DS3231_REQ_SYNCPOINT, maxim_ds3231_req_syncpoint, dev, signal, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -61,7 +63,7 @@ static inline int maxim_ds3231_get_syncpoint(const struct device * dev, struct m
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define maxim_ds3231_get_syncpoint(dev, syncpoint) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MAXIM_DS3231_GET_SYNCPOINT, maxim_ds3231_get_syncpoint, dev, syncpoint); 	retval = maxim_ds3231_get_syncpoint(dev, syncpoint); 	sys_port_trace_syscall_exit(K_SYSCALL_MAXIM_DS3231_GET_SYNCPOINT, maxim_ds3231_get_syncpoint, dev, syncpoint, retval); 	retval; })
+#define maxim_ds3231_get_syncpoint(dev, syncpoint) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_MAXIM_DS3231_GET_SYNCPOINT, maxim_ds3231_get_syncpoint, dev, syncpoint); 	syscall__retval = maxim_ds3231_get_syncpoint(dev, syncpoint); 	sys_port_trace_syscall_exit(K_SYSCALL_MAXIM_DS3231_GET_SYNCPOINT, maxim_ds3231_get_syncpoint, dev, syncpoint, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

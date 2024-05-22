@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int z_sys_mutex_kernel_lock(struct sys_mutex * mutex, k_timeout_t 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define z_sys_mutex_kernel_lock(mutex, timeout) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_Z_SYS_MUTEX_KERNEL_LOCK, z_sys_mutex_kernel_lock, mutex, timeout); 	retval = z_sys_mutex_kernel_lock(mutex, timeout); 	sys_port_trace_syscall_exit(K_SYSCALL_Z_SYS_MUTEX_KERNEL_LOCK, z_sys_mutex_kernel_lock, mutex, timeout, retval); 	retval; })
+#define z_sys_mutex_kernel_lock(mutex, timeout) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_Z_SYS_MUTEX_KERNEL_LOCK, z_sys_mutex_kernel_lock, mutex, timeout); 	syscall__retval = z_sys_mutex_kernel_lock(mutex, timeout); 	sys_port_trace_syscall_exit(K_SYSCALL_Z_SYS_MUTEX_KERNEL_LOCK, z_sys_mutex_kernel_lock, mutex, timeout, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -60,7 +62,7 @@ static inline int z_sys_mutex_kernel_unlock(struct sys_mutex * mutex)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define z_sys_mutex_kernel_unlock(mutex) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_Z_SYS_MUTEX_KERNEL_UNLOCK, z_sys_mutex_kernel_unlock, mutex); 	retval = z_sys_mutex_kernel_unlock(mutex); 	sys_port_trace_syscall_exit(K_SYSCALL_Z_SYS_MUTEX_KERNEL_UNLOCK, z_sys_mutex_kernel_unlock, mutex, retval); 	retval; })
+#define z_sys_mutex_kernel_unlock(mutex) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_Z_SYS_MUTEX_KERNEL_UNLOCK, z_sys_mutex_kernel_unlock, mutex); 	syscall__retval = z_sys_mutex_kernel_unlock(mutex); 	sys_port_trace_syscall_exit(K_SYSCALL_Z_SYS_MUTEX_KERNEL_UNLOCK, z_sys_mutex_kernel_unlock, mutex, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

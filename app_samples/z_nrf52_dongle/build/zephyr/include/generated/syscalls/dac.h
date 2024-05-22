@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int dac_channel_setup(const struct device * dev, const struct dac_
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define dac_channel_setup(dev, channel_cfg) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DAC_CHANNEL_SETUP, dac_channel_setup, dev, channel_cfg); 	retval = dac_channel_setup(dev, channel_cfg); 	sys_port_trace_syscall_exit(K_SYSCALL_DAC_CHANNEL_SETUP, dac_channel_setup, dev, channel_cfg, retval); 	retval; })
+#define dac_channel_setup(dev, channel_cfg) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DAC_CHANNEL_SETUP, dac_channel_setup, dev, channel_cfg); 	syscall__retval = dac_channel_setup(dev, channel_cfg); 	sys_port_trace_syscall_exit(K_SYSCALL_DAC_CHANNEL_SETUP, dac_channel_setup, dev, channel_cfg, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -62,7 +64,7 @@ static inline int dac_write_value(const struct device * dev, uint8_t channel, ui
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define dac_write_value(dev, channel, value) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DAC_WRITE_VALUE, dac_write_value, dev, channel, value); 	retval = dac_write_value(dev, channel, value); 	sys_port_trace_syscall_exit(K_SYSCALL_DAC_WRITE_VALUE, dac_write_value, dev, channel, value, retval); 	retval; })
+#define dac_write_value(dev, channel, value) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DAC_WRITE_VALUE, dac_write_value, dev, channel, value); 	syscall__retval = dac_write_value(dev, channel, value); 	sys_port_trace_syscall_exit(K_SYSCALL_DAC_WRITE_VALUE, dac_write_value, dev, channel, value, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

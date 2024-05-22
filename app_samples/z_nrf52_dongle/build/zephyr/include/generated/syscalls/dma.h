@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int dma_start(const struct device * dev, uint32_t channel)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define dma_start(dev, channel) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DMA_START, dma_start, dev, channel); 	retval = dma_start(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_DMA_START, dma_start, dev, channel, retval); 	retval; })
+#define dma_start(dev, channel) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DMA_START, dma_start, dev, channel); 	syscall__retval = dma_start(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_DMA_START, dma_start, dev, channel, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -61,7 +63,7 @@ static inline int dma_stop(const struct device * dev, uint32_t channel)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define dma_stop(dev, channel) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DMA_STOP, dma_stop, dev, channel); 	retval = dma_stop(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_DMA_STOP, dma_stop, dev, channel, retval); 	retval; })
+#define dma_stop(dev, channel) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DMA_STOP, dma_stop, dev, channel); 	syscall__retval = dma_stop(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_DMA_STOP, dma_stop, dev, channel, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -85,7 +87,7 @@ static inline int dma_suspend(const struct device * dev, uint32_t channel)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define dma_suspend(dev, channel) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DMA_SUSPEND, dma_suspend, dev, channel); 	retval = dma_suspend(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_DMA_SUSPEND, dma_suspend, dev, channel, retval); 	retval; })
+#define dma_suspend(dev, channel) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DMA_SUSPEND, dma_suspend, dev, channel); 	syscall__retval = dma_suspend(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_DMA_SUSPEND, dma_suspend, dev, channel, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -109,7 +111,7 @@ static inline int dma_resume(const struct device * dev, uint32_t channel)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define dma_resume(dev, channel) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DMA_RESUME, dma_resume, dev, channel); 	retval = dma_resume(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_DMA_RESUME, dma_resume, dev, channel, retval); 	retval; })
+#define dma_resume(dev, channel) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DMA_RESUME, dma_resume, dev, channel); 	syscall__retval = dma_resume(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_DMA_RESUME, dma_resume, dev, channel, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -133,7 +135,7 @@ static inline int dma_request_channel(const struct device * dev, void * filter_p
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define dma_request_channel(dev, filter_param) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DMA_REQUEST_CHANNEL, dma_request_channel, dev, filter_param); 	retval = dma_request_channel(dev, filter_param); 	sys_port_trace_syscall_exit(K_SYSCALL_DMA_REQUEST_CHANNEL, dma_request_channel, dev, filter_param, retval); 	retval; })
+#define dma_request_channel(dev, filter_param) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DMA_REQUEST_CHANNEL, dma_request_channel, dev, filter_param); 	syscall__retval = dma_request_channel(dev, filter_param); 	sys_port_trace_syscall_exit(K_SYSCALL_DMA_REQUEST_CHANNEL, dma_request_channel, dev, filter_param, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -183,7 +185,7 @@ static inline int dma_chan_filter(const struct device * dev, int channel, void *
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define dma_chan_filter(dev, channel, filter_param) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DMA_CHAN_FILTER, dma_chan_filter, dev, channel, filter_param); 	retval = dma_chan_filter(dev, channel, filter_param); 	sys_port_trace_syscall_exit(K_SYSCALL_DMA_CHAN_FILTER, dma_chan_filter, dev, channel, filter_param, retval); 	retval; })
+#define dma_chan_filter(dev, channel, filter_param) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_DMA_CHAN_FILTER, dma_chan_filter, dev, channel, filter_param); 	syscall__retval = dma_chan_filter(dev, channel, filter_param); 	sys_port_trace_syscall_exit(K_SYSCALL_DMA_CHAN_FILTER, dma_chan_filter, dev, channel, filter_param, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

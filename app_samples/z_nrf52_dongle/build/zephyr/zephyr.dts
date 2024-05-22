@@ -41,7 +41,7 @@
 	soc {
 		#address-cells = < 0x1 >;
 		#size-cells = < 0x1 >;
-		compatible = "nordic,nRF52840-QIAA", "nordic,nRF52840", "nordic,nRF52", "simple-bus";
+		compatible = "nordic,nrf52840-qiaa", "nordic,nrf52840", "nordic,nrf52", "simple-bus";
 		interrupt-parent = < &nvic >;
 		ranges;
 		nvic: interrupt-controller@e000e100 {
@@ -61,12 +61,15 @@
 		ficr: ficr@10000000 {
 			compatible = "nordic,nrf-ficr";
 			reg = < 0x10000000 0x1000 >;
+			#nordic,ficr-cells = < 0x1 >;
 			status = "okay";
 		};
 		uicr: uicr@10001000 {
 			compatible = "nordic,nrf-uicr";
 			reg = < 0x10001000 0x1000 >;
 			status = "okay";
+			nfct-pins-as-gpios;
+			gpio-as-nreset;
 		};
 		sram0: memory@20000000 {
 			compatible = "mmio-sram";
@@ -131,6 +134,7 @@
 			reg = < 0x40003000 0x1000 >;
 			clock-frequency = < 0x186a0 >;
 			interrupts = < 0x3 0x1 >;
+			easydma-maxcnt-bits = < 0x10 >;
 			status = "disabled";
 			pinctrl-0 = < &i2c0_default >;
 			pinctrl-1 = < &i2c0_sleep >;
@@ -172,12 +176,13 @@
 			reg = < 0x40004000 0x1000 >;
 			clock-frequency = < 0x186a0 >;
 			interrupts = < 0x4 0x1 >;
+			easydma-maxcnt-bits = < 0x10 >;
 			status = "okay";
 			pinctrl-0 = < &i2c1_default >;
 			pinctrl-1 = < &i2c1_sleep >;
 			pinctrl-names = "default", "sleep";
 			sh1106: sh1106@3c {
-				compatible = "sinowealth,sh1106";
+				compatible = "sinowealth,sh1106_custom";
 				status = "okay";
 				reg = < 0x3c >;
 			};
@@ -199,13 +204,15 @@
 			compatible = "nordic,nrf-nfct";
 			reg = < 0x40005000 0x1000 >;
 			interrupts = < 0x5 0x1 >;
-			status = "okay";
+			status = "disabled";
 		};
-		gpiote: gpiote@40006000 {
+		gpiote: gpiote0: gpiote@40006000 {
 			compatible = "nordic,nrf-gpiote";
 			reg = < 0x40006000 0x1000 >;
 			interrupts = < 0x6 0x5 >;
 			status = "okay";
+			instance = < 0x0 >;
+			phandle = < 0xf >;
 		};
 		adc: adc@40007000 {
 			compatible = "nordic,nrf-saadc";
@@ -231,6 +238,7 @@
 			max-bit-width = < 0x20 >;
 			interrupts = < 0x9 0x1 >;
 			prescaler = < 0x0 >;
+			phandle = < 0x10 >;
 		};
 		timer2: timer@4000a000 {
 			compatible = "nordic,nrf-timer";
@@ -240,7 +248,6 @@
 			max-bit-width = < 0x20 >;
 			interrupts = < 0xa 0x1 >;
 			prescaler = < 0x0 >;
-			phandle = < 0xf >;
 		};
 		rtc0: rtc@4000b000 {
 			compatible = "nordic,nrf-rtc";
@@ -367,7 +374,7 @@
 			pinctrl-0 = < &pwm0_default >;
 			pinctrl-1 = < &pwm0_sleep >;
 			pinctrl-names = "default", "sleep";
-			phandle = < 0x11 >;
+			phandle = < 0x12 >;
 		};
 		pdm0: pdm@4001d000 {
 			compatible = "nordic,nrf-pdm";
@@ -520,6 +527,7 @@
 			#gpio-cells = < 0x2 >;
 			status = "okay";
 			port = < 0x0 >;
+			gpiote-instance = < &gpiote >;
 			phandle = < 0x8 >;
 		};
 		gpio1: gpio@50000300 {
@@ -530,19 +538,15 @@
 			ngpios = < 0x10 >;
 			status = "okay";
 			port = < 0x1 >;
-			phandle = < 0x10 >;
+			gpiote-instance = < &gpiote >;
+			phandle = < 0x11 >;
 		};
 		cryptocell: crypto@5002a000 {
-			compatible = "nordic,nrf-cc310";
-			reg = < 0x5002a000 0x1000 >;
-			status = "okay";
-			#address-cells = < 0x1 >;
-			#size-cells = < 0x1 >;
-			cryptocell310: crypto@5002b000 {
-				compatible = "arm,cryptocell-310";
-				reg = < 0x5002b000 0x1000 >;
-				interrupts = < 0x2a 0x1 >;
-			};
+			compatible = "nordic,cryptocell", "arm,cryptocell-310";
+			reg = < 0x5002a000 0x1000 >, < 0x5002b000 0x1000 >;
+			reg-names = "wrapper", "core";
+			interrupts = < 0x2a 0x1 >;
+			status = "disabled";
 		};
 	};
 	pinctrl: pin-controller {
@@ -635,6 +639,13 @@
 		compatible = "zephyr,bt-hci-entropy";
 		status = "okay";
 	};
+	sw_pwm: sw-pwm {
+		compatible = "nordic,nrf-sw-pwm";
+		status = "disabled";
+		generator = < &timer1 >;
+		clock-prescaler = < 0x0 >;
+		#pwm-cells = < 0x3 >;
+	};
 	cpus {
 		#address-cells = < 0x1 >;
 		#size-cells = < 0x0 >;
@@ -650,13 +661,6 @@
 				swo-ref-frequency = < 0x1e84800 >;
 			};
 		};
-	};
-	sw_pwm: sw-pwm {
-		compatible = "nordic,nrf-sw-pwm";
-		status = "disabled";
-		generator = < &timer2 >;
-		clock-prescaler = < 0x0 >;
-		#pwm-cells = < 0x3 >;
 	};
 	leds {
 		compatible = "gpio-leds";
@@ -694,6 +698,7 @@
 		button0: button_0 {
 			gpios = < &gpio1 0x6 0x11 >;
 			label = "Push button switch 0";
+			zephyr,code = < 0xb >;
 		};
 	};
 };

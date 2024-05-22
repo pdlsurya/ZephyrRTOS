@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int ps2_config(const struct device * dev, ps2_callback_t callback_
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define ps2_config(dev, callback_isr) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PS2_CONFIG, ps2_config, dev, callback_isr); 	retval = ps2_config(dev, callback_isr); 	sys_port_trace_syscall_exit(K_SYSCALL_PS2_CONFIG, ps2_config, dev, callback_isr, retval); 	retval; })
+#define ps2_config(dev, callback_isr) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PS2_CONFIG, ps2_config, dev, callback_isr); 	syscall__retval = ps2_config(dev, callback_isr); 	sys_port_trace_syscall_exit(K_SYSCALL_PS2_CONFIG, ps2_config, dev, callback_isr, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -61,7 +63,7 @@ static inline int ps2_write(const struct device * dev, uint8_t value)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define ps2_write(dev, value) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PS2_WRITE, ps2_write, dev, value); 	retval = ps2_write(dev, value); 	sys_port_trace_syscall_exit(K_SYSCALL_PS2_WRITE, ps2_write, dev, value, retval); 	retval; })
+#define ps2_write(dev, value) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PS2_WRITE, ps2_write, dev, value); 	syscall__retval = ps2_write(dev, value); 	sys_port_trace_syscall_exit(K_SYSCALL_PS2_WRITE, ps2_write, dev, value, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -85,7 +87,7 @@ static inline int ps2_read(const struct device * dev, uint8_t * value)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define ps2_read(dev, value) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PS2_READ, ps2_read, dev, value); 	retval = ps2_read(dev, value); 	sys_port_trace_syscall_exit(K_SYSCALL_PS2_READ, ps2_read, dev, value, retval); 	retval; })
+#define ps2_read(dev, value) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PS2_READ, ps2_read, dev, value); 	syscall__retval = ps2_read(dev, value); 	sys_port_trace_syscall_exit(K_SYSCALL_PS2_READ, ps2_read, dev, value, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -108,7 +110,7 @@ static inline int ps2_enable_callback(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define ps2_enable_callback(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PS2_ENABLE_CALLBACK, ps2_enable_callback, dev); 	retval = ps2_enable_callback(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_PS2_ENABLE_CALLBACK, ps2_enable_callback, dev, retval); 	retval; })
+#define ps2_enable_callback(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PS2_ENABLE_CALLBACK, ps2_enable_callback, dev); 	syscall__retval = ps2_enable_callback(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_PS2_ENABLE_CALLBACK, ps2_enable_callback, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -131,7 +133,7 @@ static inline int ps2_disable_callback(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define ps2_disable_callback(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PS2_DISABLE_CALLBACK, ps2_disable_callback, dev); 	retval = ps2_disable_callback(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_PS2_DISABLE_CALLBACK, ps2_disable_callback, dev, retval); 	retval; })
+#define ps2_disable_callback(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PS2_DISABLE_CALLBACK, ps2_disable_callback, dev); 	syscall__retval = ps2_disable_callback(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_PS2_DISABLE_CALLBACK, ps2_disable_callback, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

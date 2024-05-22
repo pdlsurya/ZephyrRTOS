@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -40,7 +42,7 @@ static inline int zsock_select(int nfds, zsock_fd_set * readfds, zsock_fd_set * 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define zsock_select(nfds, readfds, writefds, exceptfds, timeout) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ZSOCK_SELECT, zsock_select, nfds, readfds, writefds, exceptfds, timeout); 	retval = zsock_select(nfds, readfds, writefds, exceptfds, timeout); 	sys_port_trace_syscall_exit(K_SYSCALL_ZSOCK_SELECT, zsock_select, nfds, readfds, writefds, exceptfds, timeout, retval); 	retval; })
+#define zsock_select(nfds, readfds, writefds, exceptfds, timeout) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ZSOCK_SELECT, zsock_select, nfds, readfds, writefds, exceptfds, timeout); 	syscall__retval = zsock_select(nfds, readfds, writefds, exceptfds, timeout); 	sys_port_trace_syscall_exit(K_SYSCALL_ZSOCK_SELECT, zsock_select, nfds, readfds, writefds, exceptfds, timeout, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

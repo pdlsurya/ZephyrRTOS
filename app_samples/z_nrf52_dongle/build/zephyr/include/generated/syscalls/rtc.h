@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int rtc_set_time(const struct device * dev, const struct rtc_time 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtc_set_time(dev, timeptr) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_SET_TIME, rtc_set_time, dev, timeptr); 	retval = rtc_set_time(dev, timeptr); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_SET_TIME, rtc_set_time, dev, timeptr, retval); 	retval; })
+#define rtc_set_time(dev, timeptr) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_SET_TIME, rtc_set_time, dev, timeptr); 	syscall__retval = rtc_set_time(dev, timeptr); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_SET_TIME, rtc_set_time, dev, timeptr, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -61,7 +63,7 @@ static inline int rtc_get_time(const struct device * dev, struct rtc_time * time
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtc_get_time(dev, timeptr) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_GET_TIME, rtc_get_time, dev, timeptr); 	retval = rtc_get_time(dev, timeptr); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_GET_TIME, rtc_get_time, dev, timeptr, retval); 	retval; })
+#define rtc_get_time(dev, timeptr) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_GET_TIME, rtc_get_time, dev, timeptr); 	syscall__retval = rtc_get_time(dev, timeptr); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_GET_TIME, rtc_get_time, dev, timeptr, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -86,7 +88,7 @@ static inline int rtc_alarm_get_supported_fields(const struct device * dev, uint
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtc_alarm_get_supported_fields(dev, id, mask) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_ALARM_GET_SUPPORTED_FIELDS, rtc_alarm_get_supported_fields, dev, id, mask); 	retval = rtc_alarm_get_supported_fields(dev, id, mask); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_ALARM_GET_SUPPORTED_FIELDS, rtc_alarm_get_supported_fields, dev, id, mask, retval); 	retval; })
+#define rtc_alarm_get_supported_fields(dev, id, mask) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_ALARM_GET_SUPPORTED_FIELDS, rtc_alarm_get_supported_fields, dev, id, mask); 	syscall__retval = rtc_alarm_get_supported_fields(dev, id, mask); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_ALARM_GET_SUPPORTED_FIELDS, rtc_alarm_get_supported_fields, dev, id, mask, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -112,7 +114,7 @@ static inline int rtc_alarm_set_time(const struct device * dev, uint16_t id, uin
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtc_alarm_set_time(dev, id, mask, timeptr) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_ALARM_SET_TIME, rtc_alarm_set_time, dev, id, mask, timeptr); 	retval = rtc_alarm_set_time(dev, id, mask, timeptr); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_ALARM_SET_TIME, rtc_alarm_set_time, dev, id, mask, timeptr, retval); 	retval; })
+#define rtc_alarm_set_time(dev, id, mask, timeptr) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_ALARM_SET_TIME, rtc_alarm_set_time, dev, id, mask, timeptr); 	syscall__retval = rtc_alarm_set_time(dev, id, mask, timeptr); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_ALARM_SET_TIME, rtc_alarm_set_time, dev, id, mask, timeptr, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -138,7 +140,7 @@ static inline int rtc_alarm_get_time(const struct device * dev, uint16_t id, uin
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtc_alarm_get_time(dev, id, mask, timeptr) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_ALARM_GET_TIME, rtc_alarm_get_time, dev, id, mask, timeptr); 	retval = rtc_alarm_get_time(dev, id, mask, timeptr); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_ALARM_GET_TIME, rtc_alarm_get_time, dev, id, mask, timeptr, retval); 	retval; })
+#define rtc_alarm_get_time(dev, id, mask, timeptr) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_ALARM_GET_TIME, rtc_alarm_get_time, dev, id, mask, timeptr); 	syscall__retval = rtc_alarm_get_time(dev, id, mask, timeptr); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_ALARM_GET_TIME, rtc_alarm_get_time, dev, id, mask, timeptr, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -162,7 +164,7 @@ static inline int rtc_alarm_is_pending(const struct device * dev, uint16_t id)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtc_alarm_is_pending(dev, id) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_ALARM_IS_PENDING, rtc_alarm_is_pending, dev, id); 	retval = rtc_alarm_is_pending(dev, id); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_ALARM_IS_PENDING, rtc_alarm_is_pending, dev, id, retval); 	retval; })
+#define rtc_alarm_is_pending(dev, id) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_ALARM_IS_PENDING, rtc_alarm_is_pending, dev, id); 	syscall__retval = rtc_alarm_is_pending(dev, id); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_ALARM_IS_PENDING, rtc_alarm_is_pending, dev, id, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -188,7 +190,7 @@ static inline int rtc_alarm_set_callback(const struct device * dev, uint16_t id,
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtc_alarm_set_callback(dev, id, callback, user_data) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_ALARM_SET_CALLBACK, rtc_alarm_set_callback, dev, id, callback, user_data); 	retval = rtc_alarm_set_callback(dev, id, callback, user_data); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_ALARM_SET_CALLBACK, rtc_alarm_set_callback, dev, id, callback, user_data, retval); 	retval; })
+#define rtc_alarm_set_callback(dev, id, callback, user_data) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_ALARM_SET_CALLBACK, rtc_alarm_set_callback, dev, id, callback, user_data); 	syscall__retval = rtc_alarm_set_callback(dev, id, callback, user_data); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_ALARM_SET_CALLBACK, rtc_alarm_set_callback, dev, id, callback, user_data, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -213,7 +215,7 @@ static inline int rtc_update_set_callback(const struct device * dev, rtc_update_
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtc_update_set_callback(dev, callback, user_data) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_UPDATE_SET_CALLBACK, rtc_update_set_callback, dev, callback, user_data); 	retval = rtc_update_set_callback(dev, callback, user_data); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_UPDATE_SET_CALLBACK, rtc_update_set_callback, dev, callback, user_data, retval); 	retval; })
+#define rtc_update_set_callback(dev, callback, user_data) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_UPDATE_SET_CALLBACK, rtc_update_set_callback, dev, callback, user_data); 	syscall__retval = rtc_update_set_callback(dev, callback, user_data); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_UPDATE_SET_CALLBACK, rtc_update_set_callback, dev, callback, user_data, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -237,7 +239,7 @@ static inline int rtc_set_calibration(const struct device * dev, int32_t calibra
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtc_set_calibration(dev, calibration) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_SET_CALIBRATION, rtc_set_calibration, dev, calibration); 	retval = rtc_set_calibration(dev, calibration); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_SET_CALIBRATION, rtc_set_calibration, dev, calibration, retval); 	retval; })
+#define rtc_set_calibration(dev, calibration) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_SET_CALIBRATION, rtc_set_calibration, dev, calibration); 	syscall__retval = rtc_set_calibration(dev, calibration); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_SET_CALIBRATION, rtc_set_calibration, dev, calibration, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -261,7 +263,7 @@ static inline int rtc_get_calibration(const struct device * dev, int32_t * calib
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtc_get_calibration(dev, calibration) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_GET_CALIBRATION, rtc_get_calibration, dev, calibration); 	retval = rtc_get_calibration(dev, calibration); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_GET_CALIBRATION, rtc_get_calibration, dev, calibration, retval); 	retval; })
+#define rtc_get_calibration(dev, calibration) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTC_GET_CALIBRATION, rtc_get_calibration, dev, calibration); 	syscall__retval = rtc_get_calibration(dev, calibration); 	sys_port_trace_syscall_exit(K_SYSCALL_RTC_GET_CALIBRATION, rtc_get_calibration, dev, calibration, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

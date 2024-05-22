@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int i3c_do_ccc(const struct device * dev, struct i3c_ccc_payload *
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define i3c_do_ccc(dev, payload) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I3C_DO_CCC, i3c_do_ccc, dev, payload); 	retval = i3c_do_ccc(dev, payload); 	sys_port_trace_syscall_exit(K_SYSCALL_I3C_DO_CCC, i3c_do_ccc, dev, payload, retval); 	retval; })
+#define i3c_do_ccc(dev, payload) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I3C_DO_CCC, i3c_do_ccc, dev, payload); 	syscall__retval = i3c_do_ccc(dev, payload); 	sys_port_trace_syscall_exit(K_SYSCALL_I3C_DO_CCC, i3c_do_ccc, dev, payload, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -62,7 +64,7 @@ static inline int i3c_transfer(struct i3c_device_desc * target, struct i3c_msg *
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define i3c_transfer(target, msgs, num_msgs) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I3C_TRANSFER, i3c_transfer, target, msgs, num_msgs); 	retval = i3c_transfer(target, msgs, num_msgs); 	sys_port_trace_syscall_exit(K_SYSCALL_I3C_TRANSFER, i3c_transfer, target, msgs, num_msgs, retval); 	retval; })
+#define i3c_transfer(target, msgs, num_msgs) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_I3C_TRANSFER, i3c_transfer, target, msgs, num_msgs); 	syscall__retval = i3c_transfer(target, msgs, num_msgs); 	sys_port_trace_syscall_exit(K_SYSCALL_I3C_TRANSFER, i3c_transfer, target, msgs, num_msgs, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

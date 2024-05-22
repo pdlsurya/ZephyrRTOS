@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int adc_channel_setup(const struct device * dev, const struct adc_
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define adc_channel_setup(dev, channel_cfg) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ADC_CHANNEL_SETUP, adc_channel_setup, dev, channel_cfg); 	retval = adc_channel_setup(dev, channel_cfg); 	sys_port_trace_syscall_exit(K_SYSCALL_ADC_CHANNEL_SETUP, adc_channel_setup, dev, channel_cfg, retval); 	retval; })
+#define adc_channel_setup(dev, channel_cfg) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ADC_CHANNEL_SETUP, adc_channel_setup, dev, channel_cfg); 	syscall__retval = adc_channel_setup(dev, channel_cfg); 	sys_port_trace_syscall_exit(K_SYSCALL_ADC_CHANNEL_SETUP, adc_channel_setup, dev, channel_cfg, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -61,7 +63,7 @@ static inline int adc_read(const struct device * dev, const struct adc_sequence 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define adc_read(dev, sequence) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ADC_READ, adc_read, dev, sequence); 	retval = adc_read(dev, sequence); 	sys_port_trace_syscall_exit(K_SYSCALL_ADC_READ, adc_read, dev, sequence, retval); 	retval; })
+#define adc_read(dev, sequence) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ADC_READ, adc_read, dev, sequence); 	syscall__retval = adc_read(dev, sequence); 	sys_port_trace_syscall_exit(K_SYSCALL_ADC_READ, adc_read, dev, sequence, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -86,7 +88,7 @@ static inline int adc_read_async(const struct device * dev, const struct adc_seq
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define adc_read_async(dev, sequence, async) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ADC_READ_ASYNC, adc_read_async, dev, sequence, async); 	retval = adc_read_async(dev, sequence, async); 	sys_port_trace_syscall_exit(K_SYSCALL_ADC_READ_ASYNC, adc_read_async, dev, sequence, async, retval); 	retval; })
+#define adc_read_async(dev, sequence, async) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ADC_READ_ASYNC, adc_read_async, dev, sequence, async); 	syscall__retval = adc_read_async(dev, sequence, async); 	sys_port_trace_syscall_exit(K_SYSCALL_ADC_READ_ASYNC, adc_read_async, dev, sequence, async, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

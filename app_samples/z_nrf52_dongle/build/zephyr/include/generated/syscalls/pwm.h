@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -40,7 +42,7 @@ static inline int pwm_set_cycles(const struct device * dev, uint32_t channel, ui
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define pwm_set_cycles(dev, channel, period, pulse, flags) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PWM_SET_CYCLES, pwm_set_cycles, dev, channel, period, pulse, flags); 	retval = pwm_set_cycles(dev, channel, period, pulse, flags); 	sys_port_trace_syscall_exit(K_SYSCALL_PWM_SET_CYCLES, pwm_set_cycles, dev, channel, period, pulse, flags, retval); 	retval; })
+#define pwm_set_cycles(dev, channel, period, pulse, flags) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PWM_SET_CYCLES, pwm_set_cycles, dev, channel, period, pulse, flags); 	syscall__retval = pwm_set_cycles(dev, channel, period, pulse, flags); 	sys_port_trace_syscall_exit(K_SYSCALL_PWM_SET_CYCLES, pwm_set_cycles, dev, channel, period, pulse, flags, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -65,7 +67,7 @@ static inline int pwm_get_cycles_per_sec(const struct device * dev, uint32_t cha
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define pwm_get_cycles_per_sec(dev, channel, cycles) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PWM_GET_CYCLES_PER_SEC, pwm_get_cycles_per_sec, dev, channel, cycles); 	retval = pwm_get_cycles_per_sec(dev, channel, cycles); 	sys_port_trace_syscall_exit(K_SYSCALL_PWM_GET_CYCLES_PER_SEC, pwm_get_cycles_per_sec, dev, channel, cycles, retval); 	retval; })
+#define pwm_get_cycles_per_sec(dev, channel, cycles) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PWM_GET_CYCLES_PER_SEC, pwm_get_cycles_per_sec, dev, channel, cycles); 	syscall__retval = pwm_get_cycles_per_sec(dev, channel, cycles); 	sys_port_trace_syscall_exit(K_SYSCALL_PWM_GET_CYCLES_PER_SEC, pwm_get_cycles_per_sec, dev, channel, cycles, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -89,7 +91,7 @@ static inline int pwm_enable_capture(const struct device * dev, uint32_t channel
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define pwm_enable_capture(dev, channel) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PWM_ENABLE_CAPTURE, pwm_enable_capture, dev, channel); 	retval = pwm_enable_capture(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_PWM_ENABLE_CAPTURE, pwm_enable_capture, dev, channel, retval); 	retval; })
+#define pwm_enable_capture(dev, channel) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PWM_ENABLE_CAPTURE, pwm_enable_capture, dev, channel); 	syscall__retval = pwm_enable_capture(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_PWM_ENABLE_CAPTURE, pwm_enable_capture, dev, channel, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -113,7 +115,7 @@ static inline int pwm_disable_capture(const struct device * dev, uint32_t channe
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define pwm_disable_capture(dev, channel) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PWM_DISABLE_CAPTURE, pwm_disable_capture, dev, channel); 	retval = pwm_disable_capture(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_PWM_DISABLE_CAPTURE, pwm_disable_capture, dev, channel, retval); 	retval; })
+#define pwm_disable_capture(dev, channel) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PWM_DISABLE_CAPTURE, pwm_disable_capture, dev, channel); 	syscall__retval = pwm_disable_capture(dev, channel); 	sys_port_trace_syscall_exit(K_SYSCALL_PWM_DISABLE_CAPTURE, pwm_disable_capture, dev, channel, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -145,7 +147,7 @@ static inline int pwm_capture_cycles(const struct device * dev, uint32_t channel
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define pwm_capture_cycles(dev, channel, flags, period, pulse, timeout) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PWM_CAPTURE_CYCLES, pwm_capture_cycles, dev, channel, flags, period, pulse, timeout); 	retval = pwm_capture_cycles(dev, channel, flags, period, pulse, timeout); 	sys_port_trace_syscall_exit(K_SYSCALL_PWM_CAPTURE_CYCLES, pwm_capture_cycles, dev, channel, flags, period, pulse, timeout, retval); 	retval; })
+#define pwm_capture_cycles(dev, channel, flags, period, pulse, timeout) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PWM_CAPTURE_CYCLES, pwm_capture_cycles, dev, channel, flags, period, pulse, timeout); 	syscall__retval = pwm_capture_cycles(dev, channel, flags, period, pulse, timeout); 	sys_port_trace_syscall_exit(K_SYSCALL_PWM_CAPTURE_CYCLES, pwm_capture_cycles, dev, channel, flags, period, pulse, timeout, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

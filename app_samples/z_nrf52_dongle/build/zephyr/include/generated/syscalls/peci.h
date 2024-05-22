@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int peci_config(const struct device * dev, uint32_t bitrate)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define peci_config(dev, bitrate) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PECI_CONFIG, peci_config, dev, bitrate); 	retval = peci_config(dev, bitrate); 	sys_port_trace_syscall_exit(K_SYSCALL_PECI_CONFIG, peci_config, dev, bitrate, retval); 	retval; })
+#define peci_config(dev, bitrate) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PECI_CONFIG, peci_config, dev, bitrate); 	syscall__retval = peci_config(dev, bitrate); 	sys_port_trace_syscall_exit(K_SYSCALL_PECI_CONFIG, peci_config, dev, bitrate, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -60,7 +62,7 @@ static inline int peci_enable(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define peci_enable(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PECI_ENABLE, peci_enable, dev); 	retval = peci_enable(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_PECI_ENABLE, peci_enable, dev, retval); 	retval; })
+#define peci_enable(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PECI_ENABLE, peci_enable, dev); 	syscall__retval = peci_enable(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_PECI_ENABLE, peci_enable, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -83,7 +85,7 @@ static inline int peci_disable(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define peci_disable(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PECI_DISABLE, peci_disable, dev); 	retval = peci_disable(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_PECI_DISABLE, peci_disable, dev, retval); 	retval; })
+#define peci_disable(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PECI_DISABLE, peci_disable, dev); 	syscall__retval = peci_disable(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_PECI_DISABLE, peci_disable, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -107,7 +109,7 @@ static inline int peci_transfer(const struct device * dev, struct peci_msg * msg
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define peci_transfer(dev, msg) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PECI_TRANSFER, peci_transfer, dev, msg); 	retval = peci_transfer(dev, msg); 	sys_port_trace_syscall_exit(K_SYSCALL_PECI_TRANSFER, peci_transfer, dev, msg, retval); 	retval; })
+#define peci_transfer(dev, msg) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_PECI_TRANSFER, peci_transfer, dev, msg); 	syscall__retval = peci_transfer(dev, msg); 	sys_port_trace_syscall_exit(K_SYSCALL_PECI_TRANSFER, peci_transfer, dev, msg, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

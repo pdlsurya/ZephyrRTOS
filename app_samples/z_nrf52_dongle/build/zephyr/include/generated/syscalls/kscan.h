@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int kscan_config(const struct device * dev, kscan_callback_t callb
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define kscan_config(dev, callback) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_KSCAN_CONFIG, kscan_config, dev, callback); 	retval = kscan_config(dev, callback); 	sys_port_trace_syscall_exit(K_SYSCALL_KSCAN_CONFIG, kscan_config, dev, callback, retval); 	retval; })
+#define kscan_config(dev, callback) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_KSCAN_CONFIG, kscan_config, dev, callback); 	syscall__retval = kscan_config(dev, callback); 	sys_port_trace_syscall_exit(K_SYSCALL_KSCAN_CONFIG, kscan_config, dev, callback, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -60,7 +62,7 @@ static inline int kscan_enable_callback(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define kscan_enable_callback(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_KSCAN_ENABLE_CALLBACK, kscan_enable_callback, dev); 	retval = kscan_enable_callback(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_KSCAN_ENABLE_CALLBACK, kscan_enable_callback, dev, retval); 	retval; })
+#define kscan_enable_callback(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_KSCAN_ENABLE_CALLBACK, kscan_enable_callback, dev); 	syscall__retval = kscan_enable_callback(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_KSCAN_ENABLE_CALLBACK, kscan_enable_callback, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -83,7 +85,7 @@ static inline int kscan_disable_callback(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define kscan_disable_callback(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_KSCAN_DISABLE_CALLBACK, kscan_disable_callback, dev); 	retval = kscan_disable_callback(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_KSCAN_DISABLE_CALLBACK, kscan_disable_callback, dev, retval); 	retval; })
+#define kscan_disable_callback(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_KSCAN_DISABLE_CALLBACK, kscan_disable_callback, dev); 	syscall__retval = kscan_disable_callback(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_KSCAN_DISABLE_CALLBACK, kscan_disable_callback, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

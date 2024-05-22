@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -17,6 +19,87 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+extern void z_impl_z_log_msg_simple_create_0(const void * source, uint32_t level, const char * fmt);
+
+__pinned_func
+static inline void z_log_msg_simple_create_0(const void * source, uint32_t level, const char * fmt)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const void * val; } parm0 = { .val = source };
+		union { uintptr_t x; uint32_t val; } parm1 = { .val = level };
+		union { uintptr_t x; const char * val; } parm2 = { .val = fmt };
+		(void) arch_syscall_invoke3(parm0.x, parm1.x, parm2.x, K_SYSCALL_Z_LOG_MSG_SIMPLE_CREATE_0);
+		return;
+	}
+#endif
+	compiler_barrier();
+	z_impl_z_log_msg_simple_create_0(source, level, fmt);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define z_log_msg_simple_create_0(source, level, fmt) do { 	sys_port_trace_syscall_enter(K_SYSCALL_Z_LOG_MSG_SIMPLE_CREATE_0, z_log_msg_simple_create_0, source, level, fmt); 	z_log_msg_simple_create_0(source, level, fmt); 	sys_port_trace_syscall_exit(K_SYSCALL_Z_LOG_MSG_SIMPLE_CREATE_0, z_log_msg_simple_create_0, source, level, fmt); } while(false)
+#endif
+#endif
+
+
+extern void z_impl_z_log_msg_simple_create_1(const void * source, uint32_t level, const char * fmt, uint32_t arg);
+
+__pinned_func
+static inline void z_log_msg_simple_create_1(const void * source, uint32_t level, const char * fmt, uint32_t arg)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const void * val; } parm0 = { .val = source };
+		union { uintptr_t x; uint32_t val; } parm1 = { .val = level };
+		union { uintptr_t x; const char * val; } parm2 = { .val = fmt };
+		union { uintptr_t x; uint32_t val; } parm3 = { .val = arg };
+		(void) arch_syscall_invoke4(parm0.x, parm1.x, parm2.x, parm3.x, K_SYSCALL_Z_LOG_MSG_SIMPLE_CREATE_1);
+		return;
+	}
+#endif
+	compiler_barrier();
+	z_impl_z_log_msg_simple_create_1(source, level, fmt, arg);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define z_log_msg_simple_create_1(source, level, fmt, arg) do { 	sys_port_trace_syscall_enter(K_SYSCALL_Z_LOG_MSG_SIMPLE_CREATE_1, z_log_msg_simple_create_1, source, level, fmt, arg); 	z_log_msg_simple_create_1(source, level, fmt, arg); 	sys_port_trace_syscall_exit(K_SYSCALL_Z_LOG_MSG_SIMPLE_CREATE_1, z_log_msg_simple_create_1, source, level, fmt, arg); } while(false)
+#endif
+#endif
+
+
+extern void z_impl_z_log_msg_simple_create_2(const void * source, uint32_t level, const char * fmt, uint32_t arg0, uint32_t arg1);
+
+__pinned_func
+static inline void z_log_msg_simple_create_2(const void * source, uint32_t level, const char * fmt, uint32_t arg0, uint32_t arg1)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const void * val; } parm0 = { .val = source };
+		union { uintptr_t x; uint32_t val; } parm1 = { .val = level };
+		union { uintptr_t x; const char * val; } parm2 = { .val = fmt };
+		union { uintptr_t x; uint32_t val; } parm3 = { .val = arg0 };
+		union { uintptr_t x; uint32_t val; } parm4 = { .val = arg1 };
+		(void) arch_syscall_invoke5(parm0.x, parm1.x, parm2.x, parm3.x, parm4.x, K_SYSCALL_Z_LOG_MSG_SIMPLE_CREATE_2);
+		return;
+	}
+#endif
+	compiler_barrier();
+	z_impl_z_log_msg_simple_create_2(source, level, fmt, arg0, arg1);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define z_log_msg_simple_create_2(source, level, fmt, arg0, arg1) do { 	sys_port_trace_syscall_enter(K_SYSCALL_Z_LOG_MSG_SIMPLE_CREATE_2, z_log_msg_simple_create_2, source, level, fmt, arg0, arg1); 	z_log_msg_simple_create_2(source, level, fmt, arg0, arg1); 	sys_port_trace_syscall_exit(K_SYSCALL_Z_LOG_MSG_SIMPLE_CREATE_2, z_log_msg_simple_create_2, source, level, fmt, arg0, arg1); } while(false)
+#endif
+#endif
+
 
 extern void z_impl_z_log_msg_static_create(const void * source, const struct log_msg_desc desc, uint8_t * package, const void * data);
 
@@ -41,44 +124,6 @@ static inline void z_log_msg_static_create(const void * source, const struct log
 #ifndef DISABLE_SYSCALL_TRACING
 
 #define z_log_msg_static_create(source, desc, package, data) do { 	sys_port_trace_syscall_enter(K_SYSCALL_Z_LOG_MSG_STATIC_CREATE, z_log_msg_static_create, source, desc, package, data); 	z_log_msg_static_create(source, desc, package, data); 	sys_port_trace_syscall_exit(K_SYSCALL_Z_LOG_MSG_STATIC_CREATE, z_log_msg_static_create, source, desc, package, data); } while(false)
-#endif
-#endif
-
-
-extern void z_impl_z_log_msg_runtime_vcreate(uint8_t domain_id, const void * source, uint8_t level, const void * data, size_t dlen, uint32_t package_flags, const char * fmt, va_list ap);
-
-__pinned_func
-static inline void z_log_msg_runtime_vcreate(uint8_t domain_id, const void * source, uint8_t level, const void * data, size_t dlen, uint32_t package_flags, const char * fmt, va_list ap)
-{
-#ifdef CONFIG_USERSPACE
-	if (z_syscall_trap()) {
-		union { uintptr_t x; uint8_t val; } parm0 = { .val = domain_id };
-		union { uintptr_t x; const void * val; } parm1 = { .val = source };
-		union { uintptr_t x; uint8_t val; } parm2 = { .val = level };
-		union { uintptr_t x; const void * val; } parm3 = { .val = data };
-		union { uintptr_t x; size_t val; } parm4 = { .val = dlen };
-		union { uintptr_t x; uint32_t val; } parm5 = { .val = package_flags };
-		union { uintptr_t x; const char * val; } parm6 = { .val = fmt };
-		union { uintptr_t x; va_list val; } parm7;
-		va_copy(parm7.val, ap);
-		uintptr_t more[] = {
-			parm5.x,
-			parm6.x,
-			parm7.x
-		};
-		(void) arch_syscall_invoke6(parm0.x, parm1.x, parm2.x, parm3.x, parm4.x, (uintptr_t) &more, K_SYSCALL_Z_LOG_MSG_RUNTIME_VCREATE);
-		va_end(parm7.val);
-		return;
-	}
-#endif
-	compiler_barrier();
-	z_impl_z_log_msg_runtime_vcreate(domain_id, source, level, data, dlen, package_flags, fmt, ap);
-}
-
-#if defined(CONFIG_TRACING_SYSCALL)
-#ifndef DISABLE_SYSCALL_TRACING
-
-#define z_log_msg_runtime_vcreate(domain_id, source, level, data, dlen, package_flags, fmt, ap) do { 	sys_port_trace_syscall_enter(K_SYSCALL_Z_LOG_MSG_RUNTIME_VCREATE, z_log_msg_runtime_vcreate, domain_id, source, level, data, dlen, package_flags, fmt, ap); 	z_log_msg_runtime_vcreate(domain_id, source, level, data, dlen, package_flags, fmt, ap); 	sys_port_trace_syscall_exit(K_SYSCALL_Z_LOG_MSG_RUNTIME_VCREATE, z_log_msg_runtime_vcreate, domain_id, source, level, data, dlen, package_flags, fmt, ap); } while(false)
 #endif
 #endif
 

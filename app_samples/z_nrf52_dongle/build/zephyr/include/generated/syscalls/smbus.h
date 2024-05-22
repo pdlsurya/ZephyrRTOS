@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int smbus_configure(const struct device * dev, uint32_t dev_config
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_configure(dev, dev_config) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_CONFIGURE, smbus_configure, dev, dev_config); 	retval = smbus_configure(dev, dev_config); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_CONFIGURE, smbus_configure, dev, dev_config, retval); 	retval; })
+#define smbus_configure(dev, dev_config) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_CONFIGURE, smbus_configure, dev, dev_config); 	syscall__retval = smbus_configure(dev, dev_config); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_CONFIGURE, smbus_configure, dev, dev_config, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -61,31 +63,7 @@ static inline int smbus_get_config(const struct device * dev, uint32_t * dev_con
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_get_config(dev, dev_config) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_GET_CONFIG, smbus_get_config, dev, dev_config); 	retval = smbus_get_config(dev, dev_config); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_GET_CONFIG, smbus_get_config, dev, dev_config, retval); 	retval; })
-#endif
-#endif
-
-
-extern int z_impl_smbus_smbalert_set_cb(const struct device * dev, struct smbus_callback * cb);
-
-__pinned_func
-static inline int smbus_smbalert_set_cb(const struct device * dev, struct smbus_callback * cb)
-{
-#ifdef CONFIG_USERSPACE
-	if (z_syscall_trap()) {
-		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
-		union { uintptr_t x; struct smbus_callback * val; } parm1 = { .val = cb };
-		return (int) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_SMBUS_SMBALERT_SET_CB);
-	}
-#endif
-	compiler_barrier();
-	return z_impl_smbus_smbalert_set_cb(dev, cb);
-}
-
-#if defined(CONFIG_TRACING_SYSCALL)
-#ifndef DISABLE_SYSCALL_TRACING
-
-#define smbus_smbalert_set_cb(dev, cb) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_SMBALERT_SET_CB, smbus_smbalert_set_cb, dev, cb); 	retval = smbus_smbalert_set_cb(dev, cb); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_SMBALERT_SET_CB, smbus_smbalert_set_cb, dev, cb, retval); 	retval; })
+#define smbus_get_config(dev, dev_config) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_GET_CONFIG, smbus_get_config, dev, dev_config); 	syscall__retval = smbus_get_config(dev, dev_config); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_GET_CONFIG, smbus_get_config, dev, dev_config, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -109,31 +87,7 @@ static inline int smbus_smbalert_remove_cb(const struct device * dev, struct smb
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_smbalert_remove_cb(dev, cb) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_SMBALERT_REMOVE_CB, smbus_smbalert_remove_cb, dev, cb); 	retval = smbus_smbalert_remove_cb(dev, cb); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_SMBALERT_REMOVE_CB, smbus_smbalert_remove_cb, dev, cb, retval); 	retval; })
-#endif
-#endif
-
-
-extern int z_impl_smbus_host_notify_set_cb(const struct device * dev, struct smbus_callback * cb);
-
-__pinned_func
-static inline int smbus_host_notify_set_cb(const struct device * dev, struct smbus_callback * cb)
-{
-#ifdef CONFIG_USERSPACE
-	if (z_syscall_trap()) {
-		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
-		union { uintptr_t x; struct smbus_callback * val; } parm1 = { .val = cb };
-		return (int) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_SMBUS_HOST_NOTIFY_SET_CB);
-	}
-#endif
-	compiler_barrier();
-	return z_impl_smbus_host_notify_set_cb(dev, cb);
-}
-
-#if defined(CONFIG_TRACING_SYSCALL)
-#ifndef DISABLE_SYSCALL_TRACING
-
-#define smbus_host_notify_set_cb(dev, cb) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_HOST_NOTIFY_SET_CB, smbus_host_notify_set_cb, dev, cb); 	retval = smbus_host_notify_set_cb(dev, cb); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_HOST_NOTIFY_SET_CB, smbus_host_notify_set_cb, dev, cb, retval); 	retval; })
+#define smbus_smbalert_remove_cb(dev, cb) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_SMBALERT_REMOVE_CB, smbus_smbalert_remove_cb, dev, cb); 	syscall__retval = smbus_smbalert_remove_cb(dev, cb); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_SMBALERT_REMOVE_CB, smbus_smbalert_remove_cb, dev, cb, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -157,7 +111,7 @@ static inline int smbus_host_notify_remove_cb(const struct device * dev, struct 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_host_notify_remove_cb(dev, cb) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_HOST_NOTIFY_REMOVE_CB, smbus_host_notify_remove_cb, dev, cb); 	retval = smbus_host_notify_remove_cb(dev, cb); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_HOST_NOTIFY_REMOVE_CB, smbus_host_notify_remove_cb, dev, cb, retval); 	retval; })
+#define smbus_host_notify_remove_cb(dev, cb) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_HOST_NOTIFY_REMOVE_CB, smbus_host_notify_remove_cb, dev, cb); 	syscall__retval = smbus_host_notify_remove_cb(dev, cb); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_HOST_NOTIFY_REMOVE_CB, smbus_host_notify_remove_cb, dev, cb, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -182,7 +136,7 @@ static inline int smbus_quick(const struct device * dev, uint16_t addr, enum smb
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_quick(dev, addr, direction) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_QUICK, smbus_quick, dev, addr, direction); 	retval = smbus_quick(dev, addr, direction); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_QUICK, smbus_quick, dev, addr, direction, retval); 	retval; })
+#define smbus_quick(dev, addr, direction) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_QUICK, smbus_quick, dev, addr, direction); 	syscall__retval = smbus_quick(dev, addr, direction); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_QUICK, smbus_quick, dev, addr, direction, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -207,7 +161,7 @@ static inline int smbus_byte_write(const struct device * dev, uint16_t addr, uin
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_byte_write(dev, addr, byte) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BYTE_WRITE, smbus_byte_write, dev, addr, byte); 	retval = smbus_byte_write(dev, addr, byte); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BYTE_WRITE, smbus_byte_write, dev, addr, byte, retval); 	retval; })
+#define smbus_byte_write(dev, addr, byte) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BYTE_WRITE, smbus_byte_write, dev, addr, byte); 	syscall__retval = smbus_byte_write(dev, addr, byte); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BYTE_WRITE, smbus_byte_write, dev, addr, byte, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -232,7 +186,7 @@ static inline int smbus_byte_read(const struct device * dev, uint16_t addr, uint
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_byte_read(dev, addr, byte) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BYTE_READ, smbus_byte_read, dev, addr, byte); 	retval = smbus_byte_read(dev, addr, byte); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BYTE_READ, smbus_byte_read, dev, addr, byte, retval); 	retval; })
+#define smbus_byte_read(dev, addr, byte) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BYTE_READ, smbus_byte_read, dev, addr, byte); 	syscall__retval = smbus_byte_read(dev, addr, byte); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BYTE_READ, smbus_byte_read, dev, addr, byte, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -258,7 +212,7 @@ static inline int smbus_byte_data_write(const struct device * dev, uint16_t addr
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_byte_data_write(dev, addr, cmd, byte) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BYTE_DATA_WRITE, smbus_byte_data_write, dev, addr, cmd, byte); 	retval = smbus_byte_data_write(dev, addr, cmd, byte); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BYTE_DATA_WRITE, smbus_byte_data_write, dev, addr, cmd, byte, retval); 	retval; })
+#define smbus_byte_data_write(dev, addr, cmd, byte) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BYTE_DATA_WRITE, smbus_byte_data_write, dev, addr, cmd, byte); 	syscall__retval = smbus_byte_data_write(dev, addr, cmd, byte); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BYTE_DATA_WRITE, smbus_byte_data_write, dev, addr, cmd, byte, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -284,7 +238,7 @@ static inline int smbus_byte_data_read(const struct device * dev, uint16_t addr,
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_byte_data_read(dev, addr, cmd, byte) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BYTE_DATA_READ, smbus_byte_data_read, dev, addr, cmd, byte); 	retval = smbus_byte_data_read(dev, addr, cmd, byte); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BYTE_DATA_READ, smbus_byte_data_read, dev, addr, cmd, byte, retval); 	retval; })
+#define smbus_byte_data_read(dev, addr, cmd, byte) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BYTE_DATA_READ, smbus_byte_data_read, dev, addr, cmd, byte); 	syscall__retval = smbus_byte_data_read(dev, addr, cmd, byte); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BYTE_DATA_READ, smbus_byte_data_read, dev, addr, cmd, byte, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -310,7 +264,7 @@ static inline int smbus_word_data_write(const struct device * dev, uint16_t addr
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_word_data_write(dev, addr, cmd, word) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_WORD_DATA_WRITE, smbus_word_data_write, dev, addr, cmd, word); 	retval = smbus_word_data_write(dev, addr, cmd, word); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_WORD_DATA_WRITE, smbus_word_data_write, dev, addr, cmd, word, retval); 	retval; })
+#define smbus_word_data_write(dev, addr, cmd, word) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_WORD_DATA_WRITE, smbus_word_data_write, dev, addr, cmd, word); 	syscall__retval = smbus_word_data_write(dev, addr, cmd, word); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_WORD_DATA_WRITE, smbus_word_data_write, dev, addr, cmd, word, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -336,7 +290,7 @@ static inline int smbus_word_data_read(const struct device * dev, uint16_t addr,
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_word_data_read(dev, addr, cmd, word) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_WORD_DATA_READ, smbus_word_data_read, dev, addr, cmd, word); 	retval = smbus_word_data_read(dev, addr, cmd, word); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_WORD_DATA_READ, smbus_word_data_read, dev, addr, cmd, word, retval); 	retval; })
+#define smbus_word_data_read(dev, addr, cmd, word) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_WORD_DATA_READ, smbus_word_data_read, dev, addr, cmd, word); 	syscall__retval = smbus_word_data_read(dev, addr, cmd, word); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_WORD_DATA_READ, smbus_word_data_read, dev, addr, cmd, word, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -363,7 +317,7 @@ static inline int smbus_pcall(const struct device * dev, uint16_t addr, uint8_t 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_pcall(dev, addr, cmd, send_word, recv_word) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_PCALL, smbus_pcall, dev, addr, cmd, send_word, recv_word); 	retval = smbus_pcall(dev, addr, cmd, send_word, recv_word); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_PCALL, smbus_pcall, dev, addr, cmd, send_word, recv_word, retval); 	retval; })
+#define smbus_pcall(dev, addr, cmd, send_word, recv_word) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_PCALL, smbus_pcall, dev, addr, cmd, send_word, recv_word); 	syscall__retval = smbus_pcall(dev, addr, cmd, send_word, recv_word); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_PCALL, smbus_pcall, dev, addr, cmd, send_word, recv_word, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -390,7 +344,7 @@ static inline int smbus_block_write(const struct device * dev, uint16_t addr, ui
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_block_write(dev, addr, cmd, count, buf) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BLOCK_WRITE, smbus_block_write, dev, addr, cmd, count, buf); 	retval = smbus_block_write(dev, addr, cmd, count, buf); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BLOCK_WRITE, smbus_block_write, dev, addr, cmd, count, buf, retval); 	retval; })
+#define smbus_block_write(dev, addr, cmd, count, buf) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BLOCK_WRITE, smbus_block_write, dev, addr, cmd, count, buf); 	syscall__retval = smbus_block_write(dev, addr, cmd, count, buf); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BLOCK_WRITE, smbus_block_write, dev, addr, cmd, count, buf, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -417,7 +371,7 @@ static inline int smbus_block_read(const struct device * dev, uint16_t addr, uin
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_block_read(dev, addr, cmd, count, buf) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BLOCK_READ, smbus_block_read, dev, addr, cmd, count, buf); 	retval = smbus_block_read(dev, addr, cmd, count, buf); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BLOCK_READ, smbus_block_read, dev, addr, cmd, count, buf, retval); 	retval; })
+#define smbus_block_read(dev, addr, cmd, count, buf) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BLOCK_READ, smbus_block_read, dev, addr, cmd, count, buf); 	syscall__retval = smbus_block_read(dev, addr, cmd, count, buf); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BLOCK_READ, smbus_block_read, dev, addr, cmd, count, buf, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -450,7 +404,7 @@ static inline int smbus_block_pcall(const struct device * dev, uint16_t addr, ui
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define smbus_block_pcall(dev, addr, cmd, snd_count, snd_buf, rcv_count, rcv_buf) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BLOCK_PCALL, smbus_block_pcall, dev, addr, cmd, snd_count, snd_buf, rcv_count, rcv_buf); 	retval = smbus_block_pcall(dev, addr, cmd, snd_count, snd_buf, rcv_count, rcv_buf); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BLOCK_PCALL, smbus_block_pcall, dev, addr, cmd, snd_count, snd_buf, rcv_count, rcv_buf, retval); 	retval; })
+#define smbus_block_pcall(dev, addr, cmd, snd_count, snd_buf, rcv_count, rcv_buf) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SMBUS_BLOCK_PCALL, smbus_block_pcall, dev, addr, cmd, snd_count, snd_buf, rcv_count, rcv_buf); 	syscall__retval = smbus_block_pcall(dev, addr, cmd, snd_count, snd_buf, rcv_count, rcv_buf); 	sys_port_trace_syscall_exit(K_SYSCALL_SMBUS_BLOCK_PCALL, smbus_block_pcall, dev, addr, cmd, snd_count, snd_buf, rcv_count, rcv_buf, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

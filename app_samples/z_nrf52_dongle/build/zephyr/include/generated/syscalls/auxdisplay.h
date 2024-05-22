@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -36,7 +38,7 @@ static inline int auxdisplay_display_on(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_display_on(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_DISPLAY_ON, auxdisplay_display_on, dev); 	retval = auxdisplay_display_on(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_DISPLAY_ON, auxdisplay_display_on, dev, retval); 	retval; })
+#define auxdisplay_display_on(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_DISPLAY_ON, auxdisplay_display_on, dev); 	syscall__retval = auxdisplay_display_on(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_DISPLAY_ON, auxdisplay_display_on, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -59,7 +61,7 @@ static inline int auxdisplay_display_off(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_display_off(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_DISPLAY_OFF, auxdisplay_display_off, dev); 	retval = auxdisplay_display_off(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_DISPLAY_OFF, auxdisplay_display_off, dev, retval); 	retval; })
+#define auxdisplay_display_off(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_DISPLAY_OFF, auxdisplay_display_off, dev); 	syscall__retval = auxdisplay_display_off(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_DISPLAY_OFF, auxdisplay_display_off, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -83,7 +85,7 @@ static inline int auxdisplay_cursor_set_enabled(const struct device * dev, bool 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_cursor_set_enabled(dev, enabled) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CURSOR_SET_ENABLED, auxdisplay_cursor_set_enabled, dev, enabled); 	retval = auxdisplay_cursor_set_enabled(dev, enabled); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CURSOR_SET_ENABLED, auxdisplay_cursor_set_enabled, dev, enabled, retval); 	retval; })
+#define auxdisplay_cursor_set_enabled(dev, enabled) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CURSOR_SET_ENABLED, auxdisplay_cursor_set_enabled, dev, enabled); 	syscall__retval = auxdisplay_cursor_set_enabled(dev, enabled); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CURSOR_SET_ENABLED, auxdisplay_cursor_set_enabled, dev, enabled, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -107,7 +109,7 @@ static inline int auxdisplay_position_blinking_set_enabled(const struct device *
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_position_blinking_set_enabled(dev, enabled) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_POSITION_BLINKING_SET_ENABLED, auxdisplay_position_blinking_set_enabled, dev, enabled); 	retval = auxdisplay_position_blinking_set_enabled(dev, enabled); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_POSITION_BLINKING_SET_ENABLED, auxdisplay_position_blinking_set_enabled, dev, enabled, retval); 	retval; })
+#define auxdisplay_position_blinking_set_enabled(dev, enabled) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_POSITION_BLINKING_SET_ENABLED, auxdisplay_position_blinking_set_enabled, dev, enabled); 	syscall__retval = auxdisplay_position_blinking_set_enabled(dev, enabled); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_POSITION_BLINKING_SET_ENABLED, auxdisplay_position_blinking_set_enabled, dev, enabled, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -132,7 +134,7 @@ static inline int auxdisplay_cursor_shift_set(const struct device * dev, uint8_t
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_cursor_shift_set(dev, direction, display_shift) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CURSOR_SHIFT_SET, auxdisplay_cursor_shift_set, dev, direction, display_shift); 	retval = auxdisplay_cursor_shift_set(dev, direction, display_shift); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CURSOR_SHIFT_SET, auxdisplay_cursor_shift_set, dev, direction, display_shift, retval); 	retval; })
+#define auxdisplay_cursor_shift_set(dev, direction, display_shift) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CURSOR_SHIFT_SET, auxdisplay_cursor_shift_set, dev, direction, display_shift); 	syscall__retval = auxdisplay_cursor_shift_set(dev, direction, display_shift); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CURSOR_SHIFT_SET, auxdisplay_cursor_shift_set, dev, direction, display_shift, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -158,7 +160,7 @@ static inline int auxdisplay_cursor_position_set(const struct device * dev, enum
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_cursor_position_set(dev, type, x, y) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CURSOR_POSITION_SET, auxdisplay_cursor_position_set, dev, type, x, y); 	retval = auxdisplay_cursor_position_set(dev, type, x, y); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CURSOR_POSITION_SET, auxdisplay_cursor_position_set, dev, type, x, y, retval); 	retval; })
+#define auxdisplay_cursor_position_set(dev, type, x, y) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CURSOR_POSITION_SET, auxdisplay_cursor_position_set, dev, type, x, y); 	syscall__retval = auxdisplay_cursor_position_set(dev, type, x, y); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CURSOR_POSITION_SET, auxdisplay_cursor_position_set, dev, type, x, y, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -183,7 +185,7 @@ static inline int auxdisplay_cursor_position_get(const struct device * dev, int1
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_cursor_position_get(dev, x, y) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CURSOR_POSITION_GET, auxdisplay_cursor_position_get, dev, x, y); 	retval = auxdisplay_cursor_position_get(dev, x, y); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CURSOR_POSITION_GET, auxdisplay_cursor_position_get, dev, x, y, retval); 	retval; })
+#define auxdisplay_cursor_position_get(dev, x, y) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CURSOR_POSITION_GET, auxdisplay_cursor_position_get, dev, x, y); 	syscall__retval = auxdisplay_cursor_position_get(dev, x, y); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CURSOR_POSITION_GET, auxdisplay_cursor_position_get, dev, x, y, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -209,7 +211,7 @@ static inline int auxdisplay_display_position_set(const struct device * dev, enu
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_display_position_set(dev, type, x, y) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_DISPLAY_POSITION_SET, auxdisplay_display_position_set, dev, type, x, y); 	retval = auxdisplay_display_position_set(dev, type, x, y); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_DISPLAY_POSITION_SET, auxdisplay_display_position_set, dev, type, x, y, retval); 	retval; })
+#define auxdisplay_display_position_set(dev, type, x, y) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_DISPLAY_POSITION_SET, auxdisplay_display_position_set, dev, type, x, y); 	syscall__retval = auxdisplay_display_position_set(dev, type, x, y); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_DISPLAY_POSITION_SET, auxdisplay_display_position_set, dev, type, x, y, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -234,7 +236,7 @@ static inline int auxdisplay_display_position_get(const struct device * dev, int
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_display_position_get(dev, x, y) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_DISPLAY_POSITION_GET, auxdisplay_display_position_get, dev, x, y); 	retval = auxdisplay_display_position_get(dev, x, y); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_DISPLAY_POSITION_GET, auxdisplay_display_position_get, dev, x, y, retval); 	retval; })
+#define auxdisplay_display_position_get(dev, x, y) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_DISPLAY_POSITION_GET, auxdisplay_display_position_get, dev, x, y); 	syscall__retval = auxdisplay_display_position_get(dev, x, y); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_DISPLAY_POSITION_GET, auxdisplay_display_position_get, dev, x, y, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -258,7 +260,7 @@ static inline int auxdisplay_capabilities_get(const struct device * dev, struct 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_capabilities_get(dev, capabilities) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CAPABILITIES_GET, auxdisplay_capabilities_get, dev, capabilities); 	retval = auxdisplay_capabilities_get(dev, capabilities); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CAPABILITIES_GET, auxdisplay_capabilities_get, dev, capabilities, retval); 	retval; })
+#define auxdisplay_capabilities_get(dev, capabilities) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CAPABILITIES_GET, auxdisplay_capabilities_get, dev, capabilities); 	syscall__retval = auxdisplay_capabilities_get(dev, capabilities); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CAPABILITIES_GET, auxdisplay_capabilities_get, dev, capabilities, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -281,7 +283,7 @@ static inline int auxdisplay_clear(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_clear(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CLEAR, auxdisplay_clear, dev); 	retval = auxdisplay_clear(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CLEAR, auxdisplay_clear, dev, retval); 	retval; })
+#define auxdisplay_clear(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CLEAR, auxdisplay_clear, dev); 	syscall__retval = auxdisplay_clear(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CLEAR, auxdisplay_clear, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -305,7 +307,7 @@ static inline int auxdisplay_brightness_get(const struct device * dev, uint8_t *
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_brightness_get(dev, brightness) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_BRIGHTNESS_GET, auxdisplay_brightness_get, dev, brightness); 	retval = auxdisplay_brightness_get(dev, brightness); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_BRIGHTNESS_GET, auxdisplay_brightness_get, dev, brightness, retval); 	retval; })
+#define auxdisplay_brightness_get(dev, brightness) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_BRIGHTNESS_GET, auxdisplay_brightness_get, dev, brightness); 	syscall__retval = auxdisplay_brightness_get(dev, brightness); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_BRIGHTNESS_GET, auxdisplay_brightness_get, dev, brightness, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -329,7 +331,7 @@ static inline int auxdisplay_brightness_set(const struct device * dev, uint8_t b
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_brightness_set(dev, brightness) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_BRIGHTNESS_SET, auxdisplay_brightness_set, dev, brightness); 	retval = auxdisplay_brightness_set(dev, brightness); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_BRIGHTNESS_SET, auxdisplay_brightness_set, dev, brightness, retval); 	retval; })
+#define auxdisplay_brightness_set(dev, brightness) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_BRIGHTNESS_SET, auxdisplay_brightness_set, dev, brightness); 	syscall__retval = auxdisplay_brightness_set(dev, brightness); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_BRIGHTNESS_SET, auxdisplay_brightness_set, dev, brightness, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -353,7 +355,7 @@ static inline int auxdisplay_backlight_get(const struct device * dev, uint8_t * 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_backlight_get(dev, backlight) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_BACKLIGHT_GET, auxdisplay_backlight_get, dev, backlight); 	retval = auxdisplay_backlight_get(dev, backlight); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_BACKLIGHT_GET, auxdisplay_backlight_get, dev, backlight, retval); 	retval; })
+#define auxdisplay_backlight_get(dev, backlight) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_BACKLIGHT_GET, auxdisplay_backlight_get, dev, backlight); 	syscall__retval = auxdisplay_backlight_get(dev, backlight); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_BACKLIGHT_GET, auxdisplay_backlight_get, dev, backlight, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -377,7 +379,7 @@ static inline int auxdisplay_backlight_set(const struct device * dev, uint8_t ba
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_backlight_set(dev, backlight) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_BACKLIGHT_SET, auxdisplay_backlight_set, dev, backlight); 	retval = auxdisplay_backlight_set(dev, backlight); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_BACKLIGHT_SET, auxdisplay_backlight_set, dev, backlight, retval); 	retval; })
+#define auxdisplay_backlight_set(dev, backlight) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_BACKLIGHT_SET, auxdisplay_backlight_set, dev, backlight); 	syscall__retval = auxdisplay_backlight_set(dev, backlight); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_BACKLIGHT_SET, auxdisplay_backlight_set, dev, backlight, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -400,7 +402,7 @@ static inline int auxdisplay_is_busy(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_is_busy(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_IS_BUSY, auxdisplay_is_busy, dev); 	retval = auxdisplay_is_busy(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_IS_BUSY, auxdisplay_is_busy, dev, retval); 	retval; })
+#define auxdisplay_is_busy(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_IS_BUSY, auxdisplay_is_busy, dev); 	syscall__retval = auxdisplay_is_busy(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_IS_BUSY, auxdisplay_is_busy, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -424,7 +426,7 @@ static inline int auxdisplay_custom_character_set(const struct device * dev, str
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_custom_character_set(dev, character) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CUSTOM_CHARACTER_SET, auxdisplay_custom_character_set, dev, character); 	retval = auxdisplay_custom_character_set(dev, character); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CUSTOM_CHARACTER_SET, auxdisplay_custom_character_set, dev, character, retval); 	retval; })
+#define auxdisplay_custom_character_set(dev, character) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CUSTOM_CHARACTER_SET, auxdisplay_custom_character_set, dev, character); 	syscall__retval = auxdisplay_custom_character_set(dev, character); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CUSTOM_CHARACTER_SET, auxdisplay_custom_character_set, dev, character, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -449,7 +451,7 @@ static inline int auxdisplay_write(const struct device * dev, const uint8_t * da
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_write(dev, data, len) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_WRITE, auxdisplay_write, dev, data, len); 	retval = auxdisplay_write(dev, data, len); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_WRITE, auxdisplay_write, dev, data, len, retval); 	retval; })
+#define auxdisplay_write(dev, data, len) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_WRITE, auxdisplay_write, dev, data, len); 	syscall__retval = auxdisplay_write(dev, data, len); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_WRITE, auxdisplay_write, dev, data, len, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -473,7 +475,7 @@ static inline int auxdisplay_custom_command(const struct device * dev, struct au
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define auxdisplay_custom_command(dev, data) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CUSTOM_COMMAND, auxdisplay_custom_command, dev, data); 	retval = auxdisplay_custom_command(dev, data); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CUSTOM_COMMAND, auxdisplay_custom_command, dev, data, retval); 	retval; })
+#define auxdisplay_custom_command(dev, data) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_AUXDISPLAY_CUSTOM_COMMAND, auxdisplay_custom_command, dev, data); 	syscall__retval = auxdisplay_custom_command(dev, data); 	sys_port_trace_syscall_exit(K_SYSCALL_AUXDISPLAY_CUSTOM_COMMAND, auxdisplay_custom_command, dev, data, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

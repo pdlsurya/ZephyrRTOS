@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -39,7 +41,7 @@ static inline int sensor_attr_set(const struct device * dev, enum sensor_channel
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sensor_attr_set(dev, chan, attr, val) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_ATTR_SET, sensor_attr_set, dev, chan, attr, val); 	retval = sensor_attr_set(dev, chan, attr, val); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_ATTR_SET, sensor_attr_set, dev, chan, attr, val, retval); 	retval; })
+#define sensor_attr_set(dev, chan, attr, val) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_ATTR_SET, sensor_attr_set, dev, chan, attr, val); 	syscall__retval = sensor_attr_set(dev, chan, attr, val); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_ATTR_SET, sensor_attr_set, dev, chan, attr, val, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -65,7 +67,7 @@ static inline int sensor_attr_get(const struct device * dev, enum sensor_channel
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sensor_attr_get(dev, chan, attr, val) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_ATTR_GET, sensor_attr_get, dev, chan, attr, val); 	retval = sensor_attr_get(dev, chan, attr, val); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_ATTR_GET, sensor_attr_get, dev, chan, attr, val, retval); 	retval; })
+#define sensor_attr_get(dev, chan, attr, val) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_ATTR_GET, sensor_attr_get, dev, chan, attr, val); 	syscall__retval = sensor_attr_get(dev, chan, attr, val); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_ATTR_GET, sensor_attr_get, dev, chan, attr, val, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -88,7 +90,7 @@ static inline int sensor_sample_fetch(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sensor_sample_fetch(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_SAMPLE_FETCH, sensor_sample_fetch, dev); 	retval = sensor_sample_fetch(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_SAMPLE_FETCH, sensor_sample_fetch, dev, retval); 	retval; })
+#define sensor_sample_fetch(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_SAMPLE_FETCH, sensor_sample_fetch, dev); 	syscall__retval = sensor_sample_fetch(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_SAMPLE_FETCH, sensor_sample_fetch, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -112,7 +114,7 @@ static inline int sensor_sample_fetch_chan(const struct device * dev, enum senso
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sensor_sample_fetch_chan(dev, type) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_SAMPLE_FETCH_CHAN, sensor_sample_fetch_chan, dev, type); 	retval = sensor_sample_fetch_chan(dev, type); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_SAMPLE_FETCH_CHAN, sensor_sample_fetch_chan, dev, type, retval); 	retval; })
+#define sensor_sample_fetch_chan(dev, type) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_SAMPLE_FETCH_CHAN, sensor_sample_fetch_chan, dev, type); 	syscall__retval = sensor_sample_fetch_chan(dev, type); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_SAMPLE_FETCH_CHAN, sensor_sample_fetch_chan, dev, type, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -137,7 +139,7 @@ static inline int sensor_channel_get(const struct device * dev, enum sensor_chan
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sensor_channel_get(dev, chan, val) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_CHANNEL_GET, sensor_channel_get, dev, chan, val); 	retval = sensor_channel_get(dev, chan, val); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_CHANNEL_GET, sensor_channel_get, dev, chan, val, retval); 	retval; })
+#define sensor_channel_get(dev, chan, val) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_CHANNEL_GET, sensor_channel_get, dev, chan, val); 	syscall__retval = sensor_channel_get(dev, chan, val); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_CHANNEL_GET, sensor_channel_get, dev, chan, val, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -161,7 +163,7 @@ static inline int sensor_get_decoder(const struct device * dev, const struct sen
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sensor_get_decoder(dev, decoder) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_GET_DECODER, sensor_get_decoder, dev, decoder); 	retval = sensor_get_decoder(dev, decoder); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_GET_DECODER, sensor_get_decoder, dev, decoder, retval); 	retval; })
+#define sensor_get_decoder(dev, decoder) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_GET_DECODER, sensor_get_decoder, dev, decoder); 	syscall__retval = sensor_get_decoder(dev, decoder); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_GET_DECODER, sensor_get_decoder, dev, decoder, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -187,7 +189,7 @@ static inline int sensor_reconfigure_read_iodev(struct rtio_iodev * iodev, const
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sensor_reconfigure_read_iodev(iodev, sensor, channels, num_channels) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_RECONFIGURE_READ_IODEV, sensor_reconfigure_read_iodev, iodev, sensor, channels, num_channels); 	retval = sensor_reconfigure_read_iodev(iodev, sensor, channels, num_channels); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_RECONFIGURE_READ_IODEV, sensor_reconfigure_read_iodev, iodev, sensor, channels, num_channels, retval); 	retval; })
+#define sensor_reconfigure_read_iodev(iodev, sensor, channels, num_channels) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_RECONFIGURE_READ_IODEV, sensor_reconfigure_read_iodev, iodev, sensor, channels, num_channels); 	syscall__retval = sensor_reconfigure_read_iodev(iodev, sensor, channels, num_channels); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_RECONFIGURE_READ_IODEV, sensor_reconfigure_read_iodev, iodev, sensor, channels, num_channels, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

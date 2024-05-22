@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/bin/arm-zephyr-eabi-g++")
+set(CMAKE_CXX_COMPILER "/usr/local/zephyr-sdk-0.16.5-1/arm-zephyr-eabi/bin/arm-zephyr-eabi-g++")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "12.2.0")
@@ -22,11 +22,11 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar")
-set(CMAKE_CXX_COMPILER_AR "/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar")
-set(CMAKE_RANLIB "/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib")
-set(CMAKE_CXX_COMPILER_RANLIB "/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib")
-set(CMAKE_LINKER "/usr/local/zephyr-sdk-0.16.2-rc1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/bin/ld.bfd")
+set(CMAKE_AR "/usr/local/zephyr-sdk-0.16.5-1/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar")
+set(CMAKE_CXX_COMPILER_AR "/usr/local/zephyr-sdk-0.16.5-1/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar")
+set(CMAKE_RANLIB "/usr/local/zephyr-sdk-0.16.5-1/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib")
+set(CMAKE_CXX_COMPILER_RANLIB "/usr/local/zephyr-sdk-0.16.5-1/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib")
+set(CMAKE_LINKER "/usr/local/zephyr-sdk-0.16.5-1/arm-zephyr-eabi/arm-zephyr-eabi/bin/ld.bfd")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCXX 1)
 set(CMAKE_CXX_COMPILER_LOADED 1)

@@ -6,16 +6,20 @@
  * alternatively user defined BUILD_VERSION.
  */
 
-#define ZEPHYR_VERSION_CODE 197731
+#define ZEPHYR_VERSION_CODE 198243
 #define ZEPHYR_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))
 
-#define KERNELVERSION          0x3046300
-#define KERNEL_VERSION_NUMBER  0x30463
-#define KERNEL_VERSION_MAJOR   3
-#define KERNEL_VERSION_MINOR   4
-#define KERNEL_PATCHLEVEL      99
-#define KERNEL_VERSION_STRING  "3.4.99"
+#define KERNELVERSION                   0x3066300
+#define KERNEL_VERSION_NUMBER           0x30663
+#define KERNEL_VERSION_MAJOR            3
+#define KERNEL_VERSION_MINOR            6
+#define KERNEL_PATCHLEVEL               99
+#define KERNEL_TWEAK                    0
+#define KERNEL_VERSION_STRING           "3.6.99"
+#define KERNEL_VERSION_EXTENDED_STRING  "3.6.99+0"
+#define KERNEL_VERSION_TWEAK_STRING     "3.6.99+0"
 
-#define BUILD_VERSION zephyr-v3.4.0-886-ge8095b1a8be1
+#define BUILD_VERSION v3.6.0-2753-g45205f865e18
+
 
 #endif /* _KERNEL_VERSION_H_ */

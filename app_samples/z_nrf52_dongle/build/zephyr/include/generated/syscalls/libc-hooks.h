@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int zephyr_read_stdin(char * buf, int nbytes)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define zephyr_read_stdin(buf, nbytes) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ZEPHYR_READ_STDIN, zephyr_read_stdin, buf, nbytes); 	retval = zephyr_read_stdin(buf, nbytes); 	sys_port_trace_syscall_exit(K_SYSCALL_ZEPHYR_READ_STDIN, zephyr_read_stdin, buf, nbytes, retval); 	retval; })
+#define zephyr_read_stdin(buf, nbytes) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ZEPHYR_READ_STDIN, zephyr_read_stdin, buf, nbytes); 	syscall__retval = zephyr_read_stdin(buf, nbytes); 	sys_port_trace_syscall_exit(K_SYSCALL_ZEPHYR_READ_STDIN, zephyr_read_stdin, buf, nbytes, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -61,7 +63,7 @@ static inline int zephyr_write_stdout(const void * buf, int nbytes)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define zephyr_write_stdout(buf, nbytes) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ZEPHYR_WRITE_STDOUT, zephyr_write_stdout, buf, nbytes); 	retval = zephyr_write_stdout(buf, nbytes); 	sys_port_trace_syscall_exit(K_SYSCALL_ZEPHYR_WRITE_STDOUT, zephyr_write_stdout, buf, nbytes, retval); 	retval; })
+#define zephyr_write_stdout(buf, nbytes) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ZEPHYR_WRITE_STDOUT, zephyr_write_stdout, buf, nbytes); 	syscall__retval = zephyr_write_stdout(buf, nbytes); 	sys_port_trace_syscall_exit(K_SYSCALL_ZEPHYR_WRITE_STDOUT, zephyr_write_stdout, buf, nbytes, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -85,7 +87,7 @@ static inline int zephyr_fputc(int c, FILE * stream)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define zephyr_fputc(c, stream) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ZEPHYR_FPUTC, zephyr_fputc, c, stream); 	retval = zephyr_fputc(c, stream); 	sys_port_trace_syscall_exit(K_SYSCALL_ZEPHYR_FPUTC, zephyr_fputc, c, stream, retval); 	retval; })
+#define zephyr_fputc(c, stream) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ZEPHYR_FPUTC, zephyr_fputc, c, stream); 	syscall__retval = zephyr_fputc(c, stream); 	sys_port_trace_syscall_exit(K_SYSCALL_ZEPHYR_FPUTC, zephyr_fputc, c, stream, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -111,7 +113,7 @@ static inline size_t zephyr_fwrite(const void *ZRESTRICT ptr, size_t size, size_
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define zephyr_fwrite(ptr, size, nitems, stream) ({ 	size_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ZEPHYR_FWRITE, zephyr_fwrite, ptr, size, nitems, stream); 	retval = zephyr_fwrite(ptr, size, nitems, stream); 	sys_port_trace_syscall_exit(K_SYSCALL_ZEPHYR_FWRITE, zephyr_fwrite, ptr, size, nitems, stream, retval); 	retval; })
+#define zephyr_fwrite(ptr, size, nitems, stream) ({ 	size_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_ZEPHYR_FWRITE, zephyr_fwrite, ptr, size, nitems, stream); 	syscall__retval = zephyr_fwrite(ptr, size, nitems, stream); 	sys_port_trace_syscall_exit(K_SYSCALL_ZEPHYR_FWRITE, zephyr_fwrite, ptr, size, nitems, stream, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

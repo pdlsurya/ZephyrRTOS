@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -78,7 +80,7 @@ static inline bool sip_svc_plat_func_id_valid(const struct device * dev, uint32_
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sip_svc_plat_func_id_valid(dev, command, func_id) ({ 	bool retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SIP_SVC_PLAT_FUNC_ID_VALID, sip_svc_plat_func_id_valid, dev, command, func_id); 	retval = sip_svc_plat_func_id_valid(dev, command, func_id); 	sys_port_trace_syscall_exit(K_SYSCALL_SIP_SVC_PLAT_FUNC_ID_VALID, sip_svc_plat_func_id_valid, dev, command, func_id, retval); 	retval; })
+#define sip_svc_plat_func_id_valid(dev, command, func_id) ({ 	bool syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SIP_SVC_PLAT_FUNC_ID_VALID, sip_svc_plat_func_id_valid, dev, command, func_id); 	syscall__retval = sip_svc_plat_func_id_valid(dev, command, func_id); 	sys_port_trace_syscall_exit(K_SYSCALL_SIP_SVC_PLAT_FUNC_ID_VALID, sip_svc_plat_func_id_valid, dev, command, func_id, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -103,7 +105,7 @@ static inline uint32_t sip_svc_plat_format_trans_id(const struct device * dev, u
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sip_svc_plat_format_trans_id(dev, client_idx, trans_idx) ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SIP_SVC_PLAT_FORMAT_TRANS_ID, sip_svc_plat_format_trans_id, dev, client_idx, trans_idx); 	retval = sip_svc_plat_format_trans_id(dev, client_idx, trans_idx); 	sys_port_trace_syscall_exit(K_SYSCALL_SIP_SVC_PLAT_FORMAT_TRANS_ID, sip_svc_plat_format_trans_id, dev, client_idx, trans_idx, retval); 	retval; })
+#define sip_svc_plat_format_trans_id(dev, client_idx, trans_idx) ({ 	uint32_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SIP_SVC_PLAT_FORMAT_TRANS_ID, sip_svc_plat_format_trans_id, dev, client_idx, trans_idx); 	syscall__retval = sip_svc_plat_format_trans_id(dev, client_idx, trans_idx); 	sys_port_trace_syscall_exit(K_SYSCALL_SIP_SVC_PLAT_FORMAT_TRANS_ID, sip_svc_plat_format_trans_id, dev, client_idx, trans_idx, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -127,7 +129,7 @@ static inline uint32_t sip_svc_plat_get_trans_idx(const struct device * dev, uin
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sip_svc_plat_get_trans_idx(dev, trans_id) ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SIP_SVC_PLAT_GET_TRANS_IDX, sip_svc_plat_get_trans_idx, dev, trans_id); 	retval = sip_svc_plat_get_trans_idx(dev, trans_id); 	sys_port_trace_syscall_exit(K_SYSCALL_SIP_SVC_PLAT_GET_TRANS_IDX, sip_svc_plat_get_trans_idx, dev, trans_id, retval); 	retval; })
+#define sip_svc_plat_get_trans_idx(dev, trans_id) ({ 	uint32_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SIP_SVC_PLAT_GET_TRANS_IDX, sip_svc_plat_get_trans_idx, dev, trans_id); 	syscall__retval = sip_svc_plat_get_trans_idx(dev, trans_id); 	sys_port_trace_syscall_exit(K_SYSCALL_SIP_SVC_PLAT_GET_TRANS_IDX, sip_svc_plat_get_trans_idx, dev, trans_id, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -177,7 +179,7 @@ static inline uint32_t sip_svc_plat_get_error_code(const struct device * dev, st
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sip_svc_plat_get_error_code(dev, res) ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SIP_SVC_PLAT_GET_ERROR_CODE, sip_svc_plat_get_error_code, dev, res); 	retval = sip_svc_plat_get_error_code(dev, res); 	sys_port_trace_syscall_exit(K_SYSCALL_SIP_SVC_PLAT_GET_ERROR_CODE, sip_svc_plat_get_error_code, dev, res, retval); 	retval; })
+#define sip_svc_plat_get_error_code(dev, res) ({ 	uint32_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SIP_SVC_PLAT_GET_ERROR_CODE, sip_svc_plat_get_error_code, dev, res); 	syscall__retval = sip_svc_plat_get_error_code(dev, res); 	sys_port_trace_syscall_exit(K_SYSCALL_SIP_SVC_PLAT_GET_ERROR_CODE, sip_svc_plat_get_error_code, dev, res, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -218,7 +220,7 @@ static inline int sip_svc_plat_async_res_req(const struct device * dev, unsigned
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sip_svc_plat_async_res_req(dev, a0, a1, a2, a3, a4, a5, a6, a7, buf, size) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SIP_SVC_PLAT_ASYNC_RES_REQ, sip_svc_plat_async_res_req, dev, a0, a1, a2, a3, a4, a5, a6, a7, buf, size); 	retval = sip_svc_plat_async_res_req(dev, a0, a1, a2, a3, a4, a5, a6, a7, buf, size); 	sys_port_trace_syscall_exit(K_SYSCALL_SIP_SVC_PLAT_ASYNC_RES_REQ, sip_svc_plat_async_res_req, dev, a0, a1, a2, a3, a4, a5, a6, a7, buf, size, retval); 	retval; })
+#define sip_svc_plat_async_res_req(dev, a0, a1, a2, a3, a4, a5, a6, a7, buf, size) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SIP_SVC_PLAT_ASYNC_RES_REQ, sip_svc_plat_async_res_req, dev, a0, a1, a2, a3, a4, a5, a6, a7, buf, size); 	syscall__retval = sip_svc_plat_async_res_req(dev, a0, a1, a2, a3, a4, a5, a6, a7, buf, size); 	sys_port_trace_syscall_exit(K_SYSCALL_SIP_SVC_PLAT_ASYNC_RES_REQ, sip_svc_plat_async_res_req, dev, a0, a1, a2, a3, a4, a5, a6, a7, buf, size, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -245,7 +247,7 @@ static inline int sip_svc_plat_async_res_res(const struct device * dev, struct a
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sip_svc_plat_async_res_res(dev, res, buf, size, trans_id) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SIP_SVC_PLAT_ASYNC_RES_RES, sip_svc_plat_async_res_res, dev, res, buf, size, trans_id); 	retval = sip_svc_plat_async_res_res(dev, res, buf, size, trans_id); 	sys_port_trace_syscall_exit(K_SYSCALL_SIP_SVC_PLAT_ASYNC_RES_RES, sip_svc_plat_async_res_res, dev, res, buf, size, trans_id, retval); 	retval; })
+#define sip_svc_plat_async_res_res(dev, res, buf, size, trans_id) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SIP_SVC_PLAT_ASYNC_RES_RES, sip_svc_plat_async_res_res, dev, res, buf, size, trans_id); 	syscall__retval = sip_svc_plat_async_res_res(dev, res, buf, size, trans_id); 	sys_port_trace_syscall_exit(K_SYSCALL_SIP_SVC_PLAT_ASYNC_RES_RES, sip_svc_plat_async_res_res, dev, res, buf, size, trans_id, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int sys_cache_data_flush_range(void * addr, size_t size)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sys_cache_data_flush_range(addr, size) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SYS_CACHE_DATA_FLUSH_RANGE, sys_cache_data_flush_range, addr, size); 	retval = sys_cache_data_flush_range(addr, size); 	sys_port_trace_syscall_exit(K_SYSCALL_SYS_CACHE_DATA_FLUSH_RANGE, sys_cache_data_flush_range, addr, size, retval); 	retval; })
+#define sys_cache_data_flush_range(addr, size) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SYS_CACHE_DATA_FLUSH_RANGE, sys_cache_data_flush_range, addr, size); 	syscall__retval = sys_cache_data_flush_range(addr, size); 	sys_port_trace_syscall_exit(K_SYSCALL_SYS_CACHE_DATA_FLUSH_RANGE, sys_cache_data_flush_range, addr, size, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -61,7 +63,7 @@ static inline int sys_cache_data_invd_range(void * addr, size_t size)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sys_cache_data_invd_range(addr, size) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SYS_CACHE_DATA_INVD_RANGE, sys_cache_data_invd_range, addr, size); 	retval = sys_cache_data_invd_range(addr, size); 	sys_port_trace_syscall_exit(K_SYSCALL_SYS_CACHE_DATA_INVD_RANGE, sys_cache_data_invd_range, addr, size, retval); 	retval; })
+#define sys_cache_data_invd_range(addr, size) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SYS_CACHE_DATA_INVD_RANGE, sys_cache_data_invd_range, addr, size); 	syscall__retval = sys_cache_data_invd_range(addr, size); 	sys_port_trace_syscall_exit(K_SYSCALL_SYS_CACHE_DATA_INVD_RANGE, sys_cache_data_invd_range, addr, size, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -85,7 +87,7 @@ static inline int sys_cache_data_flush_and_invd_range(void * addr, size_t size)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sys_cache_data_flush_and_invd_range(addr, size) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SYS_CACHE_DATA_FLUSH_AND_INVD_RANGE, sys_cache_data_flush_and_invd_range, addr, size); 	retval = sys_cache_data_flush_and_invd_range(addr, size); 	sys_port_trace_syscall_exit(K_SYSCALL_SYS_CACHE_DATA_FLUSH_AND_INVD_RANGE, sys_cache_data_flush_and_invd_range, addr, size, retval); 	retval; })
+#define sys_cache_data_flush_and_invd_range(addr, size) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SYS_CACHE_DATA_FLUSH_AND_INVD_RANGE, sys_cache_data_flush_and_invd_range, addr, size); 	syscall__retval = sys_cache_data_flush_and_invd_range(addr, size); 	sys_port_trace_syscall_exit(K_SYSCALL_SYS_CACHE_DATA_FLUSH_AND_INVD_RANGE, sys_cache_data_flush_and_invd_range, addr, size, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

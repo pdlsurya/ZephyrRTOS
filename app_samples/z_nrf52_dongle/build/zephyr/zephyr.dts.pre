@@ -1,7 +1,7 @@
 # 0 "/Users/pdlsurya/ZephyrSDK/zephyr/misc/empty_file.c"
 # 0 "<built-in>"
 # 0 "<command-line>"
-# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/arm/nrf52840dongle_nrf52840/nrf52840dongle_nrf52840.dts" 1
+# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/nordic/nrf52840dongle/nrf52840dongle_nrf52840.dts" 1
 
 
 
@@ -58,7 +58,7 @@
  };
 };
 # 4 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf52840.dtsi" 2 3 4
-# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf_common.dtsi" 1 3 4
+# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/common/nordic/nrf_common.dtsi" 1 3 4
 
 
 
@@ -66,7 +66,7 @@
 
 
 # 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/dt-bindings/adc/adc.h" 1 3 4
-# 8 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
+# 8 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
 # 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/dt-bindings/adc/nrf-adc.h" 1 3 4
 # 10 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/dt-bindings/adc/nrf-adc.h" 3 4
 # 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/dt-bindings/dt-util.h" 1 3 4
@@ -76,25 +76,44 @@
 # 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal.h" 1 3 4
 # 18 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal.h" 3 4
 # 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_loops.h" 1 3 4
+# 1083 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_loops.h" 3 4
+# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_listify.h" 1 3 4
+# 1084 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_loops.h" 2 3 4
 # 19 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 162 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal_is_eq.h" 1 3 4
+# 163 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 193 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal_util_inc.h" 1 3 4
+# 194 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+
+
+# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal_util_dec.h" 1 3 4
+# 197 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+
+
+# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal_util_x2.h" 1 3 4
+# 200 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
 # 35 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/sys/util_macro.h" 2 3 4
 # 20 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/dt-bindings/dt-util.h" 2 3 4
 # 11 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/dt-bindings/adc/nrf-adc.h" 2 3 4
-# 9 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
+# 9 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
 # 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/dt-bindings/gpio/gpio.h" 1 3 4
-# 10 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
+# 10 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
 # 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/dt-bindings/i2c/i2c.h" 1 3 4
-# 11 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
+# 11 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
+# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h" 1 3 4
+# 12 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
 # 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/dt-bindings/pinctrl/nrf-pinctrl.h" 1 3 4
-# 12 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
+# 13 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
 # 1 "/Users/pdlsurya/ZephyrSDK/zephyr/include/zephyr/dt-bindings/pwm/pwm.h" 1 3 4
-# 13 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
+# 14 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
 
 # 1 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/common/freq.h" 1 3 4
-# 15 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
+# 16 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
 # 1 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/override.dtsi" 1 3 4
-# 16 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf_common.dtsi" 2 3 4
-# 24 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf_common.dtsi" 3 4
+# 17 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/common/nordic/nrf_common.dtsi" 2 3 4
+# 25 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/common/nordic/nrf_common.dtsi" 3 4
 / {
  pinctrl: pin-controller {
 
@@ -108,14 +127,14 @@
   compatible = "zephyr,bt-hci-entropy";
   status = "okay";
  };
-};
 
-&systick {
-
-
-
-
- status = "disabled";
+ sw_pwm: sw-pwm {
+  compatible = "nordic,nrf-sw-pwm";
+  status = "disabled";
+  generator = <&timer1>;
+  clock-prescaler = <0>;
+  #pwm-cells = <3>;
+ };
 };
 # 5 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf52840.dtsi" 2 3 4
 
@@ -148,6 +167,7 @@
   ficr: ficr@10000000 {
    compatible = "nordic,nrf-ficr";
    reg = <0x10000000 0x1000>;
+   #nordic,ficr-cells = <1>;
    status = "okay";
   };
 
@@ -232,6 +252,7 @@
    reg = <0x40003000 0x1000>;
    clock-frequency = <100000>;
    interrupts = <3 1>;
+   easydma-maxcnt-bits = <16>;
    status = "disabled";
   };
 
@@ -267,6 +288,7 @@
    reg = <0x40004000 0x1000>;
    clock-frequency = <100000>;
    interrupts = <4 1>;
+   easydma-maxcnt-bits = <16>;
    status = "disabled";
   };
 
@@ -292,14 +314,15 @@
    compatible = "nordic,nrf-nfct";
    reg = <0x40005000 0x1000>;
    interrupts = <5 1>;
-   status = "okay";
+   status = "disabled";
   };
 
-  gpiote: gpiote@40006000 {
+  gpiote: gpiote0: gpiote@40006000 {
    compatible = "nordic,nrf-gpiote";
    reg = <0x40006000 0x1000>;
    interrupts = <6 5>;
    status = "disabled";
+   instance = <0>;
   };
 
   adc: adc@40007000 {
@@ -639,6 +662,7 @@
    #gpio-cells = <2>;
    status = "disabled";
    port = <0>;
+   gpiote-instance = <&gpiote>;
   };
 
   gpio1: gpio@50000300 {
@@ -650,33 +674,26 @@
    ngpios = <16>;
    status = "disabled";
    port = <1>;
+   gpiote-instance = <&gpiote>;
   };
 
   cryptocell: crypto@5002a000 {
-   compatible = "nordic,nrf-cc310";
-   reg = <0x5002A000 0x1000>;
-   status = "okay";
-   #address-cells = <1>;
-   #size-cells = <1>;
-   cryptocell310: crypto@5002b000 {
-    compatible = "arm,cryptocell-310";
-    reg = <0x5002B000 0x1000>;
-    interrupts = <42 1>;
-   };
+   compatible = "nordic,cryptocell", "arm,cryptocell-310";
+   reg = <0x5002a000 0x1000>, <0x5002b000 0x1000>;
+   reg-names = "wrapper", "core";
+   interrupts = <42 1>;
+   status = "disabled";
   };
- };
-
- sw_pwm: sw-pwm {
-  compatible = "nordic,nrf-sw-pwm";
-  status = "disabled";
-  generator = <&timer2>;
-  clock-prescaler = <0>;
-  #pwm-cells = <3>;
  };
 };
 
 &nvic {
  arm,num-irq-priority-bits = <3>;
+};
+
+&systick {
+
+ status = "disabled";
 };
 # 9 "/Users/pdlsurya/ZephyrSDK/zephyr/dts/arm/nordic/nrf52840_qiaa.dtsi" 2 3 4
 
@@ -690,11 +707,12 @@
 
 / {
  soc {
-  compatible = "nordic,nRF52840-QIAA", "nordic,nRF52840", "nordic,nRF52", "simple-bus";
+  compatible = "nordic,nrf52840-qiaa", "nordic,nrf52840",
+        "nordic,nrf52", "simple-bus";
  };
 };
-# 10 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/arm/nrf52840dongle_nrf52840/nrf52840dongle_nrf52840.dts" 2
-# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/arm/nrf52840dongle_nrf52840/nrf52840dongle_nrf52840-pinctrl.dtsi" 1
+# 10 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/nordic/nrf52840dongle/nrf52840dongle_nrf52840.dts" 2
+# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/nordic/nrf52840dongle/nrf52840dongle_nrf52840-pinctrl.dtsi" 1
 
 
 
@@ -788,6 +806,7 @@
   };
  };
 
+
  spi1_default: spi1_default {
   group1 {
    psels = <((((((0) * 32U) + (31)) & 0x7FU) << 0U) | ((4U & 0xFFFFU) << 16U))>,
@@ -806,7 +825,8 @@
  };
 
 };
-# 11 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/arm/nrf52840dongle_nrf52840/nrf52840dongle_nrf52840.dts" 2
+# 11 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/nordic/nrf52840dongle/nrf52840dongle_nrf52840.dts" 2
+
 
 / {
  model = "Nordic nRF52840 Dongle NRF52840";
@@ -862,6 +882,7 @@
   button0: button_0 {
    gpios = <&gpio1 6 ((1 << 4) | (1 << 0))>;
    label = "Push button switch 0";
+   zephyr,code = <11>;
   };
  };
 
@@ -894,6 +915,11 @@
 
 &gpiote {
  status = "okay";
+};
+
+&uicr {
+ nfct-pins-as-gpios;
+ gpio-as-nreset;
 };
 
 &gpio0 {
@@ -967,8 +993,8 @@
 
 
 
-# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/arm/nrf52840dongle_nrf52840/fstab-stock.dtsi" 1
-# 9 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/arm/nrf52840dongle_nrf52840/fstab-stock.dtsi"
+# 1 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/nordic/nrf52840dongle/fstab-stock.dtsi" 1
+# 9 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/nordic/nrf52840dongle/fstab-stock.dtsi"
 &flash0 {
  partitions {
   compatible = "fixed-partitions";
@@ -1005,7 +1031,7 @@
 
  };
 };
-# 172 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/arm/nrf52840dongle_nrf52840/nrf52840dongle_nrf52840.dts" 2
+# 179 "/Users/pdlsurya/ZephyrSDK/zephyr/boards/nordic/nrf52840dongle/nrf52840dongle_nrf52840.dts" 2
 
 zephyr_udc0: &usbd {
  compatible = "nordic,nrf-usbd";
@@ -1016,11 +1042,11 @@ zephyr_udc0: &usbd {
  };
 };
 # 0 "<command-line>" 2
-# 1 "/Users/pdlsurya/Documents/ZephyrProjects/z_nrf52_dongle/nrf52840dongle_nrf52840.overlay" 1
+# 1 "/Users/pdlsurya/Documents/ZephyrProject/app_samples/z_nrf52_dongle/nrf52840dongle_nrf52840.overlay" 1
 &i2c1 {
     status = "okay";
     sh1106:sh1106@3c{
-        compatible="sinowealth,sh1106";
+        compatible="sinowealth,sh1106_custom";
         status="okay";
         reg=<0x3c>;
     };

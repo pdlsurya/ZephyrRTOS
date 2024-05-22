@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -85,7 +87,31 @@ static inline void * k_object_alloc(enum k_objects otype)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define k_object_alloc(otype) ({ 	void * retval; 	sys_port_trace_syscall_enter(K_SYSCALL_K_OBJECT_ALLOC, k_object_alloc, otype); 	retval = k_object_alloc(otype); 	sys_port_trace_syscall_exit(K_SYSCALL_K_OBJECT_ALLOC, k_object_alloc, otype, retval); 	retval; })
+#define k_object_alloc(otype) ({ 	void * syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_K_OBJECT_ALLOC, k_object_alloc, otype); 	syscall__retval = k_object_alloc(otype); 	sys_port_trace_syscall_exit(K_SYSCALL_K_OBJECT_ALLOC, k_object_alloc, otype, syscall__retval); 	syscall__retval; })
+#endif
+#endif
+
+
+extern void * z_impl_k_object_alloc_size(enum k_objects otype, size_t size);
+
+__pinned_func
+static inline void * k_object_alloc_size(enum k_objects otype, size_t size)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; enum k_objects val; } parm0 = { .val = otype };
+		union { uintptr_t x; size_t val; } parm1 = { .val = size };
+		return (void *) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_K_OBJECT_ALLOC_SIZE);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_k_object_alloc_size(otype, size);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define k_object_alloc_size(otype, size) ({ 	void * syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_K_OBJECT_ALLOC_SIZE, k_object_alloc_size, otype, size); 	syscall__retval = k_object_alloc_size(otype, size); 	sys_port_trace_syscall_exit(K_SYSCALL_K_OBJECT_ALLOC_SIZE, k_object_alloc_size, otype, size, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int wdt_setup(const struct device * dev, uint8_t options)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define wdt_setup(dev, options) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_WDT_SETUP, wdt_setup, dev, options); 	retval = wdt_setup(dev, options); 	sys_port_trace_syscall_exit(K_SYSCALL_WDT_SETUP, wdt_setup, dev, options, retval); 	retval; })
+#define wdt_setup(dev, options) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_WDT_SETUP, wdt_setup, dev, options); 	syscall__retval = wdt_setup(dev, options); 	sys_port_trace_syscall_exit(K_SYSCALL_WDT_SETUP, wdt_setup, dev, options, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -60,7 +62,7 @@ static inline int wdt_disable(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define wdt_disable(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_WDT_DISABLE, wdt_disable, dev); 	retval = wdt_disable(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_WDT_DISABLE, wdt_disable, dev, retval); 	retval; })
+#define wdt_disable(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_WDT_DISABLE, wdt_disable, dev); 	syscall__retval = wdt_disable(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_WDT_DISABLE, wdt_disable, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -84,7 +86,7 @@ static inline int wdt_feed(const struct device * dev, int channel_id)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define wdt_feed(dev, channel_id) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_WDT_FEED, wdt_feed, dev, channel_id); 	retval = wdt_feed(dev, channel_id); 	sys_port_trace_syscall_exit(K_SYSCALL_WDT_FEED, wdt_feed, dev, channel_id, retval); 	retval; })
+#define wdt_feed(dev, channel_id) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_WDT_FEED, wdt_feed, dev, channel_id); 	syscall__retval = wdt_feed(dev, channel_id); 	sys_port_trace_syscall_exit(K_SYSCALL_WDT_FEED, wdt_feed, dev, channel_id, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

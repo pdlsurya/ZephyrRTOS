@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline ssize_t hwinfo_get_device_id(uint8_t * buffer, size_t length)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define hwinfo_get_device_id(buffer, length) ({ 	ssize_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_HWINFO_GET_DEVICE_ID, hwinfo_get_device_id, buffer, length); 	retval = hwinfo_get_device_id(buffer, length); 	sys_port_trace_syscall_exit(K_SYSCALL_HWINFO_GET_DEVICE_ID, hwinfo_get_device_id, buffer, length, retval); 	retval; })
+#define hwinfo_get_device_id(buffer, length) ({ 	ssize_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_HWINFO_GET_DEVICE_ID, hwinfo_get_device_id, buffer, length); 	syscall__retval = hwinfo_get_device_id(buffer, length); 	sys_port_trace_syscall_exit(K_SYSCALL_HWINFO_GET_DEVICE_ID, hwinfo_get_device_id, buffer, length, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -60,7 +62,7 @@ static inline int hwinfo_get_reset_cause(uint32_t * cause)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define hwinfo_get_reset_cause(cause) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_HWINFO_GET_RESET_CAUSE, hwinfo_get_reset_cause, cause); 	retval = hwinfo_get_reset_cause(cause); 	sys_port_trace_syscall_exit(K_SYSCALL_HWINFO_GET_RESET_CAUSE, hwinfo_get_reset_cause, cause, retval); 	retval; })
+#define hwinfo_get_reset_cause(cause) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_HWINFO_GET_RESET_CAUSE, hwinfo_get_reset_cause, cause); 	syscall__retval = hwinfo_get_reset_cause(cause); 	sys_port_trace_syscall_exit(K_SYSCALL_HWINFO_GET_RESET_CAUSE, hwinfo_get_reset_cause, cause, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -82,7 +84,7 @@ static inline int hwinfo_clear_reset_cause(void)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define hwinfo_clear_reset_cause() ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_HWINFO_CLEAR_RESET_CAUSE, hwinfo_clear_reset_cause); 	retval = hwinfo_clear_reset_cause(); 	sys_port_trace_syscall_exit(K_SYSCALL_HWINFO_CLEAR_RESET_CAUSE, hwinfo_clear_reset_cause, retval); 	retval; })
+#define hwinfo_clear_reset_cause() ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_HWINFO_CLEAR_RESET_CAUSE, hwinfo_clear_reset_cause); 	syscall__retval = hwinfo_clear_reset_cause(); 	sys_port_trace_syscall_exit(K_SYSCALL_HWINFO_CLEAR_RESET_CAUSE, hwinfo_clear_reset_cause, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -105,7 +107,7 @@ static inline int hwinfo_get_supported_reset_cause(uint32_t * supported)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define hwinfo_get_supported_reset_cause(supported) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_HWINFO_GET_SUPPORTED_RESET_CAUSE, hwinfo_get_supported_reset_cause, supported); 	retval = hwinfo_get_supported_reset_cause(supported); 	sys_port_trace_syscall_exit(K_SYSCALL_HWINFO_GET_SUPPORTED_RESET_CAUSE, hwinfo_get_supported_reset_cause, supported, retval); 	retval; })
+#define hwinfo_get_supported_reset_cause(supported) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_HWINFO_GET_SUPPORTED_RESET_CAUSE, hwinfo_get_supported_reset_cause, supported); 	syscall__retval = hwinfo_get_supported_reset_cause(supported); 	sys_port_trace_syscall_exit(K_SYSCALL_HWINFO_GET_SUPPORTED_RESET_CAUSE, hwinfo_get_supported_reset_cause, supported, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

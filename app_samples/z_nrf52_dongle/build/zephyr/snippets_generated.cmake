@@ -10,10 +10,10 @@
 # Global information about all snippets.
 
 # The name of every snippet that was discovered.
-set(SNIPPET_NAMES "cdc-acm-console")
+set(SNIPPET_NAMES "cdc-acm-console" "nordic-flpr" "nordic-flpr-xip" "nordic-ppr" "nordic-ppr-xip" "nus-console" "xen_dom0")
 # The paths to all the snippet.yml files. One snippet
 # can have multiple snippet.yml files.
-set(SNIPPET_PATHS "/Users/pdlsurya/ZephyrSDK/zephyr/snippets/cdc-acm-console/snippet.yml")
+set(SNIPPET_PATHS "/Users/pdlsurya/ZephyrSDK/zephyr/snippets/cdc-acm-console/snippet.yml" "/Users/pdlsurya/ZephyrSDK/zephyr/snippets/nordic-flpr-xip/snippet.yml" "/Users/pdlsurya/ZephyrSDK/zephyr/snippets/nordic-flpr/snippet.yml" "/Users/pdlsurya/ZephyrSDK/zephyr/snippets/nordic-ppr-xip/snippet.yml" "/Users/pdlsurya/ZephyrSDK/zephyr/snippets/nordic-ppr/snippet.yml" "/Users/pdlsurya/ZephyrSDK/zephyr/snippets/nus-console/snippet.yml" "/Users/pdlsurya/ZephyrSDK/zephyr/snippets/xen_dom0/snippet.yml")
 
 # Create variable scope for snippets build variables
 zephyr_create_scope(snippets)

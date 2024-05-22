@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -35,7 +37,7 @@ static inline int sys_clock_hw_cycles_per_sec_runtime_get(void)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define sys_clock_hw_cycles_per_sec_runtime_get() ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SYS_CLOCK_HW_CYCLES_PER_SEC_RUNTIME_GET, sys_clock_hw_cycles_per_sec_runtime_get); 	retval = sys_clock_hw_cycles_per_sec_runtime_get(); 	sys_port_trace_syscall_exit(K_SYSCALL_SYS_CLOCK_HW_CYCLES_PER_SEC_RUNTIME_GET, sys_clock_hw_cycles_per_sec_runtime_get, retval); 	retval; })
+#define sys_clock_hw_cycles_per_sec_runtime_get() ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SYS_CLOCK_HW_CYCLES_PER_SEC_RUNTIME_GET, sys_clock_hw_cycles_per_sec_runtime_get); 	syscall__retval = sys_clock_hw_cycles_per_sec_runtime_get(); 	sys_port_trace_syscall_exit(K_SYSCALL_SYS_CLOCK_HW_CYCLES_PER_SEC_RUNTIME_GET, sys_clock_hw_cycles_per_sec_runtime_get, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

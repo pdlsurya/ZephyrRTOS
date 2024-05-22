@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -36,7 +38,7 @@ static inline bool counter_is_counting_up(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_is_counting_up(dev) ({ 	bool retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_IS_COUNTING_UP, counter_is_counting_up, dev); 	retval = counter_is_counting_up(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_IS_COUNTING_UP, counter_is_counting_up, dev, retval); 	retval; })
+#define counter_is_counting_up(dev) ({ 	bool syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_IS_COUNTING_UP, counter_is_counting_up, dev); 	syscall__retval = counter_is_counting_up(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_IS_COUNTING_UP, counter_is_counting_up, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -59,7 +61,7 @@ static inline uint8_t counter_get_num_of_channels(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_get_num_of_channels(dev) ({ 	uint8_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_NUM_OF_CHANNELS, counter_get_num_of_channels, dev); 	retval = counter_get_num_of_channels(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_NUM_OF_CHANNELS, counter_get_num_of_channels, dev, retval); 	retval; })
+#define counter_get_num_of_channels(dev) ({ 	uint8_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_NUM_OF_CHANNELS, counter_get_num_of_channels, dev); 	syscall__retval = counter_get_num_of_channels(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_NUM_OF_CHANNELS, counter_get_num_of_channels, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -82,7 +84,7 @@ static inline uint32_t counter_get_frequency(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_get_frequency(dev) ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_FREQUENCY, counter_get_frequency, dev); 	retval = counter_get_frequency(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_FREQUENCY, counter_get_frequency, dev, retval); 	retval; })
+#define counter_get_frequency(dev) ({ 	uint32_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_FREQUENCY, counter_get_frequency, dev); 	syscall__retval = counter_get_frequency(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_FREQUENCY, counter_get_frequency, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -106,7 +108,7 @@ static inline uint32_t counter_us_to_ticks(const struct device * dev, uint64_t u
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_us_to_ticks(dev, us) ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_US_TO_TICKS, counter_us_to_ticks, dev, us); 	retval = counter_us_to_ticks(dev, us); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_US_TO_TICKS, counter_us_to_ticks, dev, us, retval); 	retval; })
+#define counter_us_to_ticks(dev, us) ({ 	uint32_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_US_TO_TICKS, counter_us_to_ticks, dev, us); 	syscall__retval = counter_us_to_ticks(dev, us); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_US_TO_TICKS, counter_us_to_ticks, dev, us, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -132,7 +134,7 @@ static inline uint64_t counter_ticks_to_us(const struct device * dev, uint32_t t
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_ticks_to_us(dev, ticks) ({ 	uint64_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_TICKS_TO_US, counter_ticks_to_us, dev, ticks); 	retval = counter_ticks_to_us(dev, ticks); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_TICKS_TO_US, counter_ticks_to_us, dev, ticks, retval); 	retval; })
+#define counter_ticks_to_us(dev, ticks) ({ 	uint64_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_TICKS_TO_US, counter_ticks_to_us, dev, ticks); 	syscall__retval = counter_ticks_to_us(dev, ticks); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_TICKS_TO_US, counter_ticks_to_us, dev, ticks, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -155,7 +157,7 @@ static inline uint32_t counter_get_max_top_value(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_get_max_top_value(dev) ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_MAX_TOP_VALUE, counter_get_max_top_value, dev); 	retval = counter_get_max_top_value(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_MAX_TOP_VALUE, counter_get_max_top_value, dev, retval); 	retval; })
+#define counter_get_max_top_value(dev) ({ 	uint32_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_MAX_TOP_VALUE, counter_get_max_top_value, dev); 	syscall__retval = counter_get_max_top_value(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_MAX_TOP_VALUE, counter_get_max_top_value, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -178,7 +180,7 @@ static inline int counter_start(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_start(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_START, counter_start, dev); 	retval = counter_start(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_START, counter_start, dev, retval); 	retval; })
+#define counter_start(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_START, counter_start, dev); 	syscall__retval = counter_start(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_START, counter_start, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -201,7 +203,7 @@ static inline int counter_stop(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_stop(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_STOP, counter_stop, dev); 	retval = counter_stop(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_STOP, counter_stop, dev, retval); 	retval; })
+#define counter_stop(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_STOP, counter_stop, dev); 	syscall__retval = counter_stop(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_STOP, counter_stop, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -225,7 +227,7 @@ static inline int counter_get_value(const struct device * dev, uint32_t * ticks)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_get_value(dev, ticks) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_VALUE, counter_get_value, dev, ticks); 	retval = counter_get_value(dev, ticks); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_VALUE, counter_get_value, dev, ticks, retval); 	retval; })
+#define counter_get_value(dev, ticks) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_VALUE, counter_get_value, dev, ticks); 	syscall__retval = counter_get_value(dev, ticks); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_VALUE, counter_get_value, dev, ticks, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -249,7 +251,7 @@ static inline int counter_get_value_64(const struct device * dev, uint64_t * tic
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_get_value_64(dev, ticks) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_VALUE_64, counter_get_value_64, dev, ticks); 	retval = counter_get_value_64(dev, ticks); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_VALUE_64, counter_get_value_64, dev, ticks, retval); 	retval; })
+#define counter_get_value_64(dev, ticks) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_VALUE_64, counter_get_value_64, dev, ticks); 	syscall__retval = counter_get_value_64(dev, ticks); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_VALUE_64, counter_get_value_64, dev, ticks, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -274,7 +276,7 @@ static inline int counter_set_channel_alarm(const struct device * dev, uint8_t c
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_set_channel_alarm(dev, chan_id, alarm_cfg) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_SET_CHANNEL_ALARM, counter_set_channel_alarm, dev, chan_id, alarm_cfg); 	retval = counter_set_channel_alarm(dev, chan_id, alarm_cfg); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_SET_CHANNEL_ALARM, counter_set_channel_alarm, dev, chan_id, alarm_cfg, retval); 	retval; })
+#define counter_set_channel_alarm(dev, chan_id, alarm_cfg) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_SET_CHANNEL_ALARM, counter_set_channel_alarm, dev, chan_id, alarm_cfg); 	syscall__retval = counter_set_channel_alarm(dev, chan_id, alarm_cfg); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_SET_CHANNEL_ALARM, counter_set_channel_alarm, dev, chan_id, alarm_cfg, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -298,7 +300,7 @@ static inline int counter_cancel_channel_alarm(const struct device * dev, uint8_
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_cancel_channel_alarm(dev, chan_id) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_CANCEL_CHANNEL_ALARM, counter_cancel_channel_alarm, dev, chan_id); 	retval = counter_cancel_channel_alarm(dev, chan_id); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_CANCEL_CHANNEL_ALARM, counter_cancel_channel_alarm, dev, chan_id, retval); 	retval; })
+#define counter_cancel_channel_alarm(dev, chan_id) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_CANCEL_CHANNEL_ALARM, counter_cancel_channel_alarm, dev, chan_id); 	syscall__retval = counter_cancel_channel_alarm(dev, chan_id); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_CANCEL_CHANNEL_ALARM, counter_cancel_channel_alarm, dev, chan_id, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -322,7 +324,7 @@ static inline int counter_set_top_value(const struct device * dev, const struct 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_set_top_value(dev, cfg) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_SET_TOP_VALUE, counter_set_top_value, dev, cfg); 	retval = counter_set_top_value(dev, cfg); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_SET_TOP_VALUE, counter_set_top_value, dev, cfg, retval); 	retval; })
+#define counter_set_top_value(dev, cfg) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_SET_TOP_VALUE, counter_set_top_value, dev, cfg); 	syscall__retval = counter_set_top_value(dev, cfg); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_SET_TOP_VALUE, counter_set_top_value, dev, cfg, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -345,7 +347,7 @@ static inline int counter_get_pending_int(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_get_pending_int(dev) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_PENDING_INT, counter_get_pending_int, dev); 	retval = counter_get_pending_int(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_PENDING_INT, counter_get_pending_int, dev, retval); 	retval; })
+#define counter_get_pending_int(dev) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_PENDING_INT, counter_get_pending_int, dev); 	syscall__retval = counter_get_pending_int(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_PENDING_INT, counter_get_pending_int, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -368,7 +370,7 @@ static inline uint32_t counter_get_top_value(const struct device * dev)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_get_top_value(dev) ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_TOP_VALUE, counter_get_top_value, dev); 	retval = counter_get_top_value(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_TOP_VALUE, counter_get_top_value, dev, retval); 	retval; })
+#define counter_get_top_value(dev) ({ 	uint32_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_TOP_VALUE, counter_get_top_value, dev); 	syscall__retval = counter_get_top_value(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_TOP_VALUE, counter_get_top_value, dev, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -393,7 +395,7 @@ static inline int counter_set_guard_period(const struct device * dev, uint32_t t
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_set_guard_period(dev, ticks, flags) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_SET_GUARD_PERIOD, counter_set_guard_period, dev, ticks, flags); 	retval = counter_set_guard_period(dev, ticks, flags); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_SET_GUARD_PERIOD, counter_set_guard_period, dev, ticks, flags, retval); 	retval; })
+#define counter_set_guard_period(dev, ticks, flags) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_SET_GUARD_PERIOD, counter_set_guard_period, dev, ticks, flags); 	syscall__retval = counter_set_guard_period(dev, ticks, flags); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_SET_GUARD_PERIOD, counter_set_guard_period, dev, ticks, flags, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -417,7 +419,7 @@ static inline uint32_t counter_get_guard_period(const struct device * dev, uint3
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define counter_get_guard_period(dev, flags) ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_GUARD_PERIOD, counter_get_guard_period, dev, flags); 	retval = counter_get_guard_period(dev, flags); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_GUARD_PERIOD, counter_get_guard_period, dev, flags, retval); 	retval; })
+#define counter_get_guard_period(dev, flags) ({ 	uint32_t syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_COUNTER_GET_GUARD_PERIOD, counter_get_guard_period, dev, flags); 	syscall__retval = counter_get_guard_period(dev, flags); 	sys_port_trace_syscall_exit(K_SYSCALL_COUNTER_GET_GUARD_PERIOD, counter_get_guard_period, dev, flags, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 

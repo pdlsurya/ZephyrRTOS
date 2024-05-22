@@ -8,6 +8,8 @@
 
 #ifndef _ASMLANGUAGE
 
+#include <stdarg.h>
+
 #include <syscall_list.h>
 #include <zephyr/syscall.h>
 
@@ -37,7 +39,7 @@ static inline int bc12_set_role(const struct device * dev, enum bc12_role role)
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define bc12_set_role(dev, role) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_BC12_SET_ROLE, bc12_set_role, dev, role); 	retval = bc12_set_role(dev, role); 	sys_port_trace_syscall_exit(K_SYSCALL_BC12_SET_ROLE, bc12_set_role, dev, role, retval); 	retval; })
+#define bc12_set_role(dev, role) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_BC12_SET_ROLE, bc12_set_role, dev, role); 	syscall__retval = bc12_set_role(dev, role); 	sys_port_trace_syscall_exit(K_SYSCALL_BC12_SET_ROLE, bc12_set_role, dev, role, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
@@ -62,7 +64,7 @@ static inline int bc12_set_result_cb(const struct device * dev, bc12_callback_t 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define bc12_set_result_cb(dev, cb, user_data) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_BC12_SET_RESULT_CB, bc12_set_result_cb, dev, cb, user_data); 	retval = bc12_set_result_cb(dev, cb, user_data); 	sys_port_trace_syscall_exit(K_SYSCALL_BC12_SET_RESULT_CB, bc12_set_result_cb, dev, cb, user_data, retval); 	retval; })
+#define bc12_set_result_cb(dev, cb, user_data) ({ 	int syscall__retval; 	sys_port_trace_syscall_enter(K_SYSCALL_BC12_SET_RESULT_CB, bc12_set_result_cb, dev, cb, user_data); 	syscall__retval = bc12_set_result_cb(dev, cb, user_data); 	sys_port_trace_syscall_exit(K_SYSCALL_BC12_SET_RESULT_CB, bc12_set_result_cb, dev, cb, user_data, syscall__retval); 	syscall__retval; })
 #endif
 #endif
 
